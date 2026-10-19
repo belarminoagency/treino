@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#E0522A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>Treino do Kaique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: caderno de treino de bolso — uma coluna, tela "Hoje" faz tudo, abas fixas embaixo */
+:root{
+  --bg:#F3F4F1; --surface:#FFFFFF; --ink:#1C2230; --muted:#6B7180; --line:#DEE0DA;
+  --accent:#E0522A; --accent-ink:#FFFFFF; --soft:#FBE7DF; --ok:#2F8A57; --ok-soft:#E1F1E7;
+  --gp:#C2412A; --gc:#B8860B; --gf:#2F8A57; --gx:#5A5FB0;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14171D; --surface:#1D2129; --ink:#ECEEF2; --muted:#9AA0AD; --line:#2C313B;
+  --accent:#FF7149; --accent-ink:#1A0E09; --soft:#3A231B; --ok:#5CC189; --ok-soft:#1C3227; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14171D; --surface:#1D2129; --ink:#ECEEF2; --muted:#9AA0AD; --line:#2C313B;
+  --accent:#FF7149; --accent-ink:#1A0E09; --soft:#3A231B; --ok:#5CC189; --ok-soft:#1C3227; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:20px calc(96px + env(safe-area-inset-bottom,0px))}
+.wrap{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance;line-height:1}
+h1{font-size:2.4rem;font-weight:900}
+h2{font-size:1.7rem;font-weight:900}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header{display:flex;flex-direction:column;gap:4px}
+section[data-tab]{display:flex;flex-direction:column;gap:16px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:.72rem;color:var(--muted)}
+.day b{font-family:var(--display);font-size:1.2rem;color:var(--ink)}
+.day.today{border-color:var(--accent);border-width:2px}
+.day.done{background:var(--ok-soft);border-color:var(--ok)}
+.day.done b{color:var(--ok)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.progress{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.check li{border-top:1px solid var(--line)}
+.check li:first-child{border-top:0}
+.check label{display:grid;grid-template-columns:26px 1fr auto;gap:12px;align-items:start;padding:12px 0;cursor:pointer}
+.check li:first-child label{padding-top:2px}
+.check input{width:24px;height:24px;accent-color:var(--ok);margin:0}
+.check .name{font-weight:600;min-width:0}
+.check .tip{display:block;font-size:.85rem;color:var(--muted);font-weight:400}
+.check .sets{font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;text-align:right;max-width:9em}
+.check .time{font-family:var(--display);font-size:1.25rem;font-weight:900;color:var(--accent);line-height:1.1;text-align:right}
+.check li.on .name{color:var(--muted);text-decoration:line-through}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:.82rem;font-weight:600;padding:3px 10px 3px 4px;border-radius:99px;background:var(--bg);border:1px solid var(--line);white-space:nowrap}
+.pill b{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:99px;font-size:.75rem;color:#fff}
+.gP b{background:var(--gp)}.gC b{background:var(--gc)}.gF b{background:var(--gf)}.gX b{background:var(--gx)}
+.portion{display:flex;flex-direction:column;gap:4px;padding-top:10px;border-top:1px solid var(--line)}
+.portion .pill{align-self:flex-start}
+.portion p{font-size:.9rem;color:var(--muted)}
+.foods{list-style:none;margin:4px 0 0;padding:0;font-size:.88rem;color:var(--muted);display:flex;flex-direction:column;gap:1px}
+.foods b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.btn{font:700 1rem var(--body);padding:14px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.btn:disabled{background:var(--ok-soft);color:var(--ok);cursor:default}
+.seg{display:flex;gap:6px}
+.seg button{flex:1;font:600 .9rem var(--body);padding:9px 6px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{background:var(--soft);border-radius:12px;padding:12px 14px;font-size:.9rem}
+.rest{display:flex;flex-direction:column;gap:6px}
+.rules{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:.92rem}
+.row{display:flex;gap:8px}
+.row input{flex:1;min-width:0;font:600 1.1rem var(--body);padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.chart{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font:500 11px var(--body)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.list li:first-child{border-top:0}
+.list button{background:none;border:0;color:var(--muted);cursor:pointer;font:inherit;padding:0 4px}
+.empty{color:var(--muted);font-size:.9rem}
+.big{display:flex;align-items:baseline;gap:8px}
+.big b{font-family:var(--display);font-size:3rem;font-weight:900;line-height:1}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(3,1fr);
+  padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+nav button{background:none;border:0;padding:8px 0;font:600 .8rem var(--body);color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-current="true"]{color:var(--accent)}
+.status{font-size:.75rem;color:var(--muted);text-align:center}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow" id="dateLabel">Hoje</span>
+    <h1>Treino do Kaique</h1>
+  </header>
+
+  <!-- HOJE -->
+  <section data-tab="hoje">
+    <div class="week" id="week"></div>
+
+    <div class="card" id="workoutCard">
+      <div class="head"><h2 id="tTitle">Treino A</h2><span class="eyebrow" id="tFocus"></span></div>
+      <div id="restBox" class="rest" hidden>
+        <p><strong>Hoje é descanso.</strong> O músculo cresce enquanto você descansa e come bem. Foque na comida.</p>
+        <p class="muted" style="font-size:.9rem">Perdeu um treino essa semana? Pode fazer hoje:</p>
+        <div class="seg" id="pick"></div>
+      </div>
+      <div id="trainBox">
+        <p class="muted" style="font-size:.9rem;margin-bottom:8px">Faça as repetições, descanse 1 minuto e repita. Marque quando terminar todas as séries.</p>
+        <ul class="check" id="exList"></ul>
+      </div>
+      <button class="btn" id="finish">Terminei o treino</button>
+    </div>
+
+    <div class="card">
+      <div class="head"><h2>Comida de hoje</h2><span class="eyebrow num" id="mealCount">0 de 5</span></div>
+      <div class="progress"><i id="mealBar"></i></div>
+      <ul class="check" id="mealList"></ul>
+      <p class="muted" style="font-size:.85rem">Monte cada refeição com o que tiver em casa. O número é quantas porções. Veja o tamanho da porção em <strong>Como fazer</strong>.</p>
+    </div>
+  </section>
+
+  <!-- COMO FAZER -->
+  <section data-tab="guia" hidden>
+    <h2>Como funciona</h2>
+    <div class="card">
+      <h3>A semana</h3>
+      <p>Segunda <strong>A</strong>, quarta <strong>B</strong>, sábado <strong>C</strong>. Os outros dias são descanso.</p>
+      <p class="muted" style="font-size:.9rem">Não deu pra treinar? Faça o treino que faltou no próximo dia livre.</p>
+    </div>
+    <div class="card">
+      <h3>As palavras</h3>
+      <ul class="rules">
+        <li><strong>Repetição:</strong> subir e descer uma vez.</li>
+        <li><strong>Série:</strong> um bloco de repetições seguidas. "3 séries de 12" = faz 12, descansa, faz 12, descansa, faz 12.</li>
+        <li><strong>Até cansar:</strong> faça até não conseguir mais nenhuma com o movimento certinho.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pra crescer</h3>
+      <ul class="rules">
+        <li>Desça o peso devagar, contando 3 segundos.</li>
+        <li>Ficou fácil? Faça mais repetições ou mais devagar.</li>
+        <li>Use o halter de 10 kg sempre que aguentar 8 repetições bem feitas.</li>
+        <li>Comer bem conta tanto quanto treinar. Não pule refeição.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tamanho de 1 porção</h3>
+      <p class="muted" style="font-size:.9rem">Use a balança e pese a comida já pronta. Vale qualquer coisa do grupo.</p>
+      <div class="portion"><span class="pill gP"><b>1</b> Proteína</span><p>100 g de qualquer carne, frango ou peixe · 3 ovos · 1 lata de atum ou sardinha</p></div>
+      <div class="portion"><span class="pill gC"><b>1</b> Carboidrato</span><p>120 g de arroz ou macarrão · 150 g de feijão · 150 g de batata ou aipim · 50 g de pão (1 pão francês) · 100 g de cuscuz</p></div>
+      <div class="portion"><span class="pill gF"><b>1</b> Fruta</span><p>1 fruta de qualquer tipo</p></div>
+      <div class="portion"><span class="pill gX"><b>1</b> Extra</span><p>1 colher de azeite, manteiga ou pasta de amendoim · 1 copo de leite · 1 fatia de queijo</p></div>
+      <p class="muted" style="font-size:.9rem">Ex.: almoço com <strong>3 Carboidrato</strong> = 240 g de arroz + 150 g de feijão.</p>
+    </div>
+    <div class="note">Se o peso não subir em 2 semanas, coloque mais 1 Carboidrato no almoço e no jantar.</div>
+  </section>
+
+  <!-- PESO -->
+  <section data-tab="peso" hidden>
+    <h2>Seu peso</h2>
+    <div class="card">
+      <div class="big"><b class="num" id="curKg">57</b><span class="muted">kg · meta 61 kg</span></div>
+      <svg class="chart" id="chart" viewBox="0 0 320 160" role="img" aria-label="Gráfico de peso"></svg>
+      <p class="muted" style="font-size:.9rem">Pese 1 vez por semana, de manhã, antes de comer.</p>
+      <form class="row" id="wForm">
+        <input id="wInput" type="text" inputmode="decimal" placeholder="Ex.: 57,5" aria-label="Seu peso hoje em kg">
+        <button class="btn" type="submit">Salvar</button>
+      </form>
+      <ul class="list" id="wList"></ul>
+    </div>
+    <div class="card">
+      <h3>Treinos feitos</h3>
+      <ul class="list" id="hList"></ul>
+    </div>
+  </section>
+
+  <p class="status" id="status"></p>
+</div>
+
+<nav aria-label="Seções">
+  <button data-go="hoje" aria-current="true"><svg viewBox="0 0 24 24"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg>Hoje</button>
+  <button data-go="guia"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>Como fazer</button>
+  <button data-go="peso"><svg viewBox="0 0 24 24"><path d="M4 19l5-6 4 3 7-9"/><path d="M15 7h5v5"/></svg>Peso</button>
+</nav>
+
+<script>
+const START={kg:57,d:"2026-10-19"}, GOAL=61;
+const W={
+  A:{name:"Treino A",focus:"Peito · ombro · tríceps",ex:[
+    ["Flexão de braço","4 séries até cansar","Corpo reto, peito quase encosta no chão"],
+    ["Flexão com pés na cadeira","3 séries de 8 a 12","Pés no sofá ou cadeira, mãos no chão"],
+    ["Halter acima da cabeça","3 séries de 10 a 15","Halter de 10 kg, sentado, empurra pra cima"],
+    ["Elevação lateral","3 séries de 12 a 15","Halter de 5 kg, abre os braços até a altura do ombro"],
+    ["Tríceps atrás da cabeça","3 séries de 10 a 15","Halter de 10 kg com as duas mãos, desce atrás da cabeça"],
+    ["Mergulho na cadeira","3 séries até cansar","Mãos na beirada da cadeira, desce o corpo"]
+  ]},
+  B:{name:"Treino B",focus:"Costas · bíceps",ex:[
+    ["Remada com um braço","4 séries de 12 (cada lado)","Halter de 10 kg, joelho e mão apoiados na cama, puxa até a cintura"],
+    ["Remada com os dois","3 séries de 12 a 15","Corpo inclinado pra frente, costas retas, puxa os dois halteres"],
+    ["Pullover","3 séries de 12","Deitado, halter de 10 kg, leva por trás da cabeça e volta"],
+    ["Abrir os braços inclinado","3 séries de 15","Halter de 5 kg, corpo inclinado, abre como asa"],
+    ["Rosca bíceps","3 séries de 10 a 12","Halter de 10 kg, sobe sem balançar o corpo"],
+    ["Rosca martelo","3 séries de 12 a 15","Palma da mão virada pra dentro"]
+  ]},
+  C:{name:"Treino C",focus:"Pernas · abdômen",ex:[
+    ["Agachamento com halter","4 séries de 15 a 20","Halter de 10 kg colado no peito, desce como se fosse sentar"],
+    ["Afundo com pé na cadeira","3 séries de 10 (cada perna)","Pé de trás na cadeira, halter de 5 kg em cada mão"],
+    ["Stiff","3 séries de 12 a 15","Joelho quase reto, leva o quadril pra trás e desce os halteres"],
+    ["Panturrilha no degrau","3 séries de 20","Sobe na ponta do pé segurando um halter"],
+    ["Abdominal","3 séries de 20","Deitado, sobe só os ombros, sem puxar o pescoço"],
+    ["Prancha","3 vezes de 30 a 60 segundos","Apoiado nos cotovelos, corpo reto e parado"]
+  ]}
+};
+const PLAN={1:"A",3:"B",6:"C"}; // segunda, quarta, sábado
+const G={P:"Proteína",C:"Carboidrato",F:"Fruta",X:"Extra"};
+const MEALS=[
+  ["9h","Café da manhã",[["P",1],["C",2],["F",1],["X",1]]],
+  ["12h","Almoço",[["P",1],["C",3],["X",1]],"+ salada à vontade"],
+  ["15h30","Lanche",[["C",2],["F",1],["X",1]]],
+  ["18h30","Quando chegar",[["C",1],["F",1],["X",1]]],
+  ["20h30","Jantar",[["P",1],["C",3]]]
+];
+
+let state={weights:[],log:{},ex:{},meals:{}};
+let ref=null,writing=false,dirty=false,timer=null;
+const $=s=>document.querySelector(s);
+const iso=d=>{const z=new Date(d);z.setMinutes(z.getMinutes()-z.getTimezoneOffset());return z.toISOString().slice(0,10)};
+const today=iso(new Date()), dow=new Date().getDay();
+const fmt=d=>d.slice(8,10)+"/"+d.slice(5,7);
+const kg=v=>String(v).replace(".",",");
+let chosen=null;
+
+function nextMissing(){
+  const now=new Date(), mon=new Date(now); mon.setDate(now.getDate()-((dow+6)%7));
+  const done=new Set(); for(let i=0;i<7;i++){const d=new Date(mon);d.setDate(mon.getDate()+i);const l=state.log[iso(d)];if(l)done.add(l.w)}
+  return ["A","B","C"].find(k=>!done.has(k))||"A";
+}
+function workoutToday(){return state.log[today]?.w || chosen || PLAN[dow] || null}
+
+function renderWeek(){
+  const now=new Date(), mon=new Date(now); mon.setDate(now.getDate()-((dow+6)%7));
+  const n=["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"]; let h="";
+  for(let i=0;i<7;i++){const d=new Date(mon);d.setDate(mon.getDate()+i);const k=iso(d);const l=state.log[k];const p=PLAN[(i+1)%7];
+    h+=`<div class="day${k===today?" today":""}${l?" done":""}"><span>${n[i]}</span><b>${l?l.w:(p||"–")}</b></div>`}
+  $("#week").innerHTML=h;
+  const days=["domingo","segunda","terça","quarta","quinta","sexta","sábado"];
+  $("#dateLabel").textContent="Hoje · "+days[dow]+", "+fmt(today);
+}
+function renderWorkout(){
+  const k=workoutToday(), done=state.log[today];
+  $("#restBox").hidden=!!k; $("#trainBox").hidden=!k; $("#finish").hidden=!k;
+  if(!k){
+    $("#tTitle").textContent="Descanso"; $("#tFocus").textContent="";
+    const sug=nextMissing();
+    $("#pick").innerHTML=["A","B","C"].map(x=>`<button data-w="${x}" aria-pressed="false">Treino ${x}${x===sug?" ★":""}</button>`).join("");
+    return;
+  }
+  const w=W[k], on=new Set(state.ex[today]||[]);
+  $("#tTitle").textContent=w.name; $("#tFocus").textContent=w.focus;
+  $("#exList").innerHTML=w.ex.map((e,i)=>`<li class="${on.has(i)?"on":""}"><label><input type="checkbox" id="ex${i}" data-ex="${i}" ${on.has(i)?"checked":""}><span class="name">${e[0]}<span class="tip">${e[2]}</span></span><span class="sets">${e[1]}</span></label></li>`).join("");
+  const b=$("#finish"); b.disabled=!!done; b.textContent=done?"Treino feito ✓ Boa!":"Terminei o treino";
+}
+function renderMeals(){
+  const on=new Set(state.meals[today]||[]);
+  $("#mealList").innerHTML=MEALS.map((m,i)=>`<li class="${on.has(i)?"on":""}"><label><input type="checkbox" id="meal${i}" data-meal="${i}" ${on.has(i)?"checked":""}><span class="name">${m[1]}<span class="pills">${m[2].map(f=>`<span class="pill g${f[0]}"><b>${f[1]}</b> ${G[f[0]]}</span>`).join("")}</span>${m[3]?`<span class="tip">${m[3]}</span>`:""}</span><span class="time">${m[0]}</span></label></li>`).join("");
+  $("#mealCount").textContent=on.size+" de "+MEALS.length;
+  $("#mealBar").style.width=(on.size/MEALS.length*100)+"%";
+}
+function renderWeight(){
+  const pts=[START,...state.weights.filter(w=>w.d!==START.d)].sort((a,b)=>a.d<b.d?-1:1);
+  $("#curKg").textContent=kg(pts[pts.length-1].kg);
+  const Wd=320,H=160,pl=30,pr=12,pt=14,pb=24;
+  const ks=pts.map(p=>p.kg).concat([GOAL]); const lo=Math.floor(Math.min(...ks))-1, hi=Math.ceil(Math.max(...ks))+1;
+  const t0=new Date(START.d).getTime(), goalT=t0+90*864e5, t1=Math.max(new Date(pts[pts.length-1].d).getTime(),goalT);
+  const x=t=>pl+(t-t0)/(t1-t0)*(Wd-pl-pr), y=v=>pt+(hi-v)/(hi-lo)*(H-pt-pb);
+  let g="", step=(hi-lo)>8?2:1;
+  for(let v=lo;v<=hi;v+=step) g+=`<line x1="${pl}" x2="${Wd-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${pl-6}" y="${y(v)+4}" text-anchor="end">${v}</text>`;
+  g+=`<line x1="${x(t0)}" y1="${y(START.kg)}" x2="${x(goalT)}" y2="${y(GOAL)}" stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="1.5"/><text x="${x(goalT)}" y="${y(GOAL)-7}" text-anchor="end">meta</text>`;
+  const P=pts.map(p=>[x(new Date(p.d).getTime()),y(p.kg)]);
+  if(P.length>1) g+=`<polyline points="${P.map(p=>p.join(",")).join(" ")}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>`;
+  P.forEach((p,i)=>g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${i===P.length-1?5:3}" fill="var(--accent)"/>`);
+  g+=`<text x="${pl}" y="${H-6}">${fmt(START.d)}</text><text x="${Wd-pr}" y="${H-6}" text-anchor="end">${fmt(iso(new Date(t1)))}</text>`;
+  $("#chart").innerHTML=g;
+  const ws=[...state.weights].sort((a,b)=>a.d<b.d?1:-1);
+  $("#wList").innerHTML=ws.map(w=>`<li><span>${fmt(w.d)}</span><span><strong>${kg(w.kg)} kg</strong> <button data-del="${w.d}" aria-label="Apagar">✕</button></span></li>`).join("")+`<li><span>${fmt(START.d)} · começo</span><strong>57 kg</strong></li>`;
+  const hs=Object.entries(state.log).sort((a,b)=>a[0]<b[0]?1:-1).slice(0,12);
+  $("#hList").innerHTML=hs.length?hs.map(([d,l])=>`<li><span>${fmt(d)}</span><strong>${W[l.w].name}</strong></li>`).join(""):`<li class="empty">Quando terminar um treino, ele aparece aqui.</li>`;
+}
+function render(){renderWeek();renderWorkout();renderMeals();renderWeight()}
+
+function prune(){const cut=iso(new Date(Date.now()-30*864e5));for(const o of [state.ex,state.meals])for(const k in o)if(k<cut)delete o[k]}
+function save(){
+  prune();
+  try{localStorage.setItem("treino-k2",JSON.stringify(state))}catch(e){}
+  if(!ref)return; dirty=true; clearTimeout(timer); timer=setTimeout(flush,700);
+}
+async function flush(){
+  if(writing||!dirty)return; writing=true; dirty=false;
+  try{await ref.set(JSON.parse(JSON.stringify(state)));}
+  catch(e){$("#status").textContent="Salvo só neste celular por enquanto"}
+  writing=false; if(dirty)flush();
+}
+
+document.addEventListener("click",e=>{
+  const go=e.target.closest("[data-go]");
+  if(go){document.querySelectorAll("section[data-tab]").forEach(s=>s.hidden=s.dataset.tab!==go.dataset.go);
+    document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-current",b===go));window.scrollTo(0,0);return}
+  const pw=e.target.closest("[data-w]"); if(pw){chosen=pw.dataset.w;renderWorkout();return}
+  const del=e.target.closest("[data-del]"); if(del){state.weights=state.weights.filter(w=>w.d!==del.dataset.del);save();renderWeight()}
+});
+document.addEventListener("change",e=>{
+  const t=e.target;
+  if(t.dataset.ex!==undefined){const s=new Set(state.ex[today]||[]);t.checked?s.add(+t.dataset.ex):s.delete(+t.dataset.ex);state.ex[today]=[...s];t.closest("li").classList.toggle("on",t.checked);save()}
+  if(t.dataset.meal!==undefined){const s=new Set(state.meals[today]||[]);t.checked?s.add(+t.dataset.meal):s.delete(+t.dataset.meal);state.meals[today]=[...s];save();renderMeals()}
+});
+$("#finish").addEventListener("click",()=>{const k=workoutToday();if(!k)return;state.log[today]={w:k};save();render()});
+$("#wForm").addEventListener("submit",e=>{e.preventDefault();const v=parseFloat($("#wInput").value.replace(",","."));
+  if(!(v>30&&v<150)){$("#wInput").value="";$("#wInput").placeholder="Digite só o número, ex.: 57,5";return}
+  state.weights=state.weights.filter(w=>w.d!==today);state.weights.push({d:today,kg:Math.round(v*10)/10});$("#wInput").value="";save();renderWeight()});
+
+try{const s=JSON.parse(localStorage.getItem("treino-k2")||"null");if(s)state=Object.assign(state,s)}catch(e){}
+render();
+
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+</script>
+
+</body>
+</html>
