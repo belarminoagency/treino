@@ -118,6 +118,20 @@
   "pico": 0.5956,
   "forma": "crescendo"
  },
+ "whoosh/subida_01.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.1064,
+  "duracao_util": 0.344,
+  "pico": 0.2708,
+  "forma": "crescendo"
+ },
+ "whoosh/subida_02.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.0778,
+  "duracao_util": 0.272,
+  "pico": 0.2157,
+  "forma": "crescendo"
+ },
  "whoosh/whoosh_01.wav": {
   "categoria": "whoosh",
   "inicio_util": 0.0508,

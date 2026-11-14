@@ -75,6 +75,9 @@ def main():
     grava("interface", "digitacao_01", digitacao())
     grava("interface", "carimbo_01", carimbo())
     grava("riser", "riser_01", riser())
+    # subida curta: varredura ascendente que termina no pico (barra/elemento que sobe rápido)
+    for i, (d, f0, f1) in enumerate([(0.45, 250, 6000), (0.35, 400, 8000)], 1):
+        grava("whoosh", f"subida_{i:02d}", whoosh(d, f0, f1, pico=0.85))
     print("ok:", RAIZ)
 
 if __name__ == "__main__":

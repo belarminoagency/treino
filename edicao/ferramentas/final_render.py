@@ -23,6 +23,19 @@ def le_frames(cmd, w, h, ch):
 def rgba(mov):
     return le_frames(["ffmpeg", "-v", "error", "-i", str(mov), "-f", "rawvideo", "-pix_fmt", "rgba", "-"], 1080, 1920, 4)
 
+def limpa_recorte(alfa):
+    """Tira do recorte o que não é a pessoa: transparências fracas (objetos do fundo que o modelo pegou pela metade)
+    e manchas soltas. Fica só o maior pedaço sólido (a pessoa), com a borda macia preservada."""
+    a = alfa.astype(np.float32) / 255.0
+    a = np.clip((a - 0.25) / 0.6, 0, 1)
+    solido = (a > 0.5).astype(np.uint8)
+    n, rot, st, _ = cv2.connectedComponentsWithStats(solido, 8)
+    if n > 2:
+        maior = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+        manter = cv2.dilate((rot == maior).astype(np.uint8), np.ones((9, 9), np.uint8))
+        a *= manter
+    return (a * 255).astype(np.uint8)
+
 def blend(base, ov):
     a = ov[:, :, 3:4].astype(np.float32) / 255.0
     if a.max() == 0: return base
@@ -70,7 +83,8 @@ def main():
     ap.add_argument("--tras", help="animações ATRÁS da pessoa (RGBA)"); ap.add_argument("--frente", help="animações na frente da pessoa (RGBA)")
     ap.add_argument("--pessoa", help="recorte da pessoa na sequência (MOV com alfa, resolução da cópia de trabalho)")
     ap.add_argument("--sfx"); ap.add_argument("--segura", type=float, default=1.0); ap.add_argument("--largura", type=int, default=1080)
-    ap.add_argument("--saida"); a = ap.parse_args()
+    ap.add_argument("--saida")
+    ap.add_argument("--so-audio", help="reaproveita a imagem deste MP4 e refaz só o áudio (efeitos/níveis)"); a = ap.parse_args()
     pasta = Path(a.pasta); d = estado.ler(pasta); fps = d["midia"]["fps"]
     cam = json.loads((pasta / d["camera"]["keyframes"]).read_text()); Q = cam["quadros"]; ax, ay = cam["ancora"]
     esconde = [(round(i["ini"]*fps), round(i["fim"]*fps)) for i in d["motions"]["itens"]
@@ -79,6 +93,11 @@ def main():
     wav, log = audio(pasta, d, json.loads(Path(a.sfx).read_text(encoding="utf-8")), a.segura, tmp)
     vers = d.get("final", {}).get("versao", 0) + 1
     out = Path(a.saida) if a.saida else pasta / "Renders" / f"{d['projeto']}_final_v{vers:02d}.mp4"
+    if a.so_audio:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", a.so_audio, "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                        "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), "-movflags", "+faststart", "-shortest", str(out)], check=True)
+        d = estado.ler(pasta); d["final"].update({"versao": vers, "arquivo": str(out.relative_to(pasta))}); estado.gravar(pasta, d)
+        print(out, "(só áudio)"); return
     W, H = 1080, 1920
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(fps), "-i", "-",
         "-i", str(wav), "-map", "0:v", "-map", "1:a", "-vf", f"scale={a.largura}:-2:flags=lanczos",
@@ -113,7 +132,7 @@ def main():
             if p_ is not None and t_ is not None and t_[:, :, 3].any():
                 # a pessoa só precisa voltar por cima quando há algo atrás dela neste quadro
                 pw_ = cv2.warpAffine(p_, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0, 0))
-                img = blend(img, np.dstack([cam_img, pw_[:, :, 3]]))
+                img = blend(img, np.dstack([cam_img, limpa_recorte(pw_[:, :, 3])]))
             if f_ is not None: img = blend(img, f_)
             if m_ is not None: img = blend(img, m_)
             if l_ is not None and not any(i0 <= f < i1 for i0, i1 in esconde): img = blend(img, l_)
