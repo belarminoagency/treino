@@ -1,0 +1,181 @@
+{
+ "projeto": "2026-11-14_Video01",
+ "perfil": "principal",
+ "tipo": "apresentador",
+ "formato": "vertical",
+ "espelhar": true,
+ "brutos": [
+  {
+   "arquivo": "bruto01.mp4",
+   "original": "VID_20260927_192106354.mp4"
+  },
+  {
+   "arquivo": "bruto02.mp4",
+   "original": "VID_20260927_192136014.mp4"
+  },
+  {
+   "arquivo": "bruto03.mp4",
+   "original": "VID_20260927_192153783.mp4"
+  },
+  {
+   "arquivo": "bruto04.mp4",
+   "original": "VID_20260927_192213720.mp4"
+  },
+  {
+   "arquivo": "bruto05.mp4",
+   "original": "VID_20260927_192335831.mp4"
+  },
+  {
+   "arquivo": "bruto06.mp4",
+   "original": "VID_20260927_192344372.mp4"
+  },
+  {
+   "arquivo": "bruto07.mp4",
+   "original": "VID_20260927_192402698.mp4"
+  },
+  {
+   "arquivo": "bruto08.mp4",
+   "original": "VID_20260927_192416989.mp4"
+  },
+  {
+   "arquivo": "bruto09.mp4",
+   "original": "VID_20260927_192616526.mp4"
+  }
+ ],
+ "etapas": {
+  "iniciar": "concluido",
+  "preparar": "aguardando_pessoa",
+  "cortes": "pendente",
+  "legendas": "pendente",
+  "motion_mapa": "pendente",
+  "motion_render": "pendente",
+  "camera": "pendente",
+  "sfx": "pendente",
+  "final": "pendente"
+ },
+ "pendencias": [
+  {
+   "id": "p01",
+   "etapa": "preparar",
+   "texto": "Transcrição bloqueada: o modelo baixa de us.aws.cdn.hf.co e cas-server.xethub.hf.co, não liberados no ambiente treino"
+  }
+ ],
+ "midia": {
+  "fps": 30,
+  "largura": 864,
+  "altura": 1920,
+  "espelhado": true,
+  "itens": [
+   {
+    "arquivo": "bruto01.mp4",
+    "duracao": 7.957767,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 32.295,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto01_trab.mp4",
+    "duracao_trab": 7.966667
+   },
+   {
+    "arquivo": "bruto02.mp4",
+    "duracao": 7.0611,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 32.431,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto02_trab.mp4",
+    "duracao_trab": 7.066667
+   },
+   {
+    "arquivo": "bruto03.mp4",
+    "duracao": 7.730811,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 32.209,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto03_trab.mp4",
+    "duracao_trab": 7.733333
+   },
+   {
+    "arquivo": "bruto04.mp4",
+    "duracao": 7.124444,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 32.283,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto04_trab.mp4",
+    "duracao_trab": 7.133333
+   },
+   {
+    "arquivo": "bruto05.mp4",
+    "duracao": 6.630389,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 33.03,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto05_trab.mp4",
+    "duracao_trab": 6.633333
+   },
+   {
+    "arquivo": "bruto06.mp4",
+    "duracao": 4.382822,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 33.312,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto06_trab.mp4",
+    "duracao_trab": 4.366667
+   },
+   {
+    "arquivo": "bruto07.mp4",
+    "duracao": 7.581656,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 32.315,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto07_trab.mp4",
+    "duracao_trab": 7.566667
+   },
+   {
+    "arquivo": "bruto08.mp4",
+    "duracao": 6.302767,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 33.319,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto08_trab.mp4",
+    "duracao_trab": 6.3
+   },
+   {
+    "arquivo": "bruto09.mp4",
+    "duracao": 9.140133,
+    "largura": 864,
+    "altura": 1920,
+    "rotacao": 0,
+    "fps_medio": 31.619,
+    "vfr": true,
+    "audio": true,
+    "trabalho": "_CLAUDE/midia/bruto09_trab.mp4",
+    "duracao_trab": 9.133333
+   }
+  ],
+  "alertas": [],
+  "obs": "VFR convertido para 30 fps CFR"
+ }
+}
