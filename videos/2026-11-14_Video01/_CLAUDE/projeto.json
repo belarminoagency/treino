@@ -46,7 +46,7 @@
   "iniciar": "concluido",
   "preparar": "concluido",
   "cortes": "concluido",
-  "legendas": "em_andamento",
+  "legendas": "aguardando_aprovacao",
   "motion_mapa": "pendente",
   "motion_render": "pendente",
   "camera": "pendente",
@@ -1252,5 +1252,10 @@
  },
  "pendencias_final": {
   "segura_fim": "A última legenda (NÃO VENDE) fica só ~1 s: no final, segurar o último quadro ~1 s a mais"
+ },
+ "versoes_usadas": {
+  "legendas": {
+   "cortes": 1
+  }
  }
 }
