@@ -20,3 +20,5 @@ __pycache__/
 .hyperframes/
 # Projeto da legenda é gerado pelo legendas_render.py a partir do estado
 videos/**/_CLAUDE/legendas/hf/
+# Renders e arquivos temporários do render ficam fora do git
+videos/**/Renders/
