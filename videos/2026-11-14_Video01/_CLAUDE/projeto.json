@@ -51,7 +51,7 @@
   "motion_render": "concluido",
   "camera": "concluido",
   "sfx": "concluido",
-  "final": "em_andamento"
+  "final": "aguardando_aprovacao"
  },
  "pendencias": [
   {
@@ -1259,6 +1259,9 @@
   },
   "motion_mapa": {
    "cortes": 1
+  },
+  "final": {
+   "cortes": 1
   }
  },
  "motions": {
@@ -1543,5 +1546,12 @@
   "versao": 1,
   "plano": "_CLAUDE/sfx/plano_v01.json",
   "itens": 37
+ },
+ "final": {
+  "versao": 1,
+  "arquivo": "Renders/2026-11-14_Video01_final_v01.mp4",
+  "quadros": 1049,
+  "segura": 1.0,
+  "loudness": "-14,6 LUFS integrado"
  }
 }
