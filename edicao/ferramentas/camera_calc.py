@@ -36,16 +36,19 @@ def main(pasta, mov):
     N = fo; fe = m.get("fechado", 1.15); lenta = m.get("lenta", 0.04)
     # o plano de cada corte é escolhido por onde a câmera TERMINOU no take anterior (o corte sempre muda de plano)
     planos, quadros, avisos = {}, [], []
+    continua_de = 1.0
     ult_s = None
     for f in range(N):
         t = f / fps
         sid, a, b = next((c for c in cortes if round(c[1]*fps) <= f < round(c[2]*fps)), cortes[-1])
         if sid not in planos:
             forcado = m.get("planos", {}).get(sid)
+            trocas = m.get("trocas")  # se definido: só esses cortes mudam de plano; nos outros a câmera CONTINUA (sem pulo)
             if forcado: planos[sid] = forcado
             elif ult_s is None: planos[sid] = "aberto"
+            elif trocas is not None and sid not in trocas: planos[sid] = "continua"; continua_de = ult_s
             else: planos[sid] = "aberto" if ult_s >= (1 + fe) / 2 else "fechado"
-        base = fe if planos[sid] == "fechado" else 1.0
+        base = fe if planos[sid] == "fechado" else (continua_de if planos[sid] == "continua" else 1.0)
         s = base * (1 + lenta * (t - a) / max(b - a, 0.01))
         tx = ty = 0.0
         for mv in m["movimentos"]:
@@ -74,6 +77,7 @@ def main(pasta, mov):
         ult_s = s
     # avisos de corte sem mudança de plano
     for (sid1, a1, b1), (sid2, a2, b2) in zip(cortes, cortes[1:]):
+        if planos.get(sid2) == "continua": continue
         f2 = round(a2 * fps); f1 = f2 - 1
         if f2 < N and abs(quadros[f2][0] / quadros[f1][0] - 1) < 0.05:
             avisos.append(f"corte {sid2} ({a2:.2f}s): mudança de plano < 5%")

@@ -1,0 +1,117 @@
+{
+ "versao": 1,
+ "fps": 30,
+ "segmentos": [
+  {
+   "id": "s001",
+   "arquivo": "bruto01.mp4",
+   "ini": 2.3,
+   "fim": 6.6333,
+   "frame_ini": 69,
+   "frame_fim": 199,
+   "texto": "Seu concorrente pode não ser melhor que você, mas ele tá aparecendo mais.",
+   "obs": "gancho"
+  },
+  {
+   "id": "s002",
+   "arquivo": "bruto02.mp4",
+   "ini": 1.1667,
+   "fim": 5.4667,
+   "frame_ini": 35,
+   "frame_fim": 164,
+   "texto": "Pensa comigo, você tem um produto excelente, atende bem, tem cliente satisfeito?",
+   "obs": ""
+  },
+  {
+   "id": "s003",
+   "arquivo": "bruto03.mp4",
+   "ini": 0.6667,
+   "fim": 2.5,
+   "frame_ini": 20,
+   "frame_fim": 75,
+   "texto": "Só que ninguém vê isso,",
+   "obs": ""
+  },
+  {
+   "id": "s004",
+   "arquivo": "bruto03.mp4",
+   "ini": 2.8667,
+   "fim": 6.0667,
+   "frame_ini": 86,
+   "frame_fim": 182,
+   "texto": "e enquanto isso, seu concorrente posta todos os dias.",
+   "obs": "pausa de 0,6 s cortada"
+  },
+  {
+   "id": "s005",
+   "arquivo": "bruto04.mp4",
+   "ini": 0.9333,
+   "fim": 5.4667,
+   "frame_ini": 28,
+   "frame_fim": 164,
+   "texto": "Ele mostra o produto, mostra os clientes, mostra os bastidores e mostra os resultados.",
+   "obs": ""
+  },
+  {
+   "id": "s006",
+   "arquivo": "bruto05.mp4",
+   "ini": 0.7,
+   "fim": 4.4667,
+   "frame_ini": 21,
+   "frame_fim": 134,
+   "texto": "Então, quando alguém pensa em comprar, quem vem primeiro na cabeça?",
+   "obs": ""
+  },
+  {
+   "id": "s007",
+   "arquivo": "bruto06.mp4",
+   "ini": 0.8,
+   "fim": 2.2667,
+   "frame_ini": 24,
+   "frame_fim": 68,
+   "texto": "Quem está aparecendo.",
+   "obs": ""
+  },
+  {
+   "id": "s008",
+   "arquivo": "bruto07.mp4",
+   "ini": 1.6667,
+   "fim": 4.5,
+   "frame_ini": 50,
+   "frame_fim": 135,
+   "texto": "Isso não significa que ele tenha um produto melhor que o seu.",
+   "obs": ""
+  },
+  {
+   "id": "s009",
+   "arquivo": "bruto08.mp4",
+   "ini": 1.3667,
+   "fim": 4.3333,
+   "frame_ini": 41,
+   "frame_fim": 130,
+   "texto": "Significa que ele está construindo a presença dele.",
+   "obs": ""
+  },
+  {
+   "id": "s010",
+   "arquivo": "bruto09.mp4",
+   "ini": 1.2667,
+   "fim": 5.0667,
+   "frame_ini": 38,
+   "frame_fim": 152,
+   "texto": "Ser bom é importante, mas se ninguém lembra que você existe,",
+   "obs": ""
+  },
+  {
+   "id": "s011",
+   "arquivo": "bruto09.mp4",
+   "ini": 5.3,
+   "fim": 7.2333,
+   "frame_ini": 159,
+   "frame_fim": 217,
+   "texto": "ser bom sozinho não vende.",
+   "obs": "pausa de 0,5 s antes da frase final cortada"
+  }
+ ],
+ "duracao": 34.967
+}

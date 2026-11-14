@@ -1,0 +1,70 @@
+{
+ "fechado": 1.15,
+ "lenta": 0.04,
+ "ancora": [
+  540,
+  760
+ ],
+ "planos": {},
+ "movimentos": [
+  {
+   "id": "cam01",
+   "tipo": "punch",
+   "t": 3.37,
+   "mais": 0.07,
+   "dur": 0.3,
+   "obs": "'aparecendo' (ápice do gancho)"
+  },
+  {
+   "id": "cam02",
+   "tipo": "zoom",
+   "t": 9.43,
+   "mais": 0.06,
+   "dur": 0.9,
+   "curva": "sine.inOut",
+   "obs": "aproximação em 'ninguém vê isso'"
+  },
+  {
+   "id": "cam03",
+   "tipo": "punch",
+   "t": 17.6,
+   "mais": 0.04,
+   "dur": 0.3,
+   "obs": "'resultados'"
+  },
+  {
+   "id": "cam05",
+   "tipo": "punch",
+   "t": 24.11,
+   "mais": 0.07,
+   "dur": 0.3,
+   "obs": "'não significa'"
+  },
+  {
+   "id": "cam06",
+   "tipo": "zoom",
+   "t": 28.2,
+   "mais": 0.08,
+   "dur": 0.9,
+   "obs": "aproximação enquanto PRESENÇA aparece na parede (não há mais tela cheia)",
+   "curva": "sine.inOut"
+  },
+  {
+   "id": "cam07",
+   "tipo": "chega",
+   "t": 29.23,
+   "dx": 0,
+   "dy": 60,
+   "dur": 0.5,
+   "obs": "chega de baixo e freia no corte s010"
+  },
+  {
+   "id": "cam08",
+   "tipo": "punch",
+   "t": 33.9,
+   "mais": 0.08,
+   "dur": 0.3,
+   "obs": "'não vende'"
+  }
+ ]
+}

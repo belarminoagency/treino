@@ -1,22 +1,169 @@
-{"fonte": "motion/hf/index.html (anotado na construção)", "eventos": [
- {"id":"ev01","item":"mo01","t":0.40,"tipo":"card_chega","forca":"media","desc":"card escuro com duas barras sobe e assenta com leve passo"},
- {"id":"ev02","item":"mo01","t":1.85,"tipo":"barra_sobe","forca":"leve","desc":"barra branca 'você' sobe com mola"},
- {"id":"ev03","item":"mo01","t":3.37,"tipo":"barra_dispara","forca":"forte","desc":"barra azul 'ele' dispara até o topo e acende (ápice do gancho)"},
- {"id":"ev04","item":"mo01","t":4.06,"tipo":"card_sai","forca":"leve","duracao":0.25,"desc":"card encolhe e desfoca"},
- {"id":"ev05","item":"mo02","t":5.98,"tipo":"selo_entra","forca":"leve","desc":"selo 'produto' desliza da esquerda + check estala"},
- {"id":"ev06","item":"mo02","t":6.88,"tipo":"selo_entra","forca":"leve","desc":"selo 'atendimento' + check"},
- {"id":"ev07","item":"mo02","t":7.84,"tipo":"selo_entra","forca":"leve","desc":"selo 'clientes' + check"},
- {"id":"ev08","item":"mo02","t":9.43,"tipo":"carimbo","forca":"forte","desc":"selos apagam e um olho cortado carimba no meio"},
- {"id":"ev09","item":"mo03","t":11.40,"tipo":"card_chega","forca":"leve","desc":"fileira de 7 dias aparece"},
- {"id":"ev10","item":"mo03","t":12.68,"tipo":"cascata_acende","forca":"media","duracao":0.45,"desc":"7 dias acendem em azul um após o outro (tic-tic-tic)"},
- {"id":"ev11","item":"mo04","t":14.64,"tipo":"post_pop","forca":"leve","desc":"quadradinho 'produto' pula"},
- {"id":"ev12","item":"mo04","t":15.48,"tipo":"post_pop","forca":"leve","desc":"quadradinho 'clientes' pula"},
- {"id":"ev13","item":"mo04","t":16.50,"tipo":"post_pop","forca":"leve","desc":"quadradinho 'bastidores' pula"},
- {"id":"ev14","item":"mo04","t":17.60,"tipo":"post_pop","forca":"media","desc":"quadradinho 'resultados' (gráfico subindo) pula, o maior da série"},
- {"id":"ev15","item":"mo05","t":19.80,"tipo":"barra_busca_chega","forca":"leve","desc":"barra de pesquisa aparece"},
- {"id":"ev16","item":"mo05","t":19.93,"tipo":"digitacao","forca":"leve","duracao":0.57,"desc":"digita 'onde comprar…'"},
- {"id":"ev17","item":"mo05","t":20.93,"tipo":"numero_revela","forca":"forte","desc":"'1º' gigante surge do desfoque com brilho azul"},
- {"id":"ev18","item":"mo06","t":27.95,"tipo":"cartela_entra","forca":"forte","desc":"tela escurece para a cartela"},
- {"id":"ev19","item":"mo06","t":28.20,"tipo":"letras_revela","forca":"media","duracao":0.3,"desc":"PRESENÇA letra a letra + brilho azul"},
- {"id":"ev20","item":"mo07","t":33.90,"tipo":"selo_cta","forca":"media","desc":"selo branco 'Salva pra lembrar' pula no alto"}
-]}
+{
+ "fonte": "motion/hf/index.html (anotado na construção)",
+ "eventos": [
+  {
+   "id": "ev01",
+   "item": "mo01",
+   "t": 0.533,
+   "tipo": "card_chega",
+   "forca": "media",
+   "desc": "card escuro com duas barras sobe e assenta com leve passo"
+  },
+  {
+   "id": "ev02",
+   "item": "mo01",
+   "t": 1.983,
+   "tipo": "barra_sobe",
+   "forca": "leve",
+   "desc": "barra branca 'você' sobe com mola"
+  },
+  {
+   "id": "ev03",
+   "item": "mo01",
+   "t": 3.503,
+   "tipo": "barra_dispara",
+   "forca": "forte",
+   "desc": "barra azul 'ele' dispara até o topo e acende (ápice do gancho)"
+  },
+  {
+   "id": "ev04",
+   "item": "mo01",
+   "t": 4.193,
+   "tipo": "card_sai",
+   "forca": "leve",
+   "duracao": 0.25,
+   "desc": "card encolhe e desfoca"
+  },
+  {
+   "id": "ev05",
+   "item": "mo02",
+   "t": 6.313,
+   "tipo": "selo_entra",
+   "forca": "leve",
+   "desc": "selo 'produto' desliza da esquerda + check estala"
+  },
+  {
+   "id": "ev06",
+   "item": "mo02",
+   "t": 7.213,
+   "tipo": "selo_entra",
+   "forca": "leve",
+   "desc": "selo 'atendimento' + check"
+  },
+  {
+   "id": "ev07",
+   "item": "mo02",
+   "t": 8.173,
+   "tipo": "selo_entra",
+   "forca": "leve",
+   "desc": "selo 'clientes' + check"
+  },
+  {
+   "id": "ev08",
+   "item": "mo02",
+   "t": 9.997,
+   "tipo": "carimbo",
+   "forca": "forte",
+   "desc": "selos apagam e um olho cortado carimba no meio"
+  },
+  {
+   "id": "ev09",
+   "item": "mo03",
+   "t": 12.167,
+   "tipo": "card_chega",
+   "forca": "leve",
+   "desc": "fileira de 7 dias aparece"
+  },
+  {
+   "id": "ev10",
+   "item": "mo03",
+   "t": 13.447,
+   "tipo": "cascata_acende",
+   "forca": "media",
+   "duracao": 0.45,
+   "desc": "7 dias acendem em azul um após o outro (tic-tic-tic)"
+  },
+  {
+   "id": "ev11",
+   "item": "mo04",
+   "t": 15.607,
+   "tipo": "post_pop",
+   "forca": "leve",
+   "desc": "quadradinho 'produto' pula"
+  },
+  {
+   "id": "ev12",
+   "item": "mo04",
+   "t": 16.447,
+   "tipo": "post_pop",
+   "forca": "leve",
+   "desc": "quadradinho 'clientes' pula"
+  },
+  {
+   "id": "ev13",
+   "item": "mo04",
+   "t": 17.467,
+   "tipo": "post_pop",
+   "forca": "leve",
+   "desc": "quadradinho 'bastidores' pula"
+  },
+  {
+   "id": "ev14",
+   "item": "mo04",
+   "t": 18.567,
+   "tipo": "post_pop",
+   "forca": "media",
+   "desc": "quadradinho 'resultados' (gráfico subindo) pula, o maior da série"
+  },
+  {
+   "id": "ev15",
+   "item": "mo05",
+   "t": 21.0,
+   "tipo": "barra_busca_chega",
+   "forca": "leve",
+   "desc": "barra de pesquisa aparece"
+  },
+  {
+   "id": "ev16",
+   "item": "mo05",
+   "t": 21.13,
+   "tipo": "digitacao",
+   "forca": "leve",
+   "duracao": 0.57,
+   "desc": "digita 'onde comprar…'"
+  },
+  {
+   "id": "ev17",
+   "item": "mo05",
+   "t": 22.13,
+   "tipo": "numero_revela",
+   "forca": "forte",
+   "desc": "'1º' gigante surge do desfoque com brilho azul"
+  },
+  {
+   "id": "ev18",
+   "item": "mo06",
+   "t": 29.817,
+   "tipo": "cartela_entra",
+   "forca": "forte",
+   "desc": "tela escurece para a cartela"
+  },
+  {
+   "id": "ev19",
+   "item": "mo06",
+   "t": 30.067,
+   "tipo": "letras_revela",
+   "forca": "media",
+   "duracao": 0.3,
+   "desc": "PRESENÇA letra a letra + brilho azul"
+  },
+  {
+   "id": "ev20",
+   "item": "mo07",
+   "t": 36.167,
+   "tipo": "selo_cta",
+   "forca": "media",
+   "desc": "selo branco 'Salva pra lembrar' pula no alto"
+  }
+ ]
+}

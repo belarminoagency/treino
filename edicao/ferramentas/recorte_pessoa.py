@@ -20,6 +20,7 @@ def main(pasta):
     fil.append(f"{cat}concat=n={len(c['segmentos'])}:v=1:a=0[v]")
     seq = pasta / "_CLAUDE" / "midia" / "sequencia.mp4"
     subprocess.run(cmd + ["-filter_complex", ";".join(fil), "-map", "[v]", "-r", str(c["fps"]), "-c:v", "libx264", "-crf", "12", "-pix_fmt", "yuv420p", str(seq)], check=True)
+    if "--so-sequencia" in sys.argv: print(seq); return
     out = pasta / "_CLAUDE" / "midia" / "pessoa.mov"
     subprocess.run(["npx", "--yes", f"hyperframes@{d['ferramentas']['hyperframes']}", "remove-background", str(seq), "-o", str(out)], check=True)
     d = estado.ler(pasta); d.setdefault("midia", {})["pessoa"] = str(out.relative_to(pasta)); estado.gravar(pasta, d)

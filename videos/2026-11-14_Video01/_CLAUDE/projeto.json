@@ -303,121 +303,121 @@
  },
  "notas_edicao": [],
  "cortes": {
-  "versao": 1,
+  "versao": 2,
   "fps": 30,
   "segmentos": [
    {
     "id": "s001",
     "arquivo": "bruto01.mp4",
-    "ini": 2.3,
-    "fim": 6.6333,
-    "frame_ini": 69,
-    "frame_fim": 199,
+    "ini": 2.1667,
+    "fim": 6.7333,
+    "frame_ini": 65,
+    "frame_fim": 202,
     "texto": "Seu concorrente pode não ser melhor que você, mas ele tá aparecendo mais.",
     "obs": "gancho"
    },
    {
     "id": "s002",
     "arquivo": "bruto02.mp4",
-    "ini": 1.1667,
-    "fim": 5.4667,
-    "frame_ini": 35,
-    "frame_fim": 164,
+    "ini": 1.0667,
+    "fim": 5.5667,
+    "frame_ini": 32,
+    "frame_fim": 167,
     "texto": "Pensa comigo, você tem um produto excelente, atende bem, tem cliente satisfeito?",
     "obs": ""
    },
    {
     "id": "s003",
     "arquivo": "bruto03.mp4",
-    "ini": 0.6667,
-    "fim": 2.5,
-    "frame_ini": 20,
-    "frame_fim": 75,
+    "ini": 0.5333,
+    "fim": 2.6,
+    "frame_ini": 16,
+    "frame_fim": 78,
     "texto": "Só que ninguém vê isso,",
     "obs": ""
    },
    {
     "id": "s004",
     "arquivo": "bruto03.mp4",
-    "ini": 2.8667,
-    "fim": 6.0667,
-    "frame_ini": 86,
-    "frame_fim": 182,
+    "ini": 2.7667,
+    "fim": 6.1667,
+    "frame_ini": 83,
+    "frame_fim": 185,
     "texto": "e enquanto isso, seu concorrente posta todos os dias.",
     "obs": "pausa de 0,6 s cortada"
    },
    {
     "id": "s005",
     "arquivo": "bruto04.mp4",
-    "ini": 0.9333,
-    "fim": 5.4667,
-    "frame_ini": 28,
-    "frame_fim": 164,
+    "ini": 0.8333,
+    "fim": 5.5667,
+    "frame_ini": 25,
+    "frame_fim": 167,
     "texto": "Ele mostra o produto, mostra os clientes, mostra os bastidores e mostra os resultados.",
     "obs": ""
    },
    {
     "id": "s006",
     "arquivo": "bruto05.mp4",
-    "ini": 0.7,
-    "fim": 4.4667,
-    "frame_ini": 21,
-    "frame_fim": 134,
+    "ini": 0.5667,
+    "fim": 4.5667,
+    "frame_ini": 17,
+    "frame_fim": 137,
     "texto": "Então, quando alguém pensa em comprar, quem vem primeiro na cabeça?",
     "obs": ""
    },
    {
     "id": "s007",
     "arquivo": "bruto06.mp4",
-    "ini": 0.8,
-    "fim": 2.2667,
-    "frame_ini": 24,
-    "frame_fim": 68,
+    "ini": 0.6667,
+    "fim": 2.3667,
+    "frame_ini": 20,
+    "frame_fim": 71,
     "texto": "Quem está aparecendo.",
     "obs": ""
    },
    {
     "id": "s008",
     "arquivo": "bruto07.mp4",
-    "ini": 1.6667,
-    "fim": 4.5,
-    "frame_ini": 50,
-    "frame_fim": 135,
+    "ini": 1.5667,
+    "fim": 4.6,
+    "frame_ini": 47,
+    "frame_fim": 138,
     "texto": "Isso não significa que ele tenha um produto melhor que o seu.",
     "obs": ""
    },
    {
     "id": "s009",
     "arquivo": "bruto08.mp4",
-    "ini": 1.3667,
-    "fim": 4.3333,
-    "frame_ini": 41,
-    "frame_fim": 130,
+    "ini": 1.2333,
+    "fim": 4.4333,
+    "frame_ini": 37,
+    "frame_fim": 133,
     "texto": "Significa que ele está construindo a presença dele.",
     "obs": ""
    },
    {
     "id": "s010",
     "arquivo": "bruto09.mp4",
-    "ini": 1.2667,
-    "fim": 5.0667,
-    "frame_ini": 38,
-    "frame_fim": 152,
+    "ini": 1.1333,
+    "fim": 5.1333,
+    "frame_ini": 34,
+    "frame_fim": 154,
     "texto": "Ser bom é importante, mas se ninguém lembra que você existe,",
     "obs": ""
    },
    {
     "id": "s011",
     "arquivo": "bruto09.mp4",
-    "ini": 5.3,
-    "fim": 7.2333,
-    "frame_ini": 159,
-    "frame_fim": 217,
+    "ini": 5.2,
+    "fim": 7.3333,
+    "frame_ini": 156,
+    "frame_fim": 220,
     "texto": "ser bom sozinho não vende.",
     "obs": "pausa de 0,5 s antes da frase final cortada"
    }
   ],
-  "duracao": 34.967
+  "duracao": 37.333
  },
  "marcadores": [
   {
@@ -429,8 +429,8 @@
   }
  ],
  "legendas": {
-  "versao": 1,
-  "cortes_versao": 1,
+  "versao": 2,
+  "cortes_versao": 2,
   "blocos": [
    {
     "id": "lg01",
@@ -438,14 +438,14 @@
      {
       "w": "Seu",
       "t": "Seu",
-      "ini": 0.05,
-      "fim": 0.57
+      "ini": 0.183,
+      "fim": 0.703
      },
      {
       "w": "concorrente",
       "t": "concorrente",
-      "ini": 0.57,
-      "fim": 1.01
+      "ini": 0.703,
+      "fim": 1.143
      }
     ]
    },
@@ -455,20 +455,20 @@
      {
       "w": "pode",
       "t": "pode",
-      "ini": 1.01,
-      "fim": 1.25
+      "ini": 1.143,
+      "fim": 1.383
      },
      {
       "w": "não",
       "t": "não",
-      "ini": 1.25,
-      "fim": 1.59
+      "ini": 1.383,
+      "fim": 1.723
      },
      {
       "w": "ser",
       "t": "ser",
-      "ini": 1.59,
-      "fim": 1.85
+      "ini": 1.723,
+      "fim": 1.983
      }
     ]
    },
@@ -478,20 +478,20 @@
      {
       "w": "melhor",
       "t": "melhor",
-      "ini": 1.85,
-      "fim": 2.09
+      "ini": 1.983,
+      "fim": 2.223
      },
      {
       "w": "que",
       "t": "que",
-      "ini": 2.09,
-      "fim": 2.23
+      "ini": 2.223,
+      "fim": 2.363
      },
      {
       "w": "você,",
       "t": "você",
-      "ini": 2.23,
-      "fim": 2.51
+      "ini": 2.363,
+      "fim": 2.643
      }
     ]
    },
@@ -501,20 +501,20 @@
      {
       "w": "mas",
       "t": "mas",
-      "ini": 2.81,
-      "fim": 3.11
+      "ini": 2.943,
+      "fim": 3.243
      },
      {
       "w": "ele",
       "t": "ele",
-      "ini": 3.11,
-      "fim": 3.25
+      "ini": 3.243,
+      "fim": 3.383
      },
      {
       "w": "tá",
       "t": "tá",
-      "ini": 3.25,
-      "fim": 3.37
+      "ini": 3.383,
+      "fim": 3.503
      }
     ]
    },
@@ -524,14 +524,14 @@
      {
       "w": "aparecendo",
       "t": "aparecendo",
-      "ini": 3.37,
-      "fim": 3.81
+      "ini": 3.503,
+      "fim": 3.943
      },
      {
       "w": "mais.",
       "t": "mais",
-      "ini": 3.81,
-      "fim": 4.15
+      "ini": 3.943,
+      "fim": 4.283
      }
     ],
     "destaque": 0
@@ -542,14 +542,14 @@
      {
       "w": "Pensa",
       "t": "Pensa",
-      "ini": 4.397,
-      "fim": 4.977
+      "ini": 4.73,
+      "fim": 5.31
      },
      {
       "w": "comigo,",
       "t": "comigo",
-      "ini": 4.977,
-      "fim": 5.197
+      "ini": 5.31,
+      "fim": 5.53
      }
     ]
    },
@@ -559,20 +559,20 @@
      {
       "w": "você",
       "t": "você",
-      "ini": 5.437,
-      "fim": 5.557
+      "ini": 5.77,
+      "fim": 5.89
      },
      {
       "w": "tem",
       "t": "tem",
-      "ini": 5.557,
-      "fim": 5.697
+      "ini": 5.89,
+      "fim": 6.03
      },
      {
       "w": "um",
       "t": "um",
-      "ini": 5.697,
-      "fim": 5.777
+      "ini": 6.03,
+      "fim": 6.11
      }
     ]
    },
@@ -582,14 +582,14 @@
      {
       "w": "produto",
       "t": "produto",
-      "ini": 5.777,
-      "fim": 5.977
+      "ini": 6.11,
+      "fim": 6.31
      },
      {
       "w": "excelente,",
       "t": "excelente",
-      "ini": 5.977,
-      "fim": 6.497
+      "ini": 6.31,
+      "fim": 6.83
      }
     ]
    },
@@ -599,14 +599,14 @@
      {
       "w": "atende",
       "t": "atende",
-      "ini": 6.557,
-      "fim": 6.877
+      "ini": 6.89,
+      "fim": 7.21
      },
      {
       "w": "bem,",
       "t": "bem",
-      "ini": 6.877,
-      "fim": 7.137
+      "ini": 7.21,
+      "fim": 7.47
      }
     ]
    },
@@ -616,20 +616,20 @@
      {
       "w": "tem",
       "t": "tem",
-      "ini": 7.397,
-      "fim": 7.497
+      "ini": 7.73,
+      "fim": 7.83
      },
      {
       "w": "cliente",
       "t": "cliente",
-      "ini": 7.497,
-      "fim": 7.837
+      "ini": 7.83,
+      "fim": 8.17
      },
      {
       "w": "satisfeito?",
       "t": "satisfeito?",
-      "ini": 7.837,
-      "fim": 8.417
+      "ini": 8.17,
+      "fim": 8.75
      }
     ]
    },
@@ -639,14 +639,14 @@
      {
       "w": "Só",
       "t": "Só",
-      "ini": 8.687,
-      "fim": 9.167
+      "ini": 9.254,
+      "fim": 9.734
      },
      {
       "w": "que",
       "t": "que",
-      "ini": 9.167,
-      "fim": 9.427
+      "ini": 9.734,
+      "fim": 9.994
      }
     ]
    },
@@ -656,20 +656,20 @@
      {
       "w": "ninguém",
       "t": "ninguém",
-      "ini": 9.427,
-      "fim": 9.787
+      "ini": 9.994,
+      "fim": 10.354
      },
      {
       "w": "vê",
       "t": "vê",
-      "ini": 9.787,
-      "fim": 10.047
+      "ini": 10.354,
+      "fim": 10.614
      },
      {
       "w": "isso,",
       "t": "isso",
-      "ini": 10.047,
-      "fim": 10.327
+      "ini": 10.614,
+      "fim": 10.894
      }
     ],
     "destaque": 0
@@ -680,20 +680,20 @@
      {
       "w": "e",
       "t": "e",
-      "ini": 10.54,
-      "fim": 10.64
+      "ini": 11.307,
+      "fim": 11.407
      },
      {
       "w": "enquanto",
       "t": "enquanto",
-      "ini": 10.64,
-      "fim": 10.94
+      "ini": 11.407,
+      "fim": 11.707
      },
      {
       "w": "isso,",
       "t": "isso",
-      "ini": 10.94,
-      "fim": 11.28
+      "ini": 11.707,
+      "fim": 12.047
      }
     ]
    },
@@ -703,14 +703,14 @@
      {
       "w": "seu",
       "t": "seu",
-      "ini": 11.4,
-      "fim": 11.62
+      "ini": 12.167,
+      "fim": 12.387
      },
      {
       "w": "concorrente",
       "t": "concorrente",
-      "ini": 11.62,
-      "fim": 12.14
+      "ini": 12.387,
+      "fim": 12.907
      }
     ]
    },
@@ -720,14 +720,14 @@
      {
       "w": "posta",
       "t": "posta",
-      "ini": 12.14,
-      "fim": 12.68
+      "ini": 12.907,
+      "fim": 13.447
      },
      {
       "w": "todos os dias.",
       "t": "todos os dias",
-      "ini": 12.68,
-      "fim": 13.34
+      "ini": 13.447,
+      "fim": 14.107
      }
     ],
     "destaque": 1
@@ -738,14 +738,14 @@
      {
       "w": "Ele",
       "t": "Ele",
-      "ini": 13.743,
-      "fim": 14.263
+      "ini": 14.71,
+      "fim": 15.23
      },
      {
       "w": "mostra",
       "t": "mostra",
-      "ini": 14.263,
-      "fim": 14.503
+      "ini": 15.23,
+      "fim": 15.47
      }
     ]
    },
@@ -755,14 +755,14 @@
      {
       "w": "o",
       "t": "o",
-      "ini": 14.503,
-      "fim": 14.643
+      "ini": 15.47,
+      "fim": 15.61
      },
      {
       "w": "produto,",
       "t": "produto",
-      "ini": 14.643,
-      "fim": 14.963
+      "ini": 15.61,
+      "fim": 15.93
      }
     ]
    },
@@ -772,20 +772,20 @@
      {
       "w": "mostra",
       "t": "mostra",
-      "ini": 15.243,
-      "fim": 15.343
+      "ini": 16.21,
+      "fim": 16.31
      },
      {
       "w": "os",
       "t": "os",
-      "ini": 15.343,
-      "fim": 15.483
+      "ini": 16.31,
+      "fim": 16.45
      },
      {
       "w": "clientes,",
       "t": "clientes",
-      "ini": 15.483,
-      "fim": 15.983
+      "ini": 16.45,
+      "fim": 16.95
      }
     ]
    },
@@ -795,20 +795,20 @@
      {
       "w": "mostra",
       "t": "mostra",
-      "ini": 16.163,
-      "fim": 16.363
+      "ini": 17.13,
+      "fim": 17.33
      },
      {
       "w": "os",
       "t": "os",
-      "ini": 16.363,
-      "fim": 16.503
+      "ini": 17.33,
+      "fim": 17.47
      },
      {
       "w": "bastidores",
       "t": "bastidores",
-      "ini": 16.503,
-      "fim": 16.983
+      "ini": 17.47,
+      "fim": 17.95
      }
     ]
    },
@@ -818,14 +818,14 @@
      {
       "w": "e",
       "t": "e",
-      "ini": 16.983,
-      "fim": 17.163
+      "ini": 17.95,
+      "fim": 18.13
      },
      {
       "w": "mostra",
       "t": "mostra",
-      "ini": 17.163,
-      "fim": 17.443
+      "ini": 18.13,
+      "fim": 18.41
      }
     ]
    },
@@ -835,14 +835,14 @@
      {
       "w": "os",
       "t": "os",
-      "ini": 17.443,
-      "fim": 17.603
+      "ini": 18.41,
+      "fim": 18.57
      },
      {
       "w": "resultados.",
       "t": "resultados",
-      "ini": 17.603,
-      "fim": 17.943
+      "ini": 18.57,
+      "fim": 18.91
      }
     ],
     "destaque": 1
@@ -853,8 +853,8 @@
      {
       "w": "Então,",
       "t": "Então",
-      "ini": 18.25,
-      "fim": 18.91
+      "ini": 19.45,
+      "fim": 20.11
      }
     ]
    },
@@ -864,20 +864,20 @@
      {
       "w": "quando",
       "t": "quando",
-      "ini": 19.23,
-      "fim": 19.35
+      "ini": 20.43,
+      "fim": 20.55
      },
      {
       "w": "alguém",
       "t": "alguém",
-      "ini": 19.35,
-      "fim": 19.55
+      "ini": 20.55,
+      "fim": 20.75
      },
      {
       "w": "pensa",
       "t": "pensa",
-      "ini": 19.55,
-      "fim": 19.83
+      "ini": 20.75,
+      "fim": 21.03
      }
     ]
    },
@@ -887,14 +887,14 @@
      {
       "w": "em",
       "t": "em",
-      "ini": 19.83,
-      "fim": 19.93
+      "ini": 21.03,
+      "fim": 21.13
      },
      {
       "w": "comprar,",
       "t": "comprar",
-      "ini": 19.93,
-      "fim": 20.25
+      "ini": 21.13,
+      "fim": 21.45
      }
     ],
     "destaque": 1
@@ -905,20 +905,20 @@
      {
       "w": "quem",
       "t": "quem",
-      "ini": 20.57,
-      "fim": 20.79
+      "ini": 21.77,
+      "fim": 21.99
      },
      {
       "w": "vem",
       "t": "vem",
-      "ini": 20.79,
-      "fim": 20.93
+      "ini": 21.99,
+      "fim": 22.13
      },
      {
       "w": "primeiro",
       "t": "primeiro",
-      "ini": 20.93,
-      "fim": 21.27
+      "ini": 22.13,
+      "fim": 22.47
      }
     ]
    },
@@ -928,14 +928,14 @@
      {
       "w": "na",
       "t": "na",
-      "ini": 21.27,
-      "fim": 21.39
+      "ini": 22.47,
+      "fim": 22.59
      },
      {
       "w": "cabeça?",
       "t": "cabeça?",
-      "ini": 21.39,
-      "fim": 21.79
+      "ini": 22.59,
+      "fim": 22.99
      }
     ]
    },
@@ -945,20 +945,20 @@
      {
       "w": "Quem",
       "t": "Quem",
-      "ini": 22.017,
-      "fim": 22.517
+      "ini": 23.45,
+      "fim": 23.95
      },
      {
       "w": "está",
       "t": "está",
-      "ini": 22.517,
-      "fim": 22.677
+      "ini": 23.95,
+      "fim": 24.11
      },
      {
       "w": "aparecendo.",
       "t": "aparecendo",
-      "ini": 22.677,
-      "fim": 23.277
+      "ini": 24.11,
+      "fim": 24.71
      }
     ],
     "destaque": 2,
@@ -970,20 +970,20 @@
      {
       "w": "Isso",
       "t": "Isso",
-      "ini": 23.507,
-      "fim": 24.107
+      "ini": 25.14,
+      "fim": 25.74
      },
      {
       "w": "não",
       "t": "não",
-      "ini": 24.107,
-      "fim": 24.227
+      "ini": 25.74,
+      "fim": 25.86
      },
      {
       "w": "significa",
       "t": "significa",
-      "ini": 24.227,
-      "fim": 24.687
+      "ini": 25.86,
+      "fim": 26.32
      }
     ]
    },
@@ -993,20 +993,20 @@
      {
       "w": "que",
       "t": "que",
-      "ini": 24.687,
-      "fim": 24.847
+      "ini": 26.32,
+      "fim": 26.48
      },
      {
       "w": "ele",
       "t": "ele",
-      "ini": 24.847,
-      "fim": 24.927
+      "ini": 26.48,
+      "fim": 26.56
      },
      {
       "w": "tenha",
       "t": "tenha",
-      "ini": 24.927,
-      "fim": 25.047
+      "ini": 26.56,
+      "fim": 26.68
      }
     ]
    },
@@ -1016,20 +1016,20 @@
      {
       "w": "um",
       "t": "um",
-      "ini": 25.047,
-      "fim": 25.147
+      "ini": 26.68,
+      "fim": 26.78
      },
      {
       "w": "produto",
       "t": "produto",
-      "ini": 25.147,
-      "fim": 25.487
+      "ini": 26.78,
+      "fim": 27.12
      },
      {
       "w": "melhor",
       "t": "melhor",
-      "ini": 25.487,
-      "fim": 25.767
+      "ini": 27.12,
+      "fim": 27.4
      }
     ]
    },
@@ -1039,20 +1039,20 @@
      {
       "w": "que",
       "t": "que",
-      "ini": 25.767,
-      "fim": 25.887
+      "ini": 27.4,
+      "fim": 27.52
      },
      {
       "w": "o",
       "t": "o",
-      "ini": 25.887,
-      "fim": 26.087
+      "ini": 27.52,
+      "fim": 27.72
      },
      {
       "w": "seu.",
       "t": "seu",
-      "ini": 26.087,
-      "fim": 26.087
+      "ini": 27.72,
+      "fim": 27.72
      }
     ]
    },
@@ -1062,20 +1062,20 @@
      {
       "w": "Significa",
       "t": "Significa",
-      "ini": 26.32,
-      "fim": 27.18
+      "ini": 28.187,
+      "fim": 29.047
      },
      {
       "w": "que",
       "t": "que",
-      "ini": 27.18,
-      "fim": 27.3
+      "ini": 29.047,
+      "fim": 29.167
      },
      {
       "w": "ele",
       "t": "ele",
-      "ini": 27.3,
-      "fim": 27.4
+      "ini": 29.167,
+      "fim": 29.267
      }
     ]
    },
@@ -1085,14 +1085,14 @@
      {
       "w": "está",
       "t": "está",
-      "ini": 27.4,
-      "fim": 27.54
+      "ini": 29.267,
+      "fim": 29.407
      },
      {
       "w": "construindo",
       "t": "construindo",
-      "ini": 27.54,
-      "fim": 28.08
+      "ini": 29.407,
+      "fim": 29.947
      }
     ]
    },
@@ -1102,20 +1102,20 @@
      {
       "w": "a",
       "t": "a",
-      "ini": 28.08,
-      "fim": 28.38
+      "ini": 29.947,
+      "fim": 30.247
      },
      {
       "w": "presença",
       "t": "presença",
-      "ini": 28.38,
-      "fim": 28.78
+      "ini": 30.247,
+      "fim": 30.647
      },
      {
       "w": "dele.",
       "t": "dele",
-      "ini": 28.78,
-      "fim": 29.04
+      "ini": 30.647,
+      "fim": 30.907
      }
     ],
     "destaque": 1
@@ -1126,14 +1126,14 @@
      {
       "w": "Ser",
       "t": "Ser",
-      "ini": 29.297,
-      "fim": 29.817
+      "ini": 31.397,
+      "fim": 31.917
      },
      {
       "w": "bom",
       "t": "bom",
-      "ini": 29.817,
-      "fim": 29.997
+      "ini": 31.917,
+      "fim": 32.097
      }
     ]
    },
@@ -1143,14 +1143,14 @@
      {
       "w": "é",
       "t": "é",
-      "ini": 29.997,
-      "fim": 30.137
+      "ini": 32.097,
+      "fim": 32.237
      },
      {
       "w": "importante,",
       "t": "importante",
-      "ini": 30.137,
-      "fim": 30.657
+      "ini": 32.237,
+      "fim": 32.757
      }
     ]
    },
@@ -1160,20 +1160,20 @@
      {
       "w": "mas",
       "t": "mas",
-      "ini": 30.917,
-      "fim": 31.217
+      "ini": 33.017,
+      "fim": 33.317
      },
      {
       "w": "se",
       "t": "se",
-      "ini": 31.217,
-      "fim": 31.357
+      "ini": 33.317,
+      "fim": 33.457
      },
      {
       "w": "ninguém",
       "t": "ninguém",
-      "ini": 31.357,
-      "fim": 31.557
+      "ini": 33.457,
+      "fim": 33.657
      }
     ]
    },
@@ -1183,14 +1183,14 @@
      {
       "w": "lembra",
       "t": "lembra",
-      "ini": 31.557,
-      "fim": 31.917
+      "ini": 33.657,
+      "fim": 34.017
      },
      {
       "w": "que",
       "t": "que",
-      "ini": 31.917,
-      "fim": 32.057
+      "ini": 34.017,
+      "fim": 34.157
      }
     ]
    },
@@ -1200,14 +1200,14 @@
      {
       "w": "você",
       "t": "você",
-      "ini": 32.057,
-      "fim": 32.357
+      "ini": 34.157,
+      "fim": 34.457
      },
      {
       "w": "existe,",
       "t": "existe",
-      "ini": 32.357,
-      "fim": 32.817
+      "ini": 34.457,
+      "fim": 34.917
      }
     ]
    },
@@ -1217,20 +1217,20 @@
      {
       "w": "ser",
       "t": "ser",
-      "ini": 33.103,
-      "fim": 33.283
+      "ini": 35.37,
+      "fim": 35.55
      },
      {
       "w": "bom",
       "t": "bom",
-      "ini": 33.283,
-      "fim": 33.443
+      "ini": 35.55,
+      "fim": 35.71
      },
      {
       "w": "sozinho",
       "t": "sozinho",
-      "ini": 33.443,
-      "fim": 33.903
+      "ini": 35.71,
+      "fim": 36.17
      }
     ]
    },
@@ -1240,14 +1240,14 @@
      {
       "w": "não vende.",
       "t": "não vende",
-      "ini": 33.903,
-      "fim": 34.783
+      "ini": 36.17,
+      "fim": 37.05
      }
     ],
     "destaque": 0
    }
   ],
-  "duracao": 34.967
+  "duracao": 37.333
  },
  "ferramentas": {
   "hyperframes": "0.9.46"
@@ -1268,19 +1268,19 @@
  },
  "motions": {
   "versao_plano": 2,
-  "cortes_versao": 1,
+  "cortes_versao": 2,
   "itens": [
    {
     "id": "mo01",
-    "ini": 0.4,
-    "fim": 4.33,
+    "ini": 0.533,
+    "fim": 4.463,
     "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
     "conceito": "barras saindo de trás dos ombros: VOCÊ à esquerda, ELE à direita; em \"aparecendo\" a dele dispara acima da cabeça",
     "gatilhos": {
-     "Seu": 0.05,
-     "melhor": 1.85,
-     "aparecendo": 3.37
+     "Seu": 0.183,
+     "melhor": 1.983,
+     "aparecendo": 3.503
     },
     "camera": {
      "durante": "punch em 'aparecendo' (3.37)",
@@ -1295,16 +1295,16 @@
    },
    {
     "id": "mo02",
-    "ini": 5.8,
-    "fim": 10.47,
+    "ini": 6.133,
+    "fim": 11.237,
     "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
     "conceito": "3 selos com ✓ em volta da cabeça (2 à esquerda, 1 à direita); em \"ninguém\" ficam cinza e um olho cortado aparece no alto",
     "gatilhos": {
-     "excelente": 5.98,
-     "bem": 6.88,
-     "satisfeito": 7.84,
-     "ninguém": 9.43
+     "excelente": 6.313,
+     "bem": 7.213,
+     "satisfeito": 8.173,
+     "ninguém": 9.997
     },
     "camera": {
      "durante": "aproximação lenta em 'ninguém vê isso'"
@@ -1318,14 +1318,14 @@
    },
    {
     "id": "mo03",
-    "ini": 11.4,
-    "fim": 13.67,
+    "ini": 12.167,
+    "fim": 14.637,
     "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
     "conceito": "7 dias em arco atrás da cabeça (coroa), acendendo um a um",
     "gatilhos": {
-     "posta": 12.14,
-     "todos os dias": 12.68
+     "posta": 12.907,
+     "todos os dias": 13.447
     },
     "camera": {
      "durante": "—"
@@ -1339,16 +1339,16 @@
    },
    {
     "id": "mo04",
-    "ini": 14.4,
-    "fim": 18.2,
+    "ini": 15.367,
+    "fim": 19.4,
     "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
     "conceito": "4 posts dos lados da cabeça (2 e 2) no ritmo da lista",
     "gatilhos": {
-     "produto": 14.64,
-     "clientes": 15.48,
-     "bastidores": 16.5,
-     "resultados": 17.6
+     "produto": 15.607,
+     "clientes": 16.447,
+     "bastidores": 17.467,
+     "resultados": 18.567
     },
     "camera": {
      "durante": "punch leve em 'resultados'"
@@ -1362,15 +1362,15 @@
    },
    {
     "id": "mo05",
-    "ini": 19.8,
-    "fim": 23.43,
+    "ini": 21.0,
+    "fim": 24.863,
     "formato": "atrás da pessoa + frente",
     "posicao": "barra de busca no peito + número grande no alto, à esquerda da cabeça",
     "conceito": "\"1º\" gigante atrás da cabeça (parcialmente coberto) + barra de pesquisa no peito (frente)",
     "gatilhos": {
-     "comprar": 19.93,
-     "primeiro": 20.93,
-     "aparecendo": 22.68
+     "comprar": 21.13,
+     "primeiro": 22.13,
+     "aparecendo": 24.113
     },
     "camera": {
      "durante": "—"
@@ -1384,13 +1384,13 @@
    },
    {
     "id": "mo06",
-    "ini": 27.95,
-    "fim": 29.23,
+    "ini": 29.817,
+    "fim": 31.097,
     "formato": "atrás da pessoa",
     "posicao": "tela cheia",
     "conceito": "parede escurece e PRESENÇA aparece enorme no alto, atrás da cabeça",
     "gatilhos": {
-     "presença": 28.38
+     "presença": 30.247
     },
     "camera": {
      "durante": "aproximação lenta"
@@ -1404,13 +1404,13 @@
    },
    {
     "id": "mo07",
-    "ini": 33.9,
-    "fim": 34.97,
+    "ini": 36.167,
+    "fim": 37.336666666666666,
     "formato": "frente",
     "posicao": "alto do quadro, acima da cabeça",
     "conceito": "\"Salva pra lembrar\" no alto",
     "gatilhos": {
-     "não vende": 33.9
+     "não vende": 36.167
     },
     "camera": {
      "durante": "punch em 'não vende'"
@@ -1458,22 +1458,22 @@
   ],
   "planos": {
    "s001": "aberto",
-   "s002": "aberto",
-   "s003": "fechado",
-   "s004": "aberto",
-   "s005": "fechado",
-   "s006": "aberto",
-   "s007": "fechado",
-   "s008": "aberto",
+   "s002": "continua",
+   "s003": "aberto",
+   "s004": "continua",
+   "s005": "aberto",
+   "s006": "continua",
+   "s007": "aberto",
+   "s008": "continua",
    "s009": "aberto",
-   "s010": "aberto",
-   "s011": "fechado"
+   "s010": "continua",
+   "s011": "aberto"
   },
   "movimentos": [
    {
     "id": "cam01",
     "tipo": "punch",
-    "t": 3.37,
+    "t": 3.503,
     "mais": 0.07,
     "dur": 0.3,
     "obs": "'aparecendo' (ápice do gancho)"
@@ -1481,7 +1481,7 @@
    {
     "id": "cam02",
     "tipo": "zoom",
-    "t": 9.43,
+    "t": 9.997,
     "mais": 0.06,
     "dur": 0.9,
     "curva": "sine.inOut",
@@ -1490,7 +1490,7 @@
    {
     "id": "cam03",
     "tipo": "punch",
-    "t": 17.6,
+    "t": 18.567,
     "mais": 0.04,
     "dur": 0.3,
     "obs": "'resultados'"
@@ -1498,7 +1498,7 @@
    {
     "id": "cam05",
     "tipo": "punch",
-    "t": 24.11,
+    "t": 25.743,
     "mais": 0.07,
     "dur": 0.3,
     "obs": "'não significa'"
@@ -1506,25 +1506,16 @@
    {
     "id": "cam06",
     "tipo": "zoom",
-    "t": 28.2,
+    "t": 30.067,
     "mais": 0.08,
     "dur": 0.9,
     "obs": "aproximação enquanto PRESENÇA aparece na parede (não há mais tela cheia)",
     "curva": "sine.inOut"
    },
    {
-    "id": "cam07",
-    "tipo": "chega",
-    "t": 29.23,
-    "dx": 0,
-    "dy": 60,
-    "dur": 0.5,
-    "obs": "chega de baixo e freia no corte s010"
-   },
-   {
     "id": "cam08",
     "tipo": "punch",
-    "t": 33.9,
+    "t": 36.167,
     "mais": 0.08,
     "dur": 0.3,
     "obs": "'não vende'"

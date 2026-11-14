@@ -1,0 +1,329 @@
+{
+ "obs": "db = ganho relativo ao pico da voz; alinhamento: pico (whoosh) ou inicio (impacto, pop, clique) · remapeado para cortes v2 · sem sfx34 (o movimento cam07 saiu)",
+ "itens": [
+  {
+   "id": "sfx01",
+   "ev": "ev01",
+   "camada": "principal",
+   "arquivo": "whoosh/whoosh_01.wav",
+   "t": 0.683,
+   "alinha": "pico",
+   "db": -10
+  },
+  {
+   "id": "sfx02",
+   "ev": "ev02",
+   "camada": "principal",
+   "arquivo": "pop/pop_02.wav",
+   "t": 1.983,
+   "alinha": "inicio",
+   "db": -10
+  },
+  {
+   "id": "sfx03",
+   "ev": "ev03",
+   "camada": "apoio",
+   "arquivo": "whoosh/whoosh_04.wav",
+   "t": 3.503,
+   "alinha": "pico",
+   "db": -8
+  },
+  {
+   "id": "sfx04",
+   "ev": "ev03",
+   "camada": "principal",
+   "arquivo": "impacto/impacto_01.wav",
+   "t": 3.503,
+   "alinha": "inicio",
+   "db": -5
+  },
+  {
+   "id": "sfx05",
+   "ev": "ev03",
+   "camada": "grave",
+   "arquivo": "grave/sub_01.wav",
+   "t": 3.503,
+   "alinha": "inicio",
+   "db": -9
+  },
+  {
+   "id": "sfx06",
+   "ev": "ev05",
+   "camada": "principal",
+   "arquivo": "pop/pop_01.wav",
+   "t": 6.313,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx07",
+   "ev": "ev05",
+   "camada": "doce",
+   "arquivo": "interface/tic_01.wav",
+   "t": 6.493,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx08",
+   "ev": "ev06",
+   "camada": "principal",
+   "arquivo": "pop/pop_03.wav",
+   "t": 7.213,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx09",
+   "ev": "ev06",
+   "camada": "doce",
+   "arquivo": "interface/tic_02.wav",
+   "t": 7.393,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx10",
+   "ev": "ev07",
+   "camada": "principal",
+   "arquivo": "pop/pop_02.wav",
+   "t": 8.173,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx11",
+   "ev": "ev07",
+   "camada": "doce",
+   "arquivo": "interface/tic_03.wav",
+   "t": 8.353,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx12",
+   "ev": "ev08",
+   "camada": "principal",
+   "arquivo": "interface/carimbo_01.wav",
+   "t": 9.997,
+   "alinha": "inicio",
+   "db": -6
+  },
+  {
+   "id": "sfx13",
+   "ev": "ev09",
+   "camada": "principal",
+   "arquivo": "whoosh/whoosh_02.wav",
+   "t": 12.317,
+   "alinha": "pico",
+   "db": -12
+  },
+  {
+   "id": "sfx14",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_01.wav",
+   "t": 13.447,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx15",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_02.wav",
+   "t": 13.517,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx16",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_03.wav",
+   "t": 13.587,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx17",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_01.wav",
+   "t": 13.657,
+   "alinha": "inicio",
+   "db": -13
+  },
+  {
+   "id": "sfx18",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_02.wav",
+   "t": 13.727,
+   "alinha": "inicio",
+   "db": -13
+  },
+  {
+   "id": "sfx19",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_03.wav",
+   "t": 13.797,
+   "alinha": "inicio",
+   "db": -12
+  },
+  {
+   "id": "sfx20",
+   "ev": "ev10",
+   "camada": "principal",
+   "arquivo": "interface/tic_01.wav",
+   "t": 13.867,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx21",
+   "ev": "ev11",
+   "camada": "principal",
+   "arquivo": "pop/pop_03.wav",
+   "t": 15.607,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx22",
+   "ev": "ev12",
+   "camada": "principal",
+   "arquivo": "pop/pop_01.wav",
+   "t": 16.447,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx23",
+   "ev": "ev13",
+   "camada": "principal",
+   "arquivo": "pop/pop_02.wav",
+   "t": 17.467,
+   "alinha": "inicio",
+   "db": -11
+  },
+  {
+   "id": "sfx24",
+   "ev": "ev14",
+   "camada": "principal",
+   "arquivo": "pop/pop_03.wav",
+   "t": 18.567,
+   "alinha": "inicio",
+   "db": -10
+  },
+  {
+   "id": "sfx25",
+   "ev": "ev14",
+   "camada": "doce",
+   "arquivo": "ding/ding_01.wav",
+   "t": 18.587,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx26",
+   "ev": "ev15",
+   "camada": "principal",
+   "arquivo": "whoosh/whoosh_01.wav",
+   "t": 21.15,
+   "alinha": "pico",
+   "db": -13
+  },
+  {
+   "id": "sfx27",
+   "ev": "ev16",
+   "camada": "principal",
+   "arquivo": "interface/digitacao_01.wav",
+   "t": 21.13,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx28",
+   "ev": "ev17",
+   "camada": "apoio",
+   "arquivo": "whoosh/whoosh_03.wav",
+   "t": 22.18,
+   "alinha": "pico",
+   "db": -9
+  },
+  {
+   "id": "sfx29",
+   "ev": "ev17",
+   "camada": "principal",
+   "arquivo": "impacto/impacto_02.wav",
+   "t": 22.13,
+   "alinha": "inicio",
+   "db": -8
+  },
+  {
+   "id": "sfx30",
+   "ev": "cam05",
+   "camada": "principal",
+   "arquivo": "whoosh/whoosh_04.wav",
+   "t": 25.763,
+   "alinha": "pico",
+   "db": -12
+  },
+  {
+   "id": "sfx31",
+   "ev": "ev18",
+   "camada": "principal",
+   "arquivo": "whoosh/whoosh_03.wav",
+   "t": 29.847,
+   "alinha": "pico",
+   "db": -8
+  },
+  {
+   "id": "sfx32",
+   "ev": "ev19",
+   "camada": "principal",
+   "arquivo": "impacto/impacto_01.wav",
+   "t": 30.247,
+   "alinha": "inicio",
+   "db": -8
+  },
+  {
+   "id": "sfx33",
+   "ev": "ev19",
+   "camada": "doce",
+   "arquivo": "ding/ding_02.wav",
+   "t": 30.267,
+   "alinha": "inicio",
+   "db": -16
+  },
+  {
+   "id": "sfx35",
+   "ev": "ev20",
+   "camada": "principal",
+   "arquivo": "pop/pop_01.wav",
+   "t": 36.167,
+   "alinha": "inicio",
+   "db": -8
+  },
+  {
+   "id": "sfx36",
+   "ev": "cam08",
+   "camada": "apoio",
+   "arquivo": "whoosh/whoosh_01.wav",
+   "t": 36.187,
+   "alinha": "pico",
+   "db": -11
+  },
+  {
+   "id": "sfx37",
+   "ev": "ev20",
+   "camada": "grave",
+   "arquivo": "grave/sub_01.wav",
+   "t": 36.167,
+   "alinha": "inicio",
+   "db": -13
+  }
+ ]
+}
