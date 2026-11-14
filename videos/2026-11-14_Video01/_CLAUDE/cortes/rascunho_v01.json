@@ -1,0 +1,17 @@
+{"folga_ini": 0.06, "folga_fim": 0.10,
+ "segmentos": [
+  {"arquivo":"bruto01.mp4","de":"Seu","ate":"mais.","de_i":0,"ate_i":12,"obs":"gancho"},
+  {"arquivo":"bruto02.mp4","de":"Pensa","ate":"satisfeito?","de_i":0,"ate_i":11},
+  {"arquivo":"bruto03.mp4","de":"Só","ate":"isso,","de_i":0,"ate_i":4},
+  {"arquivo":"bruto03.mp4","de":"e","ate":"dias.","de_i":5,"ate_i":13,"obs":"pausa de 0,6 s cortada"},
+  {"arquivo":"bruto04.mp4","de":"Ele","ate":"resultados.","de_i":0,"ate_i":13},
+  {"arquivo":"bruto05.mp4","de":"Então,","ate":"cabeça?","de_i":0,"ate_i":10},
+  {"arquivo":"bruto06.mp4","de":"Quem","ate":"aparecendo.","de_i":0,"ate_i":2},
+  {"arquivo":"bruto07.mp4","de":"Isso","ate":"seu.","de_i":0,"ate_i":11},
+  {"arquivo":"bruto08.mp4","de":"Significa","ate":"dele.","de_i":0,"ate_i":7},
+  {"arquivo":"bruto09.mp4","de":"Ser","ate":"existe,","de_i":0,"ate_i":10},
+  {"arquivo":"bruto09.mp4","de":"ser","ate":"vende.","de_i":11,"ate_i":15,"obs":"pausa de 0,5 s antes da frase final cortada"}
+ ],
+ "marcadores": [
+  {"arquivo":"bruto09.mp4","tempo":4.85,"tipo":"sugestao","texto":"Pausa antes de 'ser bom sozinho não vende' foi apertada; se preferir um respiro dramático, dá para devolver."}
+ ]}

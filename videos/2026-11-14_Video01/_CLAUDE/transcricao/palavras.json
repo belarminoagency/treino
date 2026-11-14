@@ -1,0 +1,638 @@
+{
+ "bruto01.mp4": [
+  {
+   "w": "Seu",
+   "ini": 2.35,
+   "fim": 2.87,
+   "score": 0.9
+  },
+  {
+   "w": "concorrente",
+   "ini": 2.87,
+   "fim": 3.31,
+   "score": 0.99
+  },
+  {
+   "w": "pode",
+   "ini": 3.31,
+   "fim": 3.55,
+   "score": 0.97
+  },
+  {
+   "w": "não",
+   "ini": 3.55,
+   "fim": 3.89,
+   "score": 0.98
+  },
+  {
+   "w": "ser",
+   "ini": 3.89,
+   "fim": 4.15,
+   "score": 1.0
+  },
+  {
+   "w": "melhor",
+   "ini": 4.15,
+   "fim": 4.39,
+   "score": 1.0
+  },
+  {
+   "w": "que",
+   "ini": 4.39,
+   "fim": 4.53,
+   "score": 0.98
+  },
+  {
+   "w": "você,",
+   "ini": 4.53,
+   "fim": 4.81,
+   "score": 0.99
+  },
+  {
+   "w": "mas",
+   "ini": 5.11,
+   "fim": 5.41,
+   "score": 0.99
+  },
+  {
+   "w": "ele",
+   "ini": 5.41,
+   "fim": 5.55,
+   "score": 0.98
+  },
+  {
+   "w": "tá",
+   "ini": 5.55,
+   "fim": 5.67,
+   "score": 0.72
+  },
+  {
+   "w": "aparecendo",
+   "ini": 5.67,
+   "fim": 6.11,
+   "score": 1.0
+  },
+  {
+   "w": "mais.",
+   "ini": 6.11,
+   "fim": 6.45,
+   "score": 0.99
+  }
+ ],
+ "bruto02.mp4": [
+  {
+   "w": "Pensa",
+   "ini": 1.23,
+   "fim": 1.81,
+   "score": 0.94
+  },
+  {
+   "w": "comigo,",
+   "ini": 1.81,
+   "fim": 2.03,
+   "score": 1.0
+  },
+  {
+   "w": "você",
+   "ini": 2.27,
+   "fim": 2.39,
+   "score": 1.0
+  },
+  {
+   "w": "tem",
+   "ini": 2.39,
+   "fim": 2.53,
+   "score": 1.0
+  },
+  {
+   "w": "um",
+   "ini": 2.53,
+   "fim": 2.61,
+   "score": 1.0
+  },
+  {
+   "w": "produto",
+   "ini": 2.61,
+   "fim": 2.81,
+   "score": 1.0
+  },
+  {
+   "w": "excelente,",
+   "ini": 2.81,
+   "fim": 3.33,
+   "score": 1.0
+  },
+  {
+   "w": "atende",
+   "ini": 3.39,
+   "fim": 3.71,
+   "score": 1.0
+  },
+  {
+   "w": "bem,",
+   "ini": 3.71,
+   "fim": 3.97,
+   "score": 1.0
+  },
+  {
+   "w": "tem",
+   "ini": 4.23,
+   "fim": 4.33,
+   "score": 1.0
+  },
+  {
+   "w": "cliente",
+   "ini": 4.33,
+   "fim": 4.67,
+   "score": 1.0
+  },
+  {
+   "w": "satisfeito?",
+   "ini": 4.67,
+   "fim": 5.25,
+   "score": 1.0
+  }
+ ],
+ "bruto03.mp4": [
+  {
+   "w": "Só",
+   "ini": 0.72,
+   "fim": 1.2,
+   "score": 0.83
+  },
+  {
+   "w": "que",
+   "ini": 1.2,
+   "fim": 1.46,
+   "score": 0.99
+  },
+  {
+   "w": "ninguém",
+   "ini": 1.46,
+   "fim": 1.82,
+   "score": 0.89
+  },
+  {
+   "w": "vê",
+   "ini": 1.82,
+   "fim": 2.08,
+   "score": 0.97
+  },
+  {
+   "w": "isso,",
+   "ini": 2.08,
+   "fim": 2.36,
+   "score": 1.0
+  },
+  {
+   "w": "e",
+   "ini": 2.94,
+   "fim": 3.04,
+   "score": 0.93
+  },
+  {
+   "w": "enquanto",
+   "ini": 3.04,
+   "fim": 3.34,
+   "score": 0.96
+  },
+  {
+   "w": "isso,",
+   "ini": 3.34,
+   "fim": 3.68,
+   "score": 0.99
+  },
+  {
+   "w": "seu",
+   "ini": 3.8,
+   "fim": 4.02,
+   "score": 0.8
+  },
+  {
+   "w": "concorrente",
+   "ini": 4.02,
+   "fim": 4.54,
+   "score": 1.0
+  },
+  {
+   "w": "posta",
+   "ini": 4.54,
+   "fim": 5.08,
+   "score": 0.98
+  },
+  {
+   "w": "todos",
+   "ini": 5.08,
+   "fim": 5.3,
+   "score": 0.98
+  },
+  {
+   "w": "os",
+   "ini": 5.3,
+   "fim": 5.58,
+   "score": 1.0
+  },
+  {
+   "w": "dias.",
+   "ini": 5.58,
+   "fim": 5.74,
+   "score": 1.0
+  }
+ ],
+ "bruto04.mp4": [
+  {
+   "w": "Ele",
+   "ini": 1.01,
+   "fim": 1.53,
+   "score": 0.61
+  },
+  {
+   "w": "mostra",
+   "ini": 1.53,
+   "fim": 1.77,
+   "score": 0.99
+  },
+  {
+   "w": "o",
+   "ini": 1.77,
+   "fim": 1.91,
+   "score": 0.89
+  },
+  {
+   "w": "produto,",
+   "ini": 1.91,
+   "fim": 2.23,
+   "score": 0.99
+  },
+  {
+   "w": "mostra",
+   "ini": 2.51,
+   "fim": 2.61,
+   "score": 0.97
+  },
+  {
+   "w": "os",
+   "ini": 2.61,
+   "fim": 2.75,
+   "score": 0.98
+  },
+  {
+   "w": "clientes,",
+   "ini": 2.75,
+   "fim": 3.25,
+   "score": 1.0
+  },
+  {
+   "w": "mostra",
+   "ini": 3.43,
+   "fim": 3.63,
+   "score": 0.99
+  },
+  {
+   "w": "os",
+   "ini": 3.63,
+   "fim": 3.77,
+   "score": 1.0
+  },
+  {
+   "w": "bastidores",
+   "ini": 3.77,
+   "fim": 4.25,
+   "score": 1.0
+  },
+  {
+   "w": "e",
+   "ini": 4.25,
+   "fim": 4.43,
+   "score": 0.97
+  },
+  {
+   "w": "mostra",
+   "ini": 4.43,
+   "fim": 4.71,
+   "score": 0.95
+  },
+  {
+   "w": "os",
+   "ini": 4.71,
+   "fim": 4.87,
+   "score": 1.0
+  },
+  {
+   "w": "resultados.",
+   "ini": 4.87,
+   "fim": 5.21,
+   "score": 1.0
+  }
+ ],
+ "bruto05.mp4": [
+  {
+   "w": "Então,",
+   "ini": 0.75,
+   "fim": 1.41,
+   "score": 0.87
+  },
+  {
+   "w": "quando",
+   "ini": 1.73,
+   "fim": 1.85,
+   "score": 1.0
+  },
+  {
+   "w": "alguém",
+   "ini": 1.85,
+   "fim": 2.05,
+   "score": 1.0
+  },
+  {
+   "w": "pensa",
+   "ini": 2.05,
+   "fim": 2.33,
+   "score": 1.0
+  },
+  {
+   "w": "em",
+   "ini": 2.33,
+   "fim": 2.43,
+   "score": 1.0
+  },
+  {
+   "w": "comprar,",
+   "ini": 2.43,
+   "fim": 2.75,
+   "score": 1.0
+  },
+  {
+   "w": "quem",
+   "ini": 3.07,
+   "fim": 3.29,
+   "score": 1.0
+  },
+  {
+   "w": "vem",
+   "ini": 3.29,
+   "fim": 3.43,
+   "score": 0.95
+  },
+  {
+   "w": "primeiro",
+   "ini": 3.43,
+   "fim": 3.77,
+   "score": 1.0
+  },
+  {
+   "w": "na",
+   "ini": 3.77,
+   "fim": 3.89,
+   "score": 0.99
+  },
+  {
+   "w": "cabeça?",
+   "ini": 3.89,
+   "fim": 4.29,
+   "score": 1.0
+  }
+ ],
+ "bruto06.mp4": [
+  {
+   "w": "Quem",
+   "ini": 0.85,
+   "fim": 1.35,
+   "score": 0.71
+  },
+  {
+   "w": "está",
+   "ini": 1.35,
+   "fim": 1.51,
+   "score": 0.96
+  },
+  {
+   "w": "aparecendo.",
+   "ini": 1.51,
+   "fim": 2.11,
+   "score": 0.99
+  }
+ ],
+ "bruto07.mp4": [
+  {
+   "w": "Isso",
+   "ini": 1.74,
+   "fim": 2.34,
+   "score": 0.47
+  },
+  {
+   "w": "não",
+   "ini": 2.34,
+   "fim": 2.46,
+   "score": 1.0
+  },
+  {
+   "w": "significa",
+   "ini": 2.46,
+   "fim": 2.92,
+   "score": 1.0
+  },
+  {
+   "w": "que",
+   "ini": 2.92,
+   "fim": 3.08,
+   "score": 0.99
+  },
+  {
+   "w": "ele",
+   "ini": 3.08,
+   "fim": 3.16,
+   "score": 0.97
+  },
+  {
+   "w": "tenha",
+   "ini": 3.16,
+   "fim": 3.28,
+   "score": 0.49
+  },
+  {
+   "w": "um",
+   "ini": 3.28,
+   "fim": 3.38,
+   "score": 0.99
+  },
+  {
+   "w": "produto",
+   "ini": 3.38,
+   "fim": 3.72,
+   "score": 1.0
+  },
+  {
+   "w": "melhor",
+   "ini": 3.72,
+   "fim": 4.0,
+   "score": 1.0
+  },
+  {
+   "w": "que",
+   "ini": 4.0,
+   "fim": 4.12,
+   "score": 0.98
+  },
+  {
+   "w": "o",
+   "ini": 4.12,
+   "fim": 4.32,
+   "score": 0.91
+  },
+  {
+   "w": "seu.",
+   "ini": 4.32,
+   "fim": 4.32,
+   "score": 1.0
+  }
+ ],
+ "bruto08.mp4": [
+  {
+   "w": "Significa",
+   "ini": 1.42,
+   "fim": 2.28,
+   "score": 0.77
+  },
+  {
+   "w": "que",
+   "ini": 2.28,
+   "fim": 2.4,
+   "score": 1.0
+  },
+  {
+   "w": "ele",
+   "ini": 2.4,
+   "fim": 2.5,
+   "score": 0.87
+  },
+  {
+   "w": "está",
+   "ini": 2.5,
+   "fim": 2.64,
+   "score": 1.0
+  },
+  {
+   "w": "construindo",
+   "ini": 2.64,
+   "fim": 3.18,
+   "score": 0.97
+  },
+  {
+   "w": "a",
+   "ini": 3.18,
+   "fim": 3.48,
+   "score": 0.99
+  },
+  {
+   "w": "presença",
+   "ini": 3.48,
+   "fim": 3.88,
+   "score": 1.0
+  },
+  {
+   "w": "dele.",
+   "ini": 3.88,
+   "fim": 4.14,
+   "score": 0.97
+  }
+ ],
+ "bruto09.mp4": [
+  {
+   "w": "Ser",
+   "ini": 1.33,
+   "fim": 1.85,
+   "score": 0.97
+  },
+  {
+   "w": "bom",
+   "ini": 1.85,
+   "fim": 2.03,
+   "score": 1.0
+  },
+  {
+   "w": "é",
+   "ini": 2.03,
+   "fim": 2.17,
+   "score": 1.0
+  },
+  {
+   "w": "importante,",
+   "ini": 2.17,
+   "fim": 2.69,
+   "score": 1.0
+  },
+  {
+   "w": "mas",
+   "ini": 2.95,
+   "fim": 3.25,
+   "score": 1.0
+  },
+  {
+   "w": "se",
+   "ini": 3.25,
+   "fim": 3.39,
+   "score": 1.0
+  },
+  {
+   "w": "ninguém",
+   "ini": 3.39,
+   "fim": 3.59,
+   "score": 1.0
+  },
+  {
+   "w": "lembra",
+   "ini": 3.59,
+   "fim": 3.95,
+   "score": 1.0
+  },
+  {
+   "w": "que",
+   "ini": 3.95,
+   "fim": 4.09,
+   "score": 1.0
+  },
+  {
+   "w": "você",
+   "ini": 4.09,
+   "fim": 4.39,
+   "score": 1.0
+  },
+  {
+   "w": "existe,",
+   "ini": 4.39,
+   "fim": 4.85,
+   "score": 1.0
+  },
+  {
+   "w": "ser",
+   "ini": 5.37,
+   "fim": 5.55,
+   "score": 1.0
+  },
+  {
+   "w": "bom",
+   "ini": 5.55,
+   "fim": 5.71,
+   "score": 1.0
+  },
+  {
+   "w": "sozinho",
+   "ini": 5.71,
+   "fim": 6.17,
+   "score": 1.0
+  },
+  {
+   "w": "não",
+   "ini": 6.17,
+   "fim": 6.73,
+   "score": 0.98
+  },
+  {
+   "w": "vende.",
+   "ini": 6.73,
+   "fim": 7.05,
+   "score": 1.0
+  }
+ ]
+}

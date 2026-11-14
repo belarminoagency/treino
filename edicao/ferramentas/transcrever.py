@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Transcreve cada cópia de trabalho com WhisperX (CPU), tempo por palavra.
+"""Transcreve cada cópia de trabalho (faster-whisper, CPU), tempo por palavra.
 Uso: <venv>/python transcrever.py <pasta_do_video> [modelo=large-v3-turbo] [contexto="termos, nomes"]
 Saídas: _CLAUDE/transcricao/palavras.json, frases.txt; bloco `transcricao` e `silencios` no estado.
 Confere buracos (trecho com som e sem palavra) e retranscreve sem contexto."""
@@ -44,27 +44,33 @@ def palavras_de(seg_result, offset=0.0):
     return out
 
 def main(pasta, modelo="large-v3-turbo", contexto=None):
+    # ASR: faster-whisper (VAD Silero embutido no pacote, sem download extra).
+    # Tempo por palavra: word_timestamps do faster-whisper (precisão ~0,05–0,1 s; as bordas de corte
+    # são refinadas pela energia do áudio). O WhisperX (VAD pyannote/torch.hub e alinhamento com dados
+    # do nltk) não carrega neste ambiente: usamos só o load_audio dele.
+    from faster_whisper import WhisperModel
+    import os
     pasta = Path(pasta); d = estado.ler(pasta)
     out = pasta / "_CLAUDE" / "transcricao"; out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
-    opts = {"initial_prompt": contexto} if contexto else {}
-    m = whisperx.load_model(modelo, "cpu", compute_type="int8", language="pt", asr_options=opts)
-    m_plain = whisperx.load_model(modelo, "cpu", compute_type="int8", language="pt") if contexto else m
-    al, meta = whisperx.load_align_model(language_code="pt", device="cpu")
+    fw = WhisperModel(modelo, device="cpu", compute_type="int8", cpu_threads=os.cpu_count())
+    def asr(audio, com_contexto=True):
+        segs, _ = fw.transcribe(audio, language="pt", beam_size=5, vad_filter=True, word_timestamps=True,
+                                initial_prompt=contexto if com_contexto else None,
+                                condition_on_previous_text=False)
+        return {"segments": [{"words": [{"word": w.word, "start": w.start, "end": w.end, "score": w.probability}
+                                        for w in x.words]} for x in segs]}
     todas, sil, avisos = {}, {}, []
     for it in d["midia"]["itens"]:
         stem = Path(it["arquivo"]).stem
         wpath = pasta / "_CLAUDE" / "midia" / f"{stem}_16k.wav"
         audio = whisperx.load_audio(str(wpath))
-        r = m.transcribe(audio, batch_size=4, language="pt")
-        r = whisperx.align(r["segments"], al, meta, audio, "cpu", return_char_alignments=False)
-        ps = palavras_de(r)
+        ps = palavras_de(asr(audio))
         wav, sr = sf.read(str(wpath))
         for a, b in buracos(ps, wav, sr):
             trecho = audio[int(max(0, a-0.2)*16000):int((b+0.2)*16000)]
-            r2 = m_plain.transcribe(trecho, batch_size=1, language="pt")
+            r2 = asr(trecho, com_contexto=False)
             if r2["segments"]:
-                r2 = whisperx.align(r2["segments"], al, meta, trecho, "cpu")
                 novas = [p for p in palavras_de(r2, max(0, a-0.2)) if not any(abs(p["ini"]-q["ini"]) < 0.1 for q in ps)]
                 if novas:
                     ps = sorted(ps + novas, key=lambda p: p["ini"])
@@ -93,7 +99,7 @@ def main(pasta, modelo="large-v3-turbo", contexto=None):
                 frase, ini = [], None
     (out / "frases.txt").write_text("\n".join(linhas) + "\n", encoding="utf-8")
     d = estado.ler(pasta)
-    d["transcricao"] = {"modelo": f"whisperx {modelo} cpu int8", "palavras": "_CLAUDE/transcricao/palavras.json",
+    d["transcricao"] = {"modelo": f"faster-whisper {modelo} cpu int8 word_timestamps", "palavras": "_CLAUDE/transcricao/palavras.json",
                         "frases": "_CLAUDE/transcricao/frases.txt", "avisos": avisos, "segundos_gastos": round(time.time()-t0)}
     d["silencios"] = sil
     estado.gravar(pasta, d)
