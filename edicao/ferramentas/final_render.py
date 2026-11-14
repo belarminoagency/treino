@@ -82,6 +82,8 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("pasta"); ap.add_argument("--motion"); ap.add_argument("--legenda")
     ap.add_argument("--tras", help="animações ATRÁS da pessoa (RGBA)"); ap.add_argument("--frente", help="animações na frente da pessoa (RGBA)")
     ap.add_argument("--pessoa", help="recorte da pessoa na sequência (MOV com alfa, resolução da cópia de trabalho)")
+    ap.add_argument("--objetos", help="caixas x,y,l,a;… (coordenadas da cópia de trabalho) de objetos parados na parede que o recorte às vezes pega; "
+                                       "dentro delas, o que for igual ao fundo parado sai do recorte")
     ap.add_argument("--sfx"); ap.add_argument("--segura", type=float, default=1.0); ap.add_argument("--largura", type=int, default=1080)
     ap.add_argument("--saida")
     ap.add_argument("--so-audio", help="reaproveita a imagem deste MP4 e refaz só o áudio (efeitos/níveis)"); a = ap.parse_args()
@@ -110,6 +112,18 @@ def main():
         pw, ph = d["midia"]["largura"], d["midia"]["altura"]; psh = int(round(ph * 1080 / pw / 2) * 2)
         pe = le_frames(["ffmpeg", "-v", "error", "-i", str(a.pessoa), "-vf", f"scale=1080:{psh}:flags=lanczos",
                         "-f", "rawvideo", "-pix_fmt", "rgba", "-"], 1080, psh, 4)
+    caixas, placa = [], None
+    if a.objetos and pe is not None:
+        k = 1080 / d["midia"]["largura"]
+        for c in a.objetos.split(";"):
+            x, y, w, h = [int(round(float(v) * k)) for v in c.split(",")]
+            caixas.append((max(0, x - 10), max(0, y - 10), x + w + 10, y + h + 10))
+        # fundo parado: mediana de quadros espaçados da sequência (a pessoa se mexe, o objeto não)
+        amostras = []
+        for i, q in enumerate(le_frames(["ffmpeg", "-v", "error", "-i", str(pasta / "_CLAUDE/midia/sequencia.mp4"), "-vf", f"scale=1080:{psh}",
+                                          "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], 1080, psh, 3)):
+            if i % 15 == 0: amostras.append([q[y0:y1, x0:x1].copy() for x0, y0, x1, y1 in caixas])
+        placa = [np.median(np.stack([am[j] for am in amostras]), 0).astype(np.int16) for j in range(len(caixas))]
     f = 0; ultimo = None
     for s in d["cortes"]["segmentos"]:
         trab = next(i for i in d["midia"]["itens"] if i["arquivo"] == s["arquivo"])
@@ -128,6 +142,12 @@ def main():
             t_ = next(tr, None) if tr else None
             f_ = next(fr_, None) if fr_ else None
             p_ = next(pe, None) if pe else None
+            if p_ is not None and placa is not None:
+                p_ = p_.copy()
+                for (x0, y0, x1, y1), pl in zip(caixas, placa):
+                    dif = np.abs(fr[y0:y1, x0:x1].astype(np.int16) - pl).max(2)
+                    fundo = cv2.erode((dif < 28).astype(np.uint8), np.ones((3, 3), np.uint8))
+                    p_[y0:y1, x0:x1, 3] = np.where(fundo > 0, 0, p_[y0:y1, x0:x1, 3])
             if t_ is not None: img = blend(img, t_)
             if p_ is not None and t_ is not None and t_[:, :, 3].any():
                 # a pessoa só precisa voltar por cima quando há algo atrás dela neste quadro

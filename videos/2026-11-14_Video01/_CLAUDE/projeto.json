@@ -179,7 +179,8 @@
   "alertas": [],
   "obs": "VFR convertido para 30 fps CFR",
   "enquadramento": "bruto 864x1920 (mais estreito que 9:16): escala para 1080 de largura e corta ~240 px em cima e embaixo",
-  "pessoa": "_CLAUDE/midia/pessoa.mov"
+  "pessoa": "_CLAUDE/midia/pessoa.mov",
+  "objetos_parede": "656,384,138,249;820,517,44,287;696,844,168,56"
  },
  "transcricao": {
   "modelo": "faster-whisper large-v3-turbo cpu int8 word_timestamps",
@@ -1539,8 +1540,8 @@
   "itens": 37
  },
  "final": {
-  "versao": 3,
-  "arquivo": "Renders/2026-11-14_Video01_final_v03.mp4",
+  "versao": 4,
+  "arquivo": "Renders/2026-11-14_Video01_final_v04.mp4",
   "quadros": 1049,
   "segura": 1.0
  }
