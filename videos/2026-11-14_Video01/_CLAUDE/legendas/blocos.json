@@ -1,0 +1,819 @@
+{
+ "duracao": 34.967,
+ "blocos": [
+  {
+   "id": "lg01",
+   "palavras": [
+    {
+     "w": "Seu",
+     "t": "Seu",
+     "ini": 0.05,
+     "fim": 0.57
+    },
+    {
+     "w": "concorrente",
+     "t": "concorrente",
+     "ini": 0.57,
+     "fim": 1.01
+    }
+   ]
+  },
+  {
+   "id": "lg02",
+   "palavras": [
+    {
+     "w": "pode",
+     "t": "pode",
+     "ini": 1.01,
+     "fim": 1.25
+    },
+    {
+     "w": "não",
+     "t": "não",
+     "ini": 1.25,
+     "fim": 1.59
+    },
+    {
+     "w": "ser",
+     "t": "ser",
+     "ini": 1.59,
+     "fim": 1.85
+    }
+   ]
+  },
+  {
+   "id": "lg03",
+   "palavras": [
+    {
+     "w": "melhor",
+     "t": "melhor",
+     "ini": 1.85,
+     "fim": 2.09
+    },
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 2.09,
+     "fim": 2.23
+    },
+    {
+     "w": "você,",
+     "t": "você",
+     "ini": 2.23,
+     "fim": 2.51
+    }
+   ]
+  },
+  {
+   "id": "lg04",
+   "palavras": [
+    {
+     "w": "mas",
+     "t": "mas",
+     "ini": 2.81,
+     "fim": 3.11
+    },
+    {
+     "w": "ele",
+     "t": "ele",
+     "ini": 3.11,
+     "fim": 3.25
+    },
+    {
+     "w": "tá",
+     "t": "tá",
+     "ini": 3.25,
+     "fim": 3.37
+    }
+   ]
+  },
+  {
+   "id": "lg05",
+   "palavras": [
+    {
+     "w": "aparecendo",
+     "t": "aparecendo",
+     "ini": 3.37,
+     "fim": 3.81
+    },
+    {
+     "w": "mais.",
+     "t": "mais",
+     "ini": 3.81,
+     "fim": 4.15
+    }
+   ],
+   "destaque": 0
+  },
+  {
+   "id": "lg06",
+   "palavras": [
+    {
+     "w": "Pensa",
+     "t": "Pensa",
+     "ini": 4.397,
+     "fim": 4.977
+    },
+    {
+     "w": "comigo,",
+     "t": "comigo",
+     "ini": 4.977,
+     "fim": 5.197
+    }
+   ]
+  },
+  {
+   "id": "lg07",
+   "palavras": [
+    {
+     "w": "você",
+     "t": "você",
+     "ini": 5.437,
+     "fim": 5.557
+    },
+    {
+     "w": "tem",
+     "t": "tem",
+     "ini": 5.557,
+     "fim": 5.697
+    },
+    {
+     "w": "um",
+     "t": "um",
+     "ini": 5.697,
+     "fim": 5.777
+    }
+   ]
+  },
+  {
+   "id": "lg08",
+   "palavras": [
+    {
+     "w": "produto",
+     "t": "produto",
+     "ini": 5.777,
+     "fim": 5.977
+    },
+    {
+     "w": "excelente,",
+     "t": "excelente",
+     "ini": 5.977,
+     "fim": 6.497
+    }
+   ]
+  },
+  {
+   "id": "lg09",
+   "palavras": [
+    {
+     "w": "atende",
+     "t": "atende",
+     "ini": 6.557,
+     "fim": 6.877
+    },
+    {
+     "w": "bem,",
+     "t": "bem",
+     "ini": 6.877,
+     "fim": 7.137
+    }
+   ]
+  },
+  {
+   "id": "lg10",
+   "palavras": [
+    {
+     "w": "tem",
+     "t": "tem",
+     "ini": 7.397,
+     "fim": 7.497
+    },
+    {
+     "w": "cliente",
+     "t": "cliente",
+     "ini": 7.497,
+     "fim": 7.837
+    },
+    {
+     "w": "satisfeito?",
+     "t": "satisfeito?",
+     "ini": 7.837,
+     "fim": 8.417
+    }
+   ]
+  },
+  {
+   "id": "lg11",
+   "palavras": [
+    {
+     "w": "Só",
+     "t": "Só",
+     "ini": 8.687,
+     "fim": 9.167
+    },
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 9.167,
+     "fim": 9.427
+    }
+   ]
+  },
+  {
+   "id": "lg12",
+   "palavras": [
+    {
+     "w": "ninguém",
+     "t": "ninguém",
+     "ini": 9.427,
+     "fim": 9.787
+    },
+    {
+     "w": "vê",
+     "t": "vê",
+     "ini": 9.787,
+     "fim": 10.047
+    },
+    {
+     "w": "isso,",
+     "t": "isso",
+     "ini": 10.047,
+     "fim": 10.327
+    }
+   ],
+   "destaque": 0
+  },
+  {
+   "id": "lg13",
+   "palavras": [
+    {
+     "w": "e",
+     "t": "e",
+     "ini": 10.54,
+     "fim": 10.64
+    },
+    {
+     "w": "enquanto",
+     "t": "enquanto",
+     "ini": 10.64,
+     "fim": 10.94
+    },
+    {
+     "w": "isso,",
+     "t": "isso",
+     "ini": 10.94,
+     "fim": 11.28
+    }
+   ]
+  },
+  {
+   "id": "lg14",
+   "palavras": [
+    {
+     "w": "seu",
+     "t": "seu",
+     "ini": 11.4,
+     "fim": 11.62
+    },
+    {
+     "w": "concorrente",
+     "t": "concorrente",
+     "ini": 11.62,
+     "fim": 12.14
+    }
+   ]
+  },
+  {
+   "id": "lg15",
+   "palavras": [
+    {
+     "w": "posta",
+     "t": "posta",
+     "ini": 12.14,
+     "fim": 12.68
+    },
+    {
+     "w": "todos os dias.",
+     "t": "todos os dias",
+     "ini": 12.68,
+     "fim": 13.34
+    }
+   ],
+   "destaque": 1
+  },
+  {
+   "id": "lg16",
+   "palavras": [
+    {
+     "w": "Ele",
+     "t": "Ele",
+     "ini": 13.743,
+     "fim": 14.263
+    },
+    {
+     "w": "mostra",
+     "t": "mostra",
+     "ini": 14.263,
+     "fim": 14.503
+    }
+   ]
+  },
+  {
+   "id": "lg17",
+   "palavras": [
+    {
+     "w": "o",
+     "t": "o",
+     "ini": 14.503,
+     "fim": 14.643
+    },
+    {
+     "w": "produto,",
+     "t": "produto",
+     "ini": 14.643,
+     "fim": 14.963
+    }
+   ]
+  },
+  {
+   "id": "lg18",
+   "palavras": [
+    {
+     "w": "mostra",
+     "t": "mostra",
+     "ini": 15.243,
+     "fim": 15.343
+    },
+    {
+     "w": "os",
+     "t": "os",
+     "ini": 15.343,
+     "fim": 15.483
+    },
+    {
+     "w": "clientes,",
+     "t": "clientes",
+     "ini": 15.483,
+     "fim": 15.983
+    }
+   ]
+  },
+  {
+   "id": "lg19",
+   "palavras": [
+    {
+     "w": "mostra",
+     "t": "mostra",
+     "ini": 16.163,
+     "fim": 16.363
+    },
+    {
+     "w": "os",
+     "t": "os",
+     "ini": 16.363,
+     "fim": 16.503
+    },
+    {
+     "w": "bastidores",
+     "t": "bastidores",
+     "ini": 16.503,
+     "fim": 16.983
+    }
+   ]
+  },
+  {
+   "id": "lg20",
+   "palavras": [
+    {
+     "w": "e",
+     "t": "e",
+     "ini": 16.983,
+     "fim": 17.163
+    },
+    {
+     "w": "mostra",
+     "t": "mostra",
+     "ini": 17.163,
+     "fim": 17.443
+    }
+   ]
+  },
+  {
+   "id": "lg21",
+   "palavras": [
+    {
+     "w": "os",
+     "t": "os",
+     "ini": 17.443,
+     "fim": 17.603
+    },
+    {
+     "w": "resultados.",
+     "t": "resultados",
+     "ini": 17.603,
+     "fim": 17.943
+    }
+   ],
+   "destaque": 1
+  },
+  {
+   "id": "lg22",
+   "palavras": [
+    {
+     "w": "Então,",
+     "t": "Então",
+     "ini": 18.25,
+     "fim": 18.91
+    }
+   ]
+  },
+  {
+   "id": "lg23",
+   "palavras": [
+    {
+     "w": "quando",
+     "t": "quando",
+     "ini": 19.23,
+     "fim": 19.35
+    },
+    {
+     "w": "alguém",
+     "t": "alguém",
+     "ini": 19.35,
+     "fim": 19.55
+    },
+    {
+     "w": "pensa",
+     "t": "pensa",
+     "ini": 19.55,
+     "fim": 19.83
+    }
+   ]
+  },
+  {
+   "id": "lg24",
+   "palavras": [
+    {
+     "w": "em",
+     "t": "em",
+     "ini": 19.83,
+     "fim": 19.93
+    },
+    {
+     "w": "comprar,",
+     "t": "comprar",
+     "ini": 19.93,
+     "fim": 20.25
+    }
+   ],
+   "destaque": 1
+  },
+  {
+   "id": "lg25",
+   "palavras": [
+    {
+     "w": "quem",
+     "t": "quem",
+     "ini": 20.57,
+     "fim": 20.79
+    },
+    {
+     "w": "vem",
+     "t": "vem",
+     "ini": 20.79,
+     "fim": 20.93
+    },
+    {
+     "w": "primeiro",
+     "t": "primeiro",
+     "ini": 20.93,
+     "fim": 21.27
+    }
+   ]
+  },
+  {
+   "id": "lg26",
+   "palavras": [
+    {
+     "w": "na",
+     "t": "na",
+     "ini": 21.27,
+     "fim": 21.39
+    },
+    {
+     "w": "cabeça?",
+     "t": "cabeça?",
+     "ini": 21.39,
+     "fim": 21.79
+    }
+   ]
+  },
+  {
+   "id": "lg27",
+   "palavras": [
+    {
+     "w": "Quem",
+     "t": "Quem",
+     "ini": 22.017,
+     "fim": 22.517
+    },
+    {
+     "w": "está",
+     "t": "está",
+     "ini": 22.517,
+     "fim": 22.677
+    },
+    {
+     "w": "aparecendo.",
+     "t": "aparecendo",
+     "ini": 22.677,
+     "fim": 23.277
+    }
+   ],
+   "destaque": 2,
+   "enfase": true
+  },
+  {
+   "id": "lg28",
+   "palavras": [
+    {
+     "w": "Isso",
+     "t": "Isso",
+     "ini": 23.507,
+     "fim": 24.107
+    },
+    {
+     "w": "não",
+     "t": "não",
+     "ini": 24.107,
+     "fim": 24.227
+    },
+    {
+     "w": "significa",
+     "t": "significa",
+     "ini": 24.227,
+     "fim": 24.687
+    }
+   ]
+  },
+  {
+   "id": "lg29",
+   "palavras": [
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 24.687,
+     "fim": 24.847
+    },
+    {
+     "w": "ele",
+     "t": "ele",
+     "ini": 24.847,
+     "fim": 24.927
+    },
+    {
+     "w": "tenha",
+     "t": "tenha",
+     "ini": 24.927,
+     "fim": 25.047
+    }
+   ]
+  },
+  {
+   "id": "lg30",
+   "palavras": [
+    {
+     "w": "um",
+     "t": "um",
+     "ini": 25.047,
+     "fim": 25.147
+    },
+    {
+     "w": "produto",
+     "t": "produto",
+     "ini": 25.147,
+     "fim": 25.487
+    },
+    {
+     "w": "melhor",
+     "t": "melhor",
+     "ini": 25.487,
+     "fim": 25.767
+    }
+   ]
+  },
+  {
+   "id": "lg31",
+   "palavras": [
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 25.767,
+     "fim": 25.887
+    },
+    {
+     "w": "o",
+     "t": "o",
+     "ini": 25.887,
+     "fim": 26.087
+    },
+    {
+     "w": "seu.",
+     "t": "seu",
+     "ini": 26.087,
+     "fim": 26.087
+    }
+   ]
+  },
+  {
+   "id": "lg32",
+   "palavras": [
+    {
+     "w": "Significa",
+     "t": "Significa",
+     "ini": 26.32,
+     "fim": 27.18
+    },
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 27.18,
+     "fim": 27.3
+    },
+    {
+     "w": "ele",
+     "t": "ele",
+     "ini": 27.3,
+     "fim": 27.4
+    }
+   ]
+  },
+  {
+   "id": "lg33",
+   "palavras": [
+    {
+     "w": "está",
+     "t": "está",
+     "ini": 27.4,
+     "fim": 27.54
+    },
+    {
+     "w": "construindo",
+     "t": "construindo",
+     "ini": 27.54,
+     "fim": 28.08
+    }
+   ]
+  },
+  {
+   "id": "lg34",
+   "palavras": [
+    {
+     "w": "a",
+     "t": "a",
+     "ini": 28.08,
+     "fim": 28.38
+    },
+    {
+     "w": "presença",
+     "t": "presença",
+     "ini": 28.38,
+     "fim": 28.78
+    },
+    {
+     "w": "dele.",
+     "t": "dele",
+     "ini": 28.78,
+     "fim": 29.04
+    }
+   ],
+   "destaque": 1
+  },
+  {
+   "id": "lg35",
+   "palavras": [
+    {
+     "w": "Ser",
+     "t": "Ser",
+     "ini": 29.297,
+     "fim": 29.817
+    },
+    {
+     "w": "bom",
+     "t": "bom",
+     "ini": 29.817,
+     "fim": 29.997
+    }
+   ]
+  },
+  {
+   "id": "lg36",
+   "palavras": [
+    {
+     "w": "é",
+     "t": "é",
+     "ini": 29.997,
+     "fim": 30.137
+    },
+    {
+     "w": "importante,",
+     "t": "importante",
+     "ini": 30.137,
+     "fim": 30.657
+    }
+   ]
+  },
+  {
+   "id": "lg37",
+   "palavras": [
+    {
+     "w": "mas",
+     "t": "mas",
+     "ini": 30.917,
+     "fim": 31.217
+    },
+    {
+     "w": "se",
+     "t": "se",
+     "ini": 31.217,
+     "fim": 31.357
+    },
+    {
+     "w": "ninguém",
+     "t": "ninguém",
+     "ini": 31.357,
+     "fim": 31.557
+    }
+   ]
+  },
+  {
+   "id": "lg38",
+   "palavras": [
+    {
+     "w": "lembra",
+     "t": "lembra",
+     "ini": 31.557,
+     "fim": 31.917
+    },
+    {
+     "w": "que",
+     "t": "que",
+     "ini": 31.917,
+     "fim": 32.057
+    }
+   ]
+  },
+  {
+   "id": "lg39",
+   "palavras": [
+    {
+     "w": "você",
+     "t": "você",
+     "ini": 32.057,
+     "fim": 32.357
+    },
+    {
+     "w": "existe,",
+     "t": "existe",
+     "ini": 32.357,
+     "fim": 32.817
+    }
+   ]
+  },
+  {
+   "id": "lg40",
+   "palavras": [
+    {
+     "w": "ser",
+     "t": "ser",
+     "ini": 33.103,
+     "fim": 33.283
+    },
+    {
+     "w": "bom",
+     "t": "bom",
+     "ini": 33.283,
+     "fim": 33.443
+    },
+    {
+     "w": "sozinho",
+     "t": "sozinho",
+     "ini": 33.443,
+     "fim": 33.903
+    }
+   ]
+  },
+  {
+   "id": "lg41",
+   "palavras": [
+    {
+     "w": "não vende.",
+     "t": "não vende",
+     "ini": 33.903,
+     "fim": 34.783
+    }
+   ],
+   "destaque": 0
+  }
+ ]
+}

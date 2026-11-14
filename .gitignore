@@ -17,3 +17,6 @@ videos/**/*.jpg
 videos/**/node_modules/
 node_modules/
 __pycache__/
+.hyperframes/
+# Projeto da legenda é gerado pelo legendas_render.py a partir do estado
+videos/**/_CLAUDE/legendas/hf/

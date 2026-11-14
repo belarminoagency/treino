@@ -1,0 +1,41 @@
+lg01 [00:00.05] Seu | concorrente | pode
+lg02 [00:01.25] não | ser | melhor
+lg03 [00:02.09] que | você
+lg04 [00:02.81] mas | ele | tá
+lg05 [00:03.37] aparecendo | mais
+lg06 [00:04.40] Pensa | comigo
+lg07 [00:05.44] você | tem
+lg08 [00:05.70] um | produto | excelente
+lg09 [00:06.56] atende | bem
+lg10 [00:07.40] tem | cliente | satisfeito?
+lg11 [00:08.69] Só | que | ninguém
+lg12 [00:09.79] vê | isso
+lg13 [00:10.54] e | enquanto | isso
+lg14 [00:11.40] seu | concorrente | posta
+lg15 [00:12.68] todos | os | dias
+lg16 [00:13.74] Ele | mostra
+lg17 [00:14.50] o | produto
+lg18 [00:15.24] mostra | os | clientes
+lg19 [00:16.16] mostra | os | bastidores
+lg20 [00:16.98] e | mostra
+lg21 [00:17.44] os | resultados
+lg22 [00:18.25] Então
+lg23 [00:19.23] quando | alguém | pensa
+lg24 [00:19.83] em | comprar
+lg25 [00:20.57] quem | vem | primeiro
+lg26 [00:21.27] na | cabeça?
+lg27 [00:22.02] Quem | está | aparecendo
+lg28 [00:23.51] Isso | não | significa
+lg29 [00:24.69] que | ele | tenha
+lg30 [00:25.05] um | produto | melhor
+lg31 [00:25.77] que | o | seu
+lg32 [00:26.32] Significa | que | ele
+lg33 [00:27.40] está | construindo
+lg34 [00:28.08] a | presença | dele
+lg35 [00:29.30] Ser | bom | é
+lg36 [00:30.14] importante
+lg37 [00:30.92] mas | se | ninguém
+lg38 [00:31.56] lembra | que | você
+lg39 [00:32.36] existe
+lg40 [00:33.10] ser | bom | sozinho
+lg41 [00:33.90] não | vende

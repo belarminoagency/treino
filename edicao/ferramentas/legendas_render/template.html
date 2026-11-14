@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="vendor/gsap.min.js"></script>
+<style>
+  /* Peça-base: legenda dinâmica do perfil "principal" (estilo-legenda.md, identidade.md) */
+  @font-face { font-family: "InterApoio"; src: url("fonts/Inter-SemiBold.otf"); font-weight: 600; }
+  @font-face { font-family: "InterChave"; src: url("fonts/InterDisplay-Black.otf"); font-weight: 900; }
+  @font-face { font-family: "SerifaEnfase"; src: url("fonts/playfair-display-latin-800-italic.woff2"); font-weight: 800; font-style: italic; }
+  :root {
+    --branco: #FFFFFF; --azul: #2F5BFF;
+    --sombra: 0 4px 18px rgba(0,0,0,.65), 0 1px 3px rgba(0,0,0,.55);
+    --y: __Y__px; --apoio: __APOIO__px; --chave: __CHAVE__px; --enfase: __ENFASE__px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+  #root { position: relative; width: 1080px; height: 1920px; }
+  .bloco { position: absolute; left: 0; width: 1080px; top: var(--y); transform: translateY(-50%);
+           display: flex; flex-direction: column; align-items: center; gap: 2px; visibility: hidden; }
+  .linha { display: flex; gap: 0.26em; white-space: nowrap; font-size: var(--apoio); }
+  .p { display: inline-block; opacity: 0; color: var(--branco); text-shadow: var(--sombra); will-change: transform, opacity, filter; }
+  .apoio { font-family: "InterApoio"; font-weight: 600; font-size: var(--apoio); letter-spacing: -0.01em; }
+  .chave { font-family: "InterChave"; font-weight: 900; font-size: var(--chave); color: var(--azul);
+           text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.0; }
+  .enfase { font-family: "SerifaEnfase"; font-style: italic; font-weight: 800; font-size: var(--enfase);
+            color: var(--azul); line-height: 1.05; padding: 0.1em 0.14em; margin: -0.1em -0.14em; }
+</style>
+</head>
+<body>
+<div id="root" class="clip" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920"></div>
+<script>
+  const DADOS = __DADOS__;
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  window.__timelines["main"] = tl;
+  const root = document.getElementById("root");
+
+  // monta o DOM: cada bloco em até 3 linhas (antes da palavra-chave / chave / depois)
+  DADOS.blocos.forEach((b) => {
+    const el = document.createElement("div"); el.className = "bloco"; el.id = b.id; root.appendChild(el);
+    const linhas = []; let cur = null;
+    b.palavras.forEach((p, i) => {
+      const chave = i === b.destaque;
+      if (chave) { cur = null; }
+      if (!cur) { cur = document.createElement("div"); cur.className = "linha"; el.appendChild(cur); linhas.push(cur); }
+      const s = document.createElement("span");
+      s.className = "p " + (chave ? (b.enfase ? "enfase" : "chave") : "apoio");
+      s.textContent = p.t; s.dataset.ini = p.ini; cur.appendChild(s);
+      if (chave) { cur = null; }
+    });
+  });
+
+  function montar() {
+    const fim = DADOS.duracao;
+    DADOS.blocos.forEach((b, k) => {
+      const el = document.getElementById(b.id);
+      const ini = b.palavras[0].ini;
+      const ultimo = b.palavras[b.palavras.length - 1].fim;
+      const prox = k + 1 < DADOS.blocos.length ? DADOS.blocos[k + 1].palavras[0].ini : null;
+      // some no início do próximo bloco; se houver um buraco longo, segura ~0,6 s depois da última palavra
+      let sai = prox === null ? Math.min(fim, ultimo + 1.0) : (prox - ultimo > 1.2 ? ultimo + 0.6 : prox);
+      tl.set(el, { visibility: "visible" }, ini);
+      tl.set(el, { visibility: "hidden" }, Math.max(ini + 0.05, sai));
+      // cada linha recentraliza quando uma palavra nova entra
+      el.querySelectorAll(".linha").forEach((ln) => {
+        const ps = [...ln.querySelectorAll(".p")];
+        const larg = ps.map((p) => p.getBoundingClientRect().width);
+        const gap = parseFloat(getComputedStyle(ln).columnGap) || 0;
+        const total = larg.reduce((a, c) => a + c, 0) + gap * (ps.length - 1);
+        let xAnt = null;
+        ps.forEach((p, i) => {
+          const t = parseFloat(p.dataset.ini);
+          const visivel = larg.slice(0, i + 1).reduce((a, c) => a + c, 0) + gap * i;
+          const x = (total - visivel) / 2;
+          if (xAnt === null) tl.set(ln, { x: x }, Math.max(0, t - 0.001));
+          else tl.fromTo(ln, { x: xAnt }, { x: x, duration: 0.3, ease: "power3.out", immediateRender: false, lazy: false }, t);
+          xAnt = x;
+          const chave = p.classList.contains("chave") || p.classList.contains("enfase");
+          tl.set(p, { transformOrigin: "50% 60%" }, t);
+          tl.fromTo(p, { opacity: 0, filter: "blur(8px)" },
+                       { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "expo.out", immediateRender: false, lazy: false }, t);
+          tl.fromTo(p, { scale: chave ? 1.18 : 0.92 },
+                       { scale: 1, duration: chave ? 0.33 : 0.27, ease: chave ? "back.out(1.6)" : "expo.out", immediateRender: false, lazy: false }, t);
+        });
+      });
+    });
+    tl.set({}, {}, fim);
+    tl.seek(0);
+  }
+  document.fonts.ready.then(montar);
+</script>
+</body>
+</html>
