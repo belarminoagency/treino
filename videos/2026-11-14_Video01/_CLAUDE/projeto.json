@@ -46,8 +46,8 @@
   "iniciar": "concluido",
   "preparar": "concluido",
   "cortes": "concluido",
-  "legendas": "aguardando_aprovacao",
-  "motion_mapa": "pendente",
+  "legendas": "concluido",
+  "motion_mapa": "em_andamento",
   "motion_render": "pendente",
   "camera": "pendente",
   "sfx": "pendente",
@@ -1257,5 +1257,160 @@
   "legendas": {
    "cortes": 1
   }
+ },
+ "motions": {
+  "versao_plano": 1,
+  "cortes_versao": 1,
+  "itens": [
+   {
+    "id": "mo01",
+    "ini": 0.4,
+    "fim": 4.33,
+    "formato": "sobreposição",
+    "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
+    "conceito": "Duas barras lado a lado: 'VOCÊ' (★ qualidade) e 'ELE' (olho = alcance). Em 'melhor que você' a sua barra sobe mais; em 'aparecendo' a barra dele dispara e passa a sua.",
+    "gatilhos": {
+     "Seu": 0.05,
+     "melhor": 1.85,
+     "aparecendo": 3.37
+    },
+    "camera": {
+     "durante": "punch em 'aparecendo' (3.37)",
+     "depois": "corte s002 abre no plano aberto"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   },
+   {
+    "id": "mo02",
+    "ini": 5.8,
+    "fim": 10.47,
+    "formato": "sobreposição",
+    "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
+    "conceito": "3 selos com ícone e check: produto ✓, atendimento ✓, clientes ✓ (entram nas palavras). Em 'ninguém' ficam cinza e um olho cortado carimba no meio.",
+    "gatilhos": {
+     "excelente": 5.98,
+     "bem": 6.88,
+     "satisfeito": 7.84,
+     "ninguém": 9.43
+    },
+    "camera": {
+     "durante": "aproximação lenta em 'ninguém vê isso'"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   },
+   {
+    "id": "mo03",
+    "ini": 11.4,
+    "fim": 13.67,
+    "formato": "sobreposição",
+    "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
+    "conceito": "Fileira de 7 dias (D S T Q Q S S): cada dia acende em azul com um mini post, em cascata rápida no 'todos os dias'.",
+    "gatilhos": {
+     "posta": 12.14,
+     "todos os dias": 12.68
+    },
+    "camera": {
+     "durante": "—"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   },
+   {
+    "id": "mo04",
+    "ini": 14.4,
+    "fim": 18.2,
+    "formato": "sobreposição",
+    "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
+    "conceito": "4 quadradinhos de post, cada um com um ícone, entrando no ritmo da lista: caixa (produto), pessoas (clientes), claquete (bastidores), gráfico subindo (resultados).",
+    "gatilhos": {
+     "produto": 14.64,
+     "clientes": 15.48,
+     "bastidores": 16.5,
+     "resultados": 17.6
+    },
+    "camera": {
+     "durante": "punch leve em 'resultados'"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   },
+   {
+    "id": "mo05",
+    "ini": 19.8,
+    "fim": 23.43,
+    "formato": "sobreposição",
+    "posicao": "barra de busca no peito + número grande no alto, à esquerda da cabeça",
+    "conceito": "Uma barra de pesquisa digitando 'comprar…' em 'comprar'; em 'primeiro' um '1º' gigante azul aparece no alto (estilo da sua ref. da prospecção).",
+    "gatilhos": {
+     "comprar": 19.93,
+     "primeiro": 20.93,
+     "aparecendo": 22.68
+    },
+    "camera": {
+     "durante": "rosto um pouco para a direita enquanto o '1º' está na tela"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   },
+   {
+    "id": "mo06",
+    "ini": 27.95,
+    "fim": 29.23,
+    "formato": "tela cheia",
+    "posicao": "tela cheia",
+    "conceito": "Cartela de impacto: fundo escuro, a palavra PRESENÇA surgindo com brilho azul.",
+    "gatilhos": {
+     "presença": 28.38
+    },
+    "camera": {
+     "antes": "acelera para dentro antes da cartela",
+     "depois": "volta chegando de baixo no corte s010"
+    },
+    "legenda": "some (a cartela já mostra a palavra)",
+    "status": "proposto"
+   },
+   {
+    "id": "mo07",
+    "ini": 33.9,
+    "fim": 34.97,
+    "formato": "sobreposição",
+    "posicao": "alto do quadro, acima da cabeça",
+    "conceito": "Chamada final: selo branco com texto escuro (texto a definir com a pessoa) entrando junto com 'NÃO VENDE'; o último quadro segura ~1 s.",
+    "gatilhos": {
+     "não vende": 33.9
+    },
+    "camera": {
+     "durante": "punch em 'não vende'"
+    },
+    "legenda": "fica",
+    "status": "proposto"
+   }
+  ],
+  "trechos": {
+   "gancho": [
+    0,
+    4.33
+   ],
+   "corpo": [
+    4.33,
+    29.23
+   ],
+   "fechamento": [
+    29.23,
+    34.97
+   ]
+  },
+  "zona_segura": "rosto ocupa ~y 330–1050 no quadro final; legenda em y≈1460; animações no peito (1090–1390), no alto (80–330) ou tela cheia"
+ },
+ "camera": {
+  "batidas": [
+   {
+    "palavra": "não",
+    "tempo": 24.11,
+    "o_que": "punch seco"
+   }
+  ]
  }
 }
