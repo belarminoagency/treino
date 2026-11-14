@@ -1,0 +1,80 @@
+{
+ "fechado": 1.15,
+ "lenta": 0.04,
+ "ancora": [
+  540,
+  760
+ ],
+ "planos": {
+  "s006": "fechado"
+ },
+ "movimentos": [
+  {
+   "id": "cam01",
+   "tipo": "punch",
+   "t": 3.37,
+   "mais": 0.07,
+   "dur": 0.3,
+   "obs": "'aparecendo' (ápice do gancho)"
+  },
+  {
+   "id": "cam02",
+   "tipo": "zoom",
+   "t": 9.43,
+   "mais": 0.06,
+   "dur": 0.9,
+   "curva": "sine.inOut",
+   "obs": "aproximação em 'ninguém vê isso'"
+  },
+  {
+   "id": "cam03",
+   "tipo": "punch",
+   "t": 17.6,
+   "mais": 0.04,
+   "dur": 0.3,
+   "obs": "'resultados'"
+  },
+  {
+   "id": "cam04",
+   "tipo": "desloca",
+   "t": 20.75,
+   "dx": 70,
+   "dy": 0,
+   "dur": 0.6,
+   "obs": "rosto vai para a direita enquanto o '1º' está no alto à esquerda (só no s006, plano fechado; margem de 81 px)"
+  },
+  {
+   "id": "cam05",
+   "tipo": "punch",
+   "t": 24.11,
+   "mais": 0.07,
+   "dur": 0.3,
+   "obs": "'não significa'"
+  },
+  {
+   "id": "cam06",
+   "tipo": "acelera",
+   "t": 27.75,
+   "mais": 0.1,
+   "dur": 0.2,
+   "obs": "acelera para dentro antes da cartela"
+  },
+  {
+   "id": "cam07",
+   "tipo": "chega",
+   "t": 29.23,
+   "dx": 0,
+   "dy": 90,
+   "dur": 0.5,
+   "obs": "depois da cartela: chega de baixo e freia"
+  },
+  {
+   "id": "cam08",
+   "tipo": "punch",
+   "t": 33.9,
+   "mais": 0.08,
+   "dur": 0.3,
+   "obs": "'não vende'"
+  }
+ ]
+}

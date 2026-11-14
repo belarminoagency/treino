@@ -48,10 +48,10 @@
   "cortes": "concluido",
   "legendas": "concluido",
   "motion_mapa": "concluido",
-  "motion_render": "em_andamento",
-  "camera": "pendente",
-  "sfx": "pendente",
-  "final": "pendente"
+  "motion_render": "concluido",
+  "camera": "concluido",
+  "sfx": "concluido",
+  "final": "em_andamento"
  },
  "pendencias": [
   {
@@ -1282,7 +1282,12 @@
      "depois": "corte s002 abre no plano aberto"
     },
     "legenda": "fica",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    },
    {
     "id": "mo02",
@@ -1301,7 +1306,12 @@
      "durante": "aproximação lenta em 'ninguém vê isso'"
     },
     "legenda": "fica",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    },
    {
     "id": "mo03",
@@ -1318,7 +1328,12 @@
      "durante": "—"
     },
     "legenda": "fica",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    },
    {
     "id": "mo04",
@@ -1337,7 +1352,12 @@
      "durante": "punch leve em 'resultados'"
     },
     "legenda": "fica",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    },
    {
     "id": "mo05",
@@ -1355,7 +1375,12 @@
      "durante": "rosto um pouco para a direita enquanto o '1º' está na tela"
     },
     "legenda": "fica",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    },
    {
     "id": "mo06",
@@ -1372,7 +1397,12 @@
      "depois": "volta chegando de baixo no corte s010"
     },
     "legenda": "some (a cartela já mostra a palavra)",
-    "status": "aprovado"
+    "status": "aprovado",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "tela cheia"
+    }
    },
    {
     "id": "mo07",
@@ -1389,7 +1419,12 @@
     },
     "legenda": "fica",
     "status": "aprovado",
-    "texto": "Salva pra lembrar"
+    "texto": "Salva pra lembrar",
+    "render": {
+     "arquivo": "Renders/mo_todas_v01.mov",
+     "versao": 1,
+     "trilha": "sobreposicao"
+    }
    }
   ],
   "trechos": {
@@ -1406,7 +1441,9 @@
     34.97
    ]
   },
-  "zona_segura": "rosto ocupa ~y 330–1050 no quadro final; legenda em y≈1460; animações no peito (1090–1390), no alto (80–330) ou tela cheia"
+  "zona_segura": "rosto ocupa ~y 330–1050 no quadro final; legenda em y≈1460; animações no peito (1090–1390), no alto (80–330) ou tela cheia",
+  "projeto": "_CLAUDE/motion/hf (uma composição única com os 7 itens no tempo da sequência)",
+  "eventos": "_CLAUDE/motion/eventos.json"
  },
  "camera": {
   "batidas": [
@@ -1415,6 +1452,96 @@
     "tempo": 24.11,
     "o_que": "punch seco"
    }
-  ]
+  ],
+  "planos": {
+   "s001": "aberto",
+   "s002": "aberto",
+   "s003": "fechado",
+   "s004": "aberto",
+   "s005": "fechado",
+   "s006": "fechado",
+   "s007": "aberto",
+   "s008": "fechado",
+   "s009": "aberto",
+   "s010": "aberto",
+   "s011": "fechado"
+  },
+  "movimentos": [
+   {
+    "id": "cam01",
+    "tipo": "punch",
+    "t": 3.37,
+    "mais": 0.07,
+    "dur": 0.3,
+    "obs": "'aparecendo' (ápice do gancho)"
+   },
+   {
+    "id": "cam02",
+    "tipo": "zoom",
+    "t": 9.43,
+    "mais": 0.06,
+    "dur": 0.9,
+    "curva": "sine.inOut",
+    "obs": "aproximação em 'ninguém vê isso'"
+   },
+   {
+    "id": "cam03",
+    "tipo": "punch",
+    "t": 17.6,
+    "mais": 0.04,
+    "dur": 0.3,
+    "obs": "'resultados'"
+   },
+   {
+    "id": "cam04",
+    "tipo": "desloca",
+    "t": 20.75,
+    "dx": 70,
+    "dy": 0,
+    "dur": 0.6,
+    "obs": "rosto vai para a direita enquanto o '1º' está no alto à esquerda (só no s006, plano fechado; margem de 81 px)"
+   },
+   {
+    "id": "cam05",
+    "tipo": "punch",
+    "t": 24.11,
+    "mais": 0.07,
+    "dur": 0.3,
+    "obs": "'não significa'"
+   },
+   {
+    "id": "cam06",
+    "tipo": "acelera",
+    "t": 27.75,
+    "mais": 0.1,
+    "dur": 0.2,
+    "obs": "acelera para dentro antes da cartela"
+   },
+   {
+    "id": "cam07",
+    "tipo": "chega",
+    "t": 29.23,
+    "dx": 0,
+    "dy": 90,
+    "dur": 0.5,
+    "obs": "depois da cartela: chega de baixo e freia"
+   },
+   {
+    "id": "cam08",
+    "tipo": "punch",
+    "t": 33.9,
+    "mais": 0.08,
+    "dur": 0.3,
+    "obs": "'não vende'"
+   }
+  ],
+  "fechado": 1.15,
+  "lenta": 0.04,
+  "keyframes": "_CLAUDE/camera/keyframes.json"
+ },
+ "sfx": {
+  "versao": 1,
+  "plano": "_CLAUDE/sfx/plano_v01.json",
+  "itens": 37
  }
 }

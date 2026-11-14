@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family: "InterApoio"; src: url("fonts/Inter-SemiBold.otf"); font-weight: 600; }
+  @font-face { font-family: "InterChave"; src: url("fonts/InterDisplay-Black.otf"); font-weight: 900; }
+  :root { --branco:#FFFFFF; --azul:#2F5BFF; --azulc:#6E8BFF; --azule:#1A36B8; --fundo:#0B0B0F;
+          --card: rgba(11,11,15,.86); --borda: rgba(255,255,255,.14); --sombra: 0 18px 50px rgba(0,0,0,.55); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1920px; overflow:hidden; background:transparent; }
+  #root { position:relative; width:1080px; height:1920px; font-family:"InterApoio"; color:var(--branco); }
+  .mo { position:absolute; inset:0; visibility:hidden; }
+  .peito { position:absolute; left:0; width:1080px; top:1062px; height:270px; display:flex; align-items:center; justify-content:center; }
+  .card { background:var(--card); border:2px solid var(--borda); border-radius:28px; box-shadow:var(--sombra); }
+  svg.ic { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+  .rot { font-size:30px; letter-spacing:.02em; }
+  /* mo01 barras */
+  #mo01 .card { display:flex; gap:70px; padding:22px 56px 18px; align-items:flex-end; }
+  .col { display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .trilho { width:90px; height:150px; border-radius:18px; background:rgba(255,255,255,.08); position:relative; overflow:hidden; }
+  .enche { position:absolute; left:0; right:0; bottom:0; height:100%; border-radius:18px; transform-origin:50% 100%; }
+  #b-voce .enche { background:var(--branco); }
+  #b-ele .enche { background:linear-gradient(180deg,var(--azulc),var(--azul)); }
+  .col .rot { display:flex; gap:10px; align-items:center; }
+  .col .rot svg { font-size:30px; }
+  #b-ele .rot { color:var(--azulc); }
+  /* mo02 selos */
+  #mo02 .lista { display:flex; flex-direction:column; gap:12px; position:relative; }
+  .selo { display:flex; align-items:center; gap:16px; padding:8px 24px 8px 10px; font-size:32px; }
+  .selo .bola { width:52px; height:52px; border-radius:50%; background:rgba(47,91,255,.18); color:var(--azulc); display:flex; align-items:center; justify-content:center; font-size:30px; }
+  .selo .ok { margin-left:auto; padding-left:26px; color:var(--azul); font-size:38px; }
+  #carimbo { position:absolute; left:50%; top:50%; width:150px; height:150px; margin:-75px 0 0 -75px; border-radius:50%;
+             background:var(--branco); color:var(--fundo); display:flex; align-items:center; justify-content:center; font-size:84px; opacity:0;
+             box-shadow:0 10px 40px rgba(0,0,0,.6); }
+  /* mo03 dias */
+  #mo03 .card { display:flex; gap:12px; padding:20px; }
+  .dia { width:88px; height:140px; border-radius:18px; border:2px solid rgba(255,255,255,.18); display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:14px 0 16px; position:relative; overflow:hidden; }
+  .dia .let { font-family:"InterChave"; font-size:34px; z-index:2; }
+  .dia .post { font-size:44px; z-index:2; opacity:.35; }
+  .dia .luz { position:absolute; inset:0; background:var(--azul); transform-origin:50% 100%; transform:scaleY(0); z-index:1; }
+  /* mo04 posts */
+  #mo04 .linha { display:flex; gap:22px; }
+  .tile { width:184px; height:184px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
+  .tile svg { font-size:72px; color:var(--branco); }
+  .tile .rot { font-size:30px; opacity:.9; }
+  .tile.fim svg { color:var(--azul); }
+  /* mo05 busca + 1º */
+  #busca { display:flex; align-items:center; gap:20px; width:760px; height:110px; padding:0 34px; border-radius:60px; font-size:40px; }
+  #busca svg { font-size:44px; color:var(--azulc); }
+  #busca .cur { width:3px; height:48px; background:var(--branco); margin-left:2px; }
+  #primeiro { position:absolute; left:96px; top:190px; font-family:"InterChave"; font-size:250px; line-height:1; color:var(--branco);
+              letter-spacing:-0.04em; text-shadow:0 0 36px rgba(47,91,255,.95), 0 0 80px rgba(47,91,255,.6), 0 14px 40px rgba(0,0,0,.5); }
+  #primeiro sup { font-size:.42em; vertical-align:top; position:relative; top:.18em; margin-left:.04em; }
+  /* mo06 cartela */
+  #mo06 .fundo { position:absolute; inset:0; background:radial-gradient(60% 40% at 50% 50%, rgba(47,91,255,.32), rgba(11,11,15,0) 70%), var(--fundo); }
+  #mo06 .palco { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  #mo06 .palavra { position:relative; font-family:"InterChave"; font-size:124px; letter-spacing:-0.02em; }
+  #mo06 .brilho { position:absolute; inset:0; color:var(--azul); filter:blur(28px); opacity:.9; }
+  #mo06 .letras { position:relative; color:var(--branco); }
+  #mo06 .l { display:inline-block; }
+  /* mo07 chamada */
+  #cta { position:absolute; left:50%; top:200px; transform:translateX(-50%); display:flex; align-items:center; gap:18px;
+         background:var(--branco); color:var(--fundo); border-radius:60px; padding:22px 40px 22px 30px; font-family:"InterChave"; font-size:44px; white-space:nowrap;
+         box-shadow:0 14px 44px rgba(0,0,0,.45); }
+  #cta svg { font-size:46px; color:var(--azul); stroke-width:2.6; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M7 11.5V6a1.5 1.5 0 0 1 3 0v4"/><path d="M10 10V4.5a1.5 1.5 0 0 1 3 0V10"/><path d="M13 10V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M16 9.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-4.6-2.15L4 15.5a1.6 1.6 0 0 1 2.4-2.1L8 15"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-clap" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+</svg>
+<div id="root" class="clip" data-composition-id="main" data-start="0" data-duration="34.9833" data-width="1080" data-height="1920">
+
+  <div class="mo" id="mo01"><div class="peito"><div class="card">
+    <div class="col" id="b-voce"><div class="trilho"><div class="enche"></div></div><div class="rot"><svg class="ic"><use href="#i-star"/></svg>VOCÊ</div></div>
+    <div class="col" id="b-ele"><div class="trilho"><div class="enche"></div></div><div class="rot"><svg class="ic"><use href="#i-eye"/></svg>ELE</div></div>
+  </div></div></div>
+
+  <div class="mo" id="mo02"><div class="peito"><div class="lista">
+    <div class="selo card" id="s1"><div class="bola"><svg class="ic"><use href="#i-package"/></svg></div>Produto<div class="ok"><svg class="ic"><use href="#i-check"/></svg></div></div>
+    <div class="selo card" id="s2"><div class="bola"><svg class="ic"><use href="#i-hand"/></svg></div>Atendimento<div class="ok"><svg class="ic"><use href="#i-check"/></svg></div></div>
+    <div class="selo card" id="s3"><div class="bola"><svg class="ic"><use href="#i-users"/></svg></div>Clientes<div class="ok"><svg class="ic"><use href="#i-check"/></svg></div></div>
+    <div id="carimbo"><svg class="ic"><use href="#i-eyeoff"/></svg></div>
+  </div></div></div>
+
+  <div class="mo" id="mo03"><div class="peito"><div class="card" id="dias"></div></div></div>
+
+  <div class="mo" id="mo04"><div class="peito"><div class="linha">
+    <div class="tile card" id="t1"><svg class="ic"><use href="#i-package"/></svg><div class="rot">produto</div></div>
+    <div class="tile card" id="t2"><svg class="ic"><use href="#i-users"/></svg><div class="rot">clientes</div></div>
+    <div class="tile card" id="t3"><svg class="ic"><use href="#i-clap"/></svg><div class="rot">bastidores</div></div>
+    <div class="tile card fim" id="t4"><svg class="ic"><use href="#i-trend"/></svg><div class="rot">resultados</div></div>
+  </div></div></div>
+
+  <div class="mo" id="mo05">
+    <div class="peito"><div class="card" id="busca"><svg class="ic"><use href="#i-search"/></svg><span id="digita"></span><div class="cur"></div></div></div>
+    <div id="primeiro">1<sup>º</sup></div>
+  </div>
+
+  <div class="mo" id="mo06"><div class="fundo"></div><div class="palco"><div class="palavra"><div class="brilho" data-layout-ignore>PRESENÇA</div><div class="letras" id="letras"></div></div></div></div>
+
+  <div class="mo" id="mo07"><div id="cta"><svg class="ic"><use href="#i-bookmark"/></svg>Salva pra lembrar</div></div>
+</div>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  window.__timelines["main"] = tl;
+  const FIM = 34.9833;
+  const F = (o) => Object.assign({ immediateRender: false, lazy: false }, o);
+  const mostra = (id, a, b) => { tl.set("#" + id, { visibility: "visible" }, a); tl.set("#" + id, { visibility: "hidden" }, b); };
+  const entra = (sel, t, extra) => tl.fromTo(sel, Object.assign({ opacity: 0, scale: 0.9, y: 24, filter: "blur(10px)" }, (extra||{}).from),
+                    F(Object.assign({ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "back.out(1.4)" }, (extra||{}).to)), t);
+  const sai = (sel, t) => tl.fromTo(sel, { opacity: 1, scale: 1, filter: "blur(0px)" }, F({ opacity: 0, scale: 0.94, filter: "blur(10px)", duration: 0.25, ease: "power3.in" }), t);
+
+  // dias da semana (mo03)
+  const dias = document.getElementById("dias");
+  ["D","S","T","Q","Q","S","S"].forEach((l) => {
+    const e = document.createElement("div"); e.className = "dia";
+    e.innerHTML = '<div class="luz"></div><div class="let">' + l + '</div><svg class="ic post"><use href="#i-image"/></svg>';
+    dias.appendChild(e);
+  });
+  // letras da cartela (mo06)
+  const letras = document.getElementById("letras");
+  [..."PRESENÇA"].forEach((c) => { const s = document.createElement("span"); s.className = "l"; s.textContent = c; letras.appendChild(s); });
+
+  function montar() {
+    // baselines (estado de repouso antes de qualquer tween)
+    tl.set(["#b-voce .enche", "#b-ele .enche"], { scaleY: 0 }, 0);
+    // ---------- mo01: barras (0,40–4,33) ----------
+    mostra("mo01", 0.40, 4.33);
+    entra("#mo01 .card", 0.40);
+    tl.fromTo("#b-voce .enche", { scaleY: 0.0 }, F({ scaleY: 0.45, duration: 0.6, ease: "power3.out" }), 0.55);
+    tl.fromTo("#b-ele .enche", { scaleY: 0.0 }, F({ scaleY: 0.25, duration: 0.6, ease: "power3.out" }), 0.65);
+    tl.fromTo("#b-voce .enche", { scaleY: 0.45 }, F({ scaleY: 0.80, duration: 0.5, ease: "back.out(1.6)" }), 1.85);
+    tl.fromTo("#b-ele .enche", { scaleY: 0.25 }, F({ scaleY: 1.0, duration: 0.45, ease: "expo.out" }), 3.37);
+    tl.fromTo("#b-ele .trilho", { boxShadow: "0 0 0 rgba(47,91,255,0)" }, F({ boxShadow: "0 0 40px rgba(47,91,255,.9)", duration: 0.3, ease: "power2.out" }), 3.37);
+    tl.fromTo("#b-ele", { scale: 1 }, F({ scale: 1.12, duration: 0.4, ease: "back.out(2)" }), 3.37);
+    tl.fromTo("#b-voce", { opacity: 1 }, F({ opacity: 0.45, duration: 0.3, ease: "power1.inOut" }), 3.45);
+    sai("#mo01 .card", 4.06);
+
+    // ---------- mo02: selos (5,80–10,47) ----------
+    mostra("mo02", 5.80, 10.47);
+    [["#s1", 5.98], ["#s2", 6.88], ["#s3", 7.84]].forEach(([s, t]) => {
+      tl.fromTo(s, { opacity: 0, x: -50, filter: "blur(10px)" }, F({ opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }), t);
+      tl.fromTo(s + " .ok", { scale: 0, rotation: -30 }, F({ scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.4)" }), t + 0.18);
+    });
+    tl.fromTo("#mo02 .selo", { opacity: 1, filter: "grayscale(0) blur(0px)" }, F({ opacity: 0.4, filter: "grayscale(1) blur(1.5px)", duration: 0.3, ease: "power1.inOut" }), 9.43);
+    tl.set("#carimbo", { transformOrigin: "50% 50%" }, 9.43);
+    tl.fromTo("#carimbo", { opacity: 0, scale: 1.8, rotation: -14 }, F({ opacity: 1, scale: 1, rotation: -6, duration: 0.32, ease: "power4.out" }), 9.43);
+    sai("#mo02 .lista", 10.20);
+
+    // ---------- mo03: dias (11,40–13,67) ----------
+    mostra("mo03", 11.40, 13.67);
+    entra("#dias", 11.40);
+    const ds = [...document.querySelectorAll(".dia")];
+    ds.forEach((e, i) => {
+      const t = 12.68 + i * 0.07;
+      tl.fromTo(e.querySelector(".luz"), { scaleY: 0 }, F({ scaleY: 1, duration: 0.25, ease: "power3.out" }), t);
+      tl.fromTo(e.querySelector(".post"), { opacity: 0.35, scale: 1 }, F({ opacity: 1, scale: 1.12, duration: 0.25, ease: "back.out(2)" }), t);
+    });
+    sai("#dias", 13.42);
+
+    // ---------- mo04: posts (14,40–18,20) ----------
+    mostra("mo04", 14.40, 18.20);
+    [["#t1", 14.64], ["#t2", 15.48], ["#t3", 16.50], ["#t4", 17.60]].forEach(([s, t]) => entra(s, t, { from: { y: 50, scale: 0.8 } }));
+    tl.fromTo("#t4 svg", { y: 0 }, F({ y: -10, duration: 0.5, ease: "power2.out" }), 17.75);
+    sai("#mo04 .linha", 17.95);
+
+    // ---------- mo05: busca + 1º (19,80–23,43) ----------
+    mostra("mo05", 19.80, 23.43);
+    entra("#busca", 19.80);
+    const txt = "onde comprar…", dig = document.getElementById("digita");
+    for (let i = 0; i <= txt.length; i++) {
+      tl.set(dig, { textContent: txt.slice(0, i) }, 19.93 + i * (1 / 23));
+    }
+    tl.fromTo("#busca .cur", { opacity: 1 }, F({ opacity: 0, duration: 0.01, repeat: 7, yoyo: true, repeatDelay: 0.25, ease: "none" }), 20.6);
+    tl.set("#primeiro", { transformOrigin: "30% 60%" }, 20.93);
+    tl.fromTo("#primeiro", { opacity: 0, scale: 1.35, filter: "blur(14px)" }, F({ opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "back.out(1.5)" }), 20.93);
+    tl.fromTo("#primeiro", { y: 0 }, F({ y: -14, duration: 2.2, ease: "none" }), 21.43);
+    sai("#busca", 23.18);
+    tl.fromTo("#primeiro", { opacity: 1 }, F({ opacity: 0, duration: 0.25, ease: "power3.in" }), 23.18);
+
+    // ---------- mo06: cartela PRESENÇA (27,95–29,23) ----------
+    mostra("mo06", 27.95, 29.23);
+    tl.fromTo("#mo06 .fundo", { opacity: 0 }, F({ opacity: 1, duration: 0.14, ease: "power1.inOut" }), 27.95);
+    tl.fromTo("#mo06 .brilho", { opacity: 0 }, F({ opacity: 0.9, duration: 0.5, ease: "power2.out" }), 28.38);
+    tl.fromTo("#mo06 .palavra", { scale: 1.0 }, F({ scale: 1.07, duration: 1.0, ease: "none" }), 28.2);
+    [...letras.children].forEach((l, i) => {
+      tl.fromTo(l, { opacity: 0, y: 30, filter: "blur(12px)" }, F({ opacity: 1, y: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }), 28.20 + i * 0.03);
+    });
+
+    // ---------- mo07: chamada final (33,90–fim) ----------
+    mostra("mo07", 33.90, FIM + 1);
+    tl.fromTo("#cta", { opacity: 0, scale: 0.7, y: -30, xPercent: -50, filter: "blur(10px)" },
+                      F({ opacity: 1, scale: 1, y: 0, xPercent: -50, filter: "blur(0px)", duration: 0.5, ease: "back.out(1.8)" }), 33.90);
+    tl.set("#cta", { transformOrigin: "50% 50%" }, 33.90);
+    tl.fromTo("#cta svg", { y: -8 }, F({ y: 0, duration: 0.4, ease: "bounce.out" }), 34.20);
+
+    tl.set({}, {}, FIM);
+    tl.seek(0);
+  }
+  document.fonts.ready.then(montar);
+</script>
+</body>
+</html>

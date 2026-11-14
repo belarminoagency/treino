@@ -1,0 +1,149 @@
+{
+ "clique/clique_01.wav": {
+  "categoria": "clique",
+  "inicio_util": 0.0,
+  "duracao_util": 0.025,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "clique/clique_02.wav": {
+  "categoria": "clique",
+  "inicio_util": 0.0,
+  "duracao_util": 0.025,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "clique/clique_03.wav": {
+  "categoria": "clique",
+  "inicio_util": 0.0,
+  "duracao_util": 0.025,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "ding/ding_01.wav": {
+  "categoria": "ding",
+  "inicio_util": 0.0,
+  "duracao_util": 0.6,
+  "pico": 0.006,
+  "forma": "ataque_seco"
+ },
+ "ding/ding_02.wav": {
+  "categoria": "ding",
+  "inicio_util": 0.0,
+  "duracao_util": 0.6,
+  "pico": 0.0069,
+  "forma": "ataque_seco"
+ },
+ "grave/sub_01.wav": {
+  "categoria": "grave",
+  "inicio_util": 0.0,
+  "duracao_util": 1.2,
+  "pico": 0.0041,
+  "forma": "ataque_seco"
+ },
+ "impacto/impacto_01.wav": {
+  "categoria": "impacto",
+  "inicio_util": 0.0,
+  "duracao_util": 1.0,
+  "pico": 0.0035,
+  "forma": "ataque_seco"
+ },
+ "impacto/impacto_02.wav": {
+  "categoria": "impacto",
+  "inicio_util": 0.0,
+  "duracao_util": 0.7,
+  "pico": 0.0033,
+  "forma": "ataque_seco"
+ },
+ "interface/carimbo_01.wav": {
+  "categoria": "interface",
+  "inicio_util": 0.0,
+  "duracao_util": 0.35,
+  "pico": 0.0026,
+  "forma": "ataque_seco"
+ },
+ "interface/digitacao_01.wav": {
+  "categoria": "interface",
+  "inicio_util": 0.0009,
+  "duracao_util": 0.639,
+  "pico": 0.5044,
+  "forma": "crescendo"
+ },
+ "interface/tic_01.wav": {
+  "categoria": "interface",
+  "inicio_util": 0.0,
+  "duracao_util": 0.05,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "interface/tic_02.wav": {
+  "categoria": "interface",
+  "inicio_util": 0.0,
+  "duracao_util": 0.05,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "interface/tic_03.wav": {
+  "categoria": "interface",
+  "inicio_util": 0.0,
+  "duracao_util": 0.05,
+  "pico": 0.0025,
+  "forma": "ataque_seco"
+ },
+ "pop/pop_01.wav": {
+  "categoria": "pop",
+  "inicio_util": 0.0006,
+  "duracao_util": 0.089,
+  "pico": 0.0049,
+  "forma": "ataque_seco"
+ },
+ "pop/pop_02.wav": {
+  "categoria": "pop",
+  "inicio_util": 0.0003,
+  "duracao_util": 0.09,
+  "pico": 0.0052,
+  "forma": "ataque_seco"
+ },
+ "pop/pop_03.wav": {
+  "categoria": "pop",
+  "inicio_util": 0.0005,
+  "duracao_util": 0.089,
+  "pico": 0.0054,
+  "forma": "ataque_seco"
+ },
+ "riser/riser_01.wav": {
+  "categoria": "riser",
+  "inicio_util": 0.2999,
+  "duracao_util": 0.6,
+  "pico": 0.5956,
+  "forma": "crescendo"
+ },
+ "whoosh/whoosh_01.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.0508,
+  "duracao_util": 0.299,
+  "pico": 0.1676,
+  "forma": "crescendo"
+ },
+ "whoosh/whoosh_02.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.0709,
+  "duracao_util": 0.429,
+  "pico": 0.248,
+  "forma": "crescendo"
+ },
+ "whoosh/whoosh_03.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.0979,
+  "duracao_util": 0.602,
+  "pico": 0.3029,
+  "forma": "crescendo"
+ },
+ "whoosh/whoosh_04.wav": {
+  "categoria": "whoosh",
+  "inicio_util": 0.058,
+  "duracao_util": 0.392,
+  "pico": 0.2081,
+  "forma": "crescendo"
+ }
+}
