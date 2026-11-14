@@ -20,6 +20,8 @@ Rode `bash edicao/ferramentas/preparar_ambiente.sh`. Na primeira vez, escreva es
 1. **Brutos presentes?** Se a sessão é nova e `Brutos/` não tem os arquivos, peça o reenvio.
 2. **Inventário** (ffprobe por arquivo): duração, fps real (`r_frame_rate` e `avg_frame_rate`), resolução, rotação, codec, áudio.
    - **Celular grava com taxa de quadros variável (VFR)** com frequência: se `r_frame_rate` ≠ `avg_frame_rate`, converter para taxa constante (CFR) na taxa mais próxima (30 ou 60) numa cópia de trabalho `_CLAUDE/midia/bruto01_cfr.mp4`, e usar a cópia em todo o fluxo. Anote no estado.
+   - **Espelhar:** se `espelhar` = true no estado, aplicar `hflip` na mesma cópia de trabalho (todo o fluxo usa a cópia; o bruto fica intacto).
+   - **Vários brutos curtos** (celular grava um arquivo por take): ordenar pelo horário do nome/metadado; cada um vira uma cópia de trabalho própria.
    - **Rotação:** vídeo de celular pode vir com metadado de rotação; confira a largura/altura de exibição.
    - Alertas: sem áudio, ilegível, fps diferentes entre brutos.
 3. **Áudio:** extrair WAV 16 kHz mono para transcrever (e o original 48 kHz para o render).
