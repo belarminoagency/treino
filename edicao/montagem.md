@@ -13,7 +13,8 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - Duração típica: 30 s a 1 min (curtos: o fluxo trabalha o vídeo inteiro de uma vez, sem dividir em trechos)
 - Pastas: ferramentas em `edicao/` (neste repositório). Cada vídeo numa pasta da sessão `videos/AAAA-MM-DD_Nome/` com `Brutos/`, `Assets/`, `Renders/` e `_CLAUDE/` (estado); vídeos e renders fora do git. O estado (`_CLAUDE/*.json`) e o caderno de aprendizados vão para o repositório.
 - Transcrição: WhisperX local, na CPU (gratuita; reinstalada a cada sessão até existir script de preparação do ambiente). Alternativa futura: ElevenLabs Scribe.
-- Notas faladas: <…>
+- Notas faladas: "nota de edição" … "fim da nota" (sugestão padrão, aceita sem objeção)
+- Cortes: ritmo apertado (tira pausas, "ééé", "hum", respirações longas e repetições); na dúvida não corta e pergunta. Grava com roteiro mas improvisa em cima: o roteiro serve para reconhecer takes repetidos e a grafia de termos, nunca para trocar o que foi falado; o improviso é conteúdo válido, não erro.
 - Animação: <…>
 - Câmera: <…>
 - Som: <…> (a pessoa tem interesse no Epidemic Sound; sons baixados pelo celular e enviados na sessão)
@@ -30,4 +31,4 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - [ ] regras comuns
 
 ## Próximo passo
-Entrevista, decisões 5 e 6: notas faladas e cortes.
+Entrevista, decisão 7: animações.
