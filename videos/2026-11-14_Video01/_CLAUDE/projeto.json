@@ -1265,16 +1265,16 @@
   }
  },
  "motions": {
-  "versao_plano": 1,
+  "versao_plano": 2,
   "cortes_versao": 1,
   "itens": [
    {
     "id": "mo01",
     "ini": 0.4,
     "fim": 4.33,
-    "formato": "sobreposição",
+    "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
-    "conceito": "Duas barras lado a lado: 'VOCÊ' (★ qualidade) e 'ELE' (olho = alcance). Em 'melhor que você' a sua barra sobe mais; em 'aparecendo' a barra dele dispara e passa a sua.",
+    "conceito": "barras saindo de trás dos ombros: VOCÊ à esquerda, ELE à direita; em \"aparecendo\" a dele dispara acima da cabeça",
     "gatilhos": {
      "Seu": 0.05,
      "melhor": 1.85,
@@ -1287,18 +1287,17 @@
     "legenda": "fica",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo02",
     "ini": 5.8,
     "fim": 10.47,
-    "formato": "sobreposição",
+    "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
-    "conceito": "3 selos com ícone e check: produto ✓, atendimento ✓, clientes ✓ (entram nas palavras). Em 'ninguém' ficam cinza e um olho cortado carimba no meio.",
+    "conceito": "3 selos com ✓ em volta da cabeça (2 à esquerda, 1 à direita); em \"ninguém\" ficam cinza e um olho cortado aparece no alto",
     "gatilhos": {
      "excelente": 5.98,
      "bem": 6.88,
@@ -1311,18 +1310,17 @@
     "legenda": "fica",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo03",
     "ini": 11.4,
     "fim": 13.67,
-    "formato": "sobreposição",
+    "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
-    "conceito": "Fileira de 7 dias (D S T Q Q S S): cada dia acende em azul com um mini post, em cascata rápida no 'todos os dias'.",
+    "conceito": "7 dias em arco atrás da cabeça (coroa), acendendo um a um",
     "gatilhos": {
      "posta": 12.14,
      "todos os dias": 12.68
@@ -1333,18 +1331,17 @@
     "legenda": "fica",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo04",
     "ini": 14.4,
     "fim": 18.2,
-    "formato": "sobreposição",
+    "formato": "atrás da pessoa",
     "posicao": "zona do peito (y≈1090–1390, entre o queixo e a legenda)",
-    "conceito": "4 quadradinhos de post, cada um com um ícone, entrando no ritmo da lista: caixa (produto), pessoas (clientes), claquete (bastidores), gráfico subindo (resultados).",
+    "conceito": "4 posts dos lados da cabeça (2 e 2) no ritmo da lista",
     "gatilhos": {
      "produto": 14.64,
      "clientes": 15.48,
@@ -1357,63 +1354,59 @@
     "legenda": "fica",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo05",
     "ini": 19.8,
     "fim": 23.43,
-    "formato": "sobreposição",
+    "formato": "atrás da pessoa + frente",
     "posicao": "barra de busca no peito + número grande no alto, à esquerda da cabeça",
-    "conceito": "Uma barra de pesquisa digitando 'comprar…' em 'comprar'; em 'primeiro' um '1º' gigante azul aparece no alto (estilo da sua ref. da prospecção).",
+    "conceito": "\"1º\" gigante atrás da cabeça (parcialmente coberto) + barra de pesquisa no peito (frente)",
     "gatilhos": {
      "comprar": 19.93,
      "primeiro": 20.93,
      "aparecendo": 22.68
     },
     "camera": {
-     "durante": "rosto um pouco para a direita enquanto o '1º' está na tela"
+     "durante": "—"
     },
     "legenda": "fica",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo06",
     "ini": 27.95,
     "fim": 29.23,
-    "formato": "tela cheia",
+    "formato": "atrás da pessoa",
     "posicao": "tela cheia",
-    "conceito": "Cartela de impacto: fundo escuro, a palavra PRESENÇA surgindo com brilho azul.",
+    "conceito": "parede escurece e PRESENÇA aparece enorme no alto, atrás da cabeça",
     "gatilhos": {
      "presença": 28.38
     },
     "camera": {
-     "antes": "acelera para dentro antes da cartela",
-     "depois": "volta chegando de baixo no corte s010"
+     "durante": "aproximação lenta"
     },
-    "legenda": "some (a cartela já mostra a palavra)",
+    "legenda": "some (a palavra já está na parede)",
     "status": "aprovado",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "tela cheia"
+     "arquivo": "Renders/mo_tras_v02.mov",
+     "versao": 2
     }
    },
    {
     "id": "mo07",
     "ini": 33.9,
     "fim": 34.97,
-    "formato": "sobreposição",
+    "formato": "frente",
     "posicao": "alto do quadro, acima da cabeça",
-    "conceito": "Chamada final: selo branco com texto escuro (“Salva pra lembrar”, com ícone de salvar) entrando junto com 'NÃO VENDE'; o último quadro segura ~1 s.",
+    "conceito": "\"Salva pra lembrar\" no alto",
     "gatilhos": {
      "não vende": 33.9
     },
@@ -1424,9 +1417,8 @@
     "status": "aprovado",
     "texto": "Salva pra lembrar",
     "render": {
-     "arquivo": "Renders/mo_todas_v01.mov",
-     "versao": 1,
-     "trilha": "sobreposicao"
+     "arquivo": "Renders/mo_frente_v02.mov",
+     "versao": 2
     }
    }
   ],
@@ -1445,8 +1437,14 @@
    ]
   },
   "zona_segura": "rosto ocupa ~y 330–1050 no quadro final; legenda em y≈1460; animações no peito (1090–1390), no alto (80–330) ou tela cheia",
-  "projeto": "_CLAUDE/motion/hf (uma composição única com os 7 itens no tempo da sequência)",
-  "eventos": "_CLAUDE/motion/eventos.json"
+  "projeto": "_CLAUDE/motion/base/template.html → tras/ e frente/ (v02, pedido da pessoa: animações atrás e em volta dela)",
+  "eventos": "_CLAUDE/motion/eventos.json",
+  "camadas": {
+   "tras": "_CLAUDE/motion/tras",
+   "frente": "_CLAUDE/motion/frente",
+   "fonte": "_CLAUDE/motion/base/template.html",
+   "pessoa": "_CLAUDE/midia/pessoa.mov (recorte_pessoa.py)"
+  }
  },
  "camera": {
   "batidas": [
@@ -1462,9 +1460,9 @@
    "s003": "fechado",
    "s004": "aberto",
    "s005": "fechado",
-   "s006": "fechado",
-   "s007": "aberto",
-   "s008": "fechado",
+   "s006": "aberto",
+   "s007": "fechado",
+   "s008": "aberto",
    "s009": "aberto",
    "s010": "aberto",
    "s011": "fechado"
@@ -1496,15 +1494,6 @@
     "obs": "'resultados'"
    },
    {
-    "id": "cam04",
-    "tipo": "desloca",
-    "t": 20.75,
-    "dx": 70,
-    "dy": 0,
-    "dur": 0.6,
-    "obs": "rosto vai para a direita enquanto o '1º' está no alto à esquerda (só no s006, plano fechado; margem de 81 px)"
-   },
-   {
     "id": "cam05",
     "tipo": "punch",
     "t": 24.11,
@@ -1514,20 +1503,21 @@
    },
    {
     "id": "cam06",
-    "tipo": "acelera",
-    "t": 27.75,
-    "mais": 0.1,
-    "dur": 0.2,
-    "obs": "acelera para dentro antes da cartela"
+    "tipo": "zoom",
+    "t": 28.2,
+    "mais": 0.08,
+    "dur": 0.9,
+    "obs": "aproximação enquanto PRESENÇA aparece na parede (não há mais tela cheia)",
+    "curva": "sine.inOut"
    },
    {
     "id": "cam07",
     "tipo": "chega",
     "t": 29.23,
     "dx": 0,
-    "dy": 90,
+    "dy": 60,
     "dur": 0.5,
-    "obs": "depois da cartela: chega de baixo e freia"
+    "obs": "chega de baixo e freia no corte s010"
    },
    {
     "id": "cam08",

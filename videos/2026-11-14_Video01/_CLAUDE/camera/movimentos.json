@@ -5,9 +5,7 @@
   540,
   760
  ],
- "planos": {
-  "s006": "fechado"
- },
+ "planos": {},
  "movimentos": [
   {
    "id": "cam01",
@@ -35,15 +33,6 @@
    "obs": "'resultados'"
   },
   {
-   "id": "cam04",
-   "tipo": "desloca",
-   "t": 20.75,
-   "dx": 70,
-   "dy": 0,
-   "dur": 0.6,
-   "obs": "rosto vai para a direita enquanto o '1º' está no alto à esquerda (só no s006, plano fechado; margem de 81 px)"
-  },
-  {
    "id": "cam05",
    "tipo": "punch",
    "t": 24.11,
@@ -53,20 +42,21 @@
   },
   {
    "id": "cam06",
-   "tipo": "acelera",
-   "t": 27.75,
-   "mais": 0.1,
-   "dur": 0.2,
-   "obs": "acelera para dentro antes da cartela"
+   "tipo": "zoom",
+   "t": 28.2,
+   "mais": 0.08,
+   "dur": 0.9,
+   "obs": "aproximação enquanto PRESENÇA aparece na parede (não há mais tela cheia)",
+   "curva": "sine.inOut"
   },
   {
    "id": "cam07",
    "tipo": "chega",
    "t": 29.23,
    "dx": 0,
-   "dy": 90,
+   "dy": 60,
    "dur": 0.5,
-   "obs": "depois da cartela: chega de baixo e freia"
+   "obs": "chega de baixo e freia no corte s010"
   },
   {
    "id": "cam08",

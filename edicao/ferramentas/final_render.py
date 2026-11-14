@@ -67,11 +67,14 @@ def audio(pasta, d, plano, segura, tmp):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("pasta"); ap.add_argument("--motion"); ap.add_argument("--legenda")
+    ap.add_argument("--tras", help="animações ATRÁS da pessoa (RGBA)"); ap.add_argument("--frente", help="animações na frente da pessoa (RGBA)")
+    ap.add_argument("--pessoa", help="recorte da pessoa na sequência (MOV com alfa, resolução da cópia de trabalho)")
     ap.add_argument("--sfx"); ap.add_argument("--segura", type=float, default=1.0); ap.add_argument("--largura", type=int, default=1080)
     ap.add_argument("--saida"); a = ap.parse_args()
     pasta = Path(a.pasta); d = estado.ler(pasta); fps = d["midia"]["fps"]
     cam = json.loads((pasta / d["camera"]["keyframes"]).read_text()); Q = cam["quadros"]; ax, ay = cam["ancora"]
-    esconde = [(round(i["ini"]*fps), round(i["fim"]*fps)) for i in d["motions"]["itens"] if i["formato"] == "tela cheia"]
+    esconde = [(round(i["ini"]*fps), round(i["fim"]*fps)) for i in d["motions"]["itens"]
+               if i["formato"] == "tela cheia" or str(i.get("legenda", "")).startswith("some")]
     tmp = tempfile.mkdtemp()
     wav, log = audio(pasta, d, json.loads(Path(a.sfx).read_text(encoding="utf-8")), a.segura, tmp)
     vers = d.get("final", {}).get("versao", 0) + 1
@@ -82,6 +85,12 @@ def main():
         "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-profile:v", "high",
         "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), "-movflags", "+faststart", "-shortest", str(out)], stdin=subprocess.PIPE)
     mo = rgba(a.motion) if a.motion else None; lg = rgba(a.legenda) if a.legenda else None
+    tr = rgba(a.tras) if a.tras else None; fr_ = rgba(a.frente) if a.frente else None
+    pe = None
+    if a.pessoa:
+        pw, ph = d["midia"]["largura"], d["midia"]["altura"]; psh = int(round(ph * 1080 / pw / 2) * 2)
+        pe = le_frames(["ffmpeg", "-v", "error", "-i", str(a.pessoa), "-vf", f"scale=1080:{psh}:flags=lanczos",
+                        "-f", "rawvideo", "-pix_fmt", "rgba", "-"], 1080, psh, 4)
     f = 0; ultimo = None
     for s in d["cortes"]["segmentos"]:
         trab = next(i for i in d["midia"]["itens"] if i["arquivo"] == s["arquivo"])
@@ -94,8 +103,18 @@ def main():
             sc, tx, ty = Q[min(f, len(Q)-1)]
             M = np.float32([[sc, 0, ax - sc*ax + tx], [0, sc, ay - sc*(ay + off) + ty]])
             img = cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+            cam_img = img.copy()  # a imagem da câmera (a pessoa volta por cima com os pixels originais + alfa do recorte)
             m_ = next(mo, None) if mo else None
             l_ = next(lg, None) if lg else None
+            t_ = next(tr, None) if tr else None
+            f_ = next(fr_, None) if fr_ else None
+            p_ = next(pe, None) if pe else None
+            if t_ is not None: img = blend(img, t_)
+            if p_ is not None and t_ is not None and t_[:, :, 3].any():
+                # a pessoa só precisa voltar por cima quando há algo atrás dela neste quadro
+                pw_ = cv2.warpAffine(p_, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0, 0))
+                img = blend(img, np.dstack([cam_img, pw_[:, :, 3]]))
+            if f_ is not None: img = blend(img, f_)
             if m_ is not None: img = blend(img, m_)
             if l_ is not None and not any(i0 <= f < i1 for i0, i1 in esconde): img = blend(img, l_)
             enc.stdin.write(img.tobytes()); ultimo = img; f += 1
