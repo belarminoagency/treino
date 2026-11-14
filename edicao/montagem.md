@@ -1,6 +1,6 @@
 # Montagem do fluxo de edição
 
-Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
+Fase atual: 3 (referências e perfil) · Atualizado em 2026-11-14
 
 ## Ambiente
 - Sessão na nuvem (Claude Code pelo app do celular), temporária: tudo o que precisa ficar vai para este repositório.
@@ -18,8 +18,8 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - Animação: sim, HyperFrames. Densidade média, "o necessário": mais no gancho (primeiros ~3 s), ênfases nas palavras-chave no meio, algo na chamada final. Maioria sobreposição; tela cheia de vez em quando (mais nos narrados).
 - Câmera: zoom alternado nos cortes (disfarça o jump cut) + punch nas ênfases + câmera casada com as animações (feita depois das animações prontas). Seguir o rosto só quando precisar adaptar formato (vertical ↔ horizontal). Vídeos narrados pulam a etapa. A pessoa deixou o gosto fino a critério do Claude.
 - Som: efeitos sonoros pelo Claude. Biblioteca em `edicao/sons/` por categoria (whoosh, pop, clique, impacto, riser…): começa com sons sintetizados por código (sem problema de licença); depois cresce com sons do Epidemic Sound que a pessoa baixa no celular e envia (guardados uma vez no repositório). Música: Reels/TikTok/Shorts SEM música no render (a pessoa adiciona música em alta no app ao postar); YouTube: trilha de fundo baixa, enviada pela pessoa.
-- Revisões: <…>
-- Nomes: prefixo <…>; skill mestra /<…>
+- Revisões: (1) vídeo só com os cortes, assistido no celular; (2) plano das animações aprovado pelo chat (lista com tempos), sem render; (3) vídeo final completo (animações + câmera + som). Correções pelo chat citando o tempo ("0:15 corta essa frase") ou o número do item.
+- Nomes: prefixo `edit-`; skill mestra `/editar`
 
 ## Perfil
 - <ainda não criado>
@@ -31,4 +31,4 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - [ ] regras comuns
 
 ## Próximo passo
-Entrevista, decisões 10 e 11: revisões e nomes.
+Fase 3: juntar referências (vídeos de que a pessoa gosta) e escrever o perfil.
