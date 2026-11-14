@@ -45,8 +45,8 @@
  "etapas": {
   "iniciar": "concluido",
   "preparar": "concluido",
-  "cortes": "aguardando_aprovacao",
-  "legendas": "pendente",
+  "cortes": "concluido",
+  "legendas": "em_andamento",
   "motion_mapa": "pendente",
   "motion_render": "pendente",
   "camera": "pendente",
