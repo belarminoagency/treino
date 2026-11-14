@@ -1,0 +1,7 @@
+# Arquivos de vídeo e renders (pesados, não versionar)
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.wav
+*.mp3
