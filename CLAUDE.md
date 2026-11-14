@@ -1,7 +1,7 @@
 # Instruções para o Claude
 
 ## Fluxo de edição de vídeo (sessões na nuvem, pelo celular)
-A dona deste repositório usa o Claude Code só pelo celular, em sessões na nuvem que são temporárias.
+Quem usa este repositório trabalha com o Claude Code só pelo celular, em sessões na nuvem que são temporárias.
 Tudo o que fica em `~/.claude/skills/` ou fora do repositório some quando a sessão acaba.
 
 Por isso, ao usar a skill `fluxo-de-edicao` (e as skills que ela criar):

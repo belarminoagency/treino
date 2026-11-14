@@ -5,3 +5,15 @@
 *.mkv
 *.wav
 *.mp3
+*.mov
+*.m4a
+*.aac
+*.flac
+# Exceção: a biblioteca de sons é versionada (arquivos leves)
+!edicao/sons/**
+# Frames, snapshots e caches dos vídeos
+videos/**/*.png
+videos/**/*.jpg
+videos/**/node_modules/
+node_modules/
+__pycache__/

@@ -1,6 +1,6 @@
 # Montagem do fluxo de edição
 
-Fase atual: 4 (plano do fluxo) · Atualizado em 2026-11-14
+Fase atual: 6 (teste num vídeo curto) · Atualizado em 2026-11-14
 
 ## Ambiente
 - Sessão na nuvem (Claude Code pelo app do celular), temporária: tudo o que precisa ficar vai para este repositório.
@@ -24,11 +24,24 @@ Fase atual: 4 (plano do fluxo) · Atualizado em 2026-11-14
 ## Perfil
 - principal (`edicao/perfil/principal/`): confirmado. Branco + azul elétrico #2F5BFF, Inter. Legenda dinâmica é o centro do estilo. Falta: logo/@ (opcional); medir curvas por fluxo óptico.
 
-## Fluxo aprovado
-<pendente>
+## Fluxo aprovado (14/11/2026)
+- /editar — skill mestra: mostra onde o vídeo está e chama a etapa certa
+1. edit-iniciar — recebe o bruto e o roteiro, cria a pasta, o estado e o briefing
+2. edit-preparar — inventário (VFR→CFR), transcrição por palavra, pausas, notas faladas
+3. edit-cortes — corte apertado → revisão 1 (vídeo no celular)
+4. edit-legendas — legenda dinâmica com palavra-chave azul
+5. edit-motion-mapa — plano das animações e da câmera → revisão 2 (pelo chat)
+6. edit-motion-render — animações no HyperFrames (assets dentro desta etapa)
+7. edit-camera — zoom alternado, punch, casada com as animações (narrado: pula)
+8. edit-sfx — efeitos sonoros + biblioteca
+9. edit-final — junta tudo, -14 LUFS, entrega o MP4 → revisão 3
 
-## Skills escritas
-- [ ] regras comuns
+## Skills escritas (em `.claude/skills/`)
+- [x] regras comuns (`editar/regras-comuns.md`)
+- [x] editar · [x] edit-iniciar · [x] edit-preparar · [x] edit-cortes · [x] edit-legendas
+- [x] edit-motion-mapa · [x] edit-motion-render · [x] edit-camera · [x] edit-sfx · [x] edit-final
+- Perfil dividido em `edicao/perfil/principal/` (identidade, estilo-legenda, estilo-motion, estilo-camera, estilo-cortes, estilo-som, catalogo)
+- Scripts: nascem no teste (fase 6)
 
 ## Próximo passo
-Fase 4: aprovar a lista de etapas.
+Fase 6: teste com um vídeo curto (30–60 s) da pessoa, rodando /editar do começo ao fim. Depois: salvar script de preparação do ambiente (setup script) para as próximas sessões.
