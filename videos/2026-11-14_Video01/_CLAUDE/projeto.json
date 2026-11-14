@@ -178,7 +178,8 @@
   ],
   "alertas": [],
   "obs": "VFR convertido para 30 fps CFR",
-  "enquadramento": "bruto 864x1920 (mais estreito que 9:16): escala para 1080 de largura e corta ~240 px em cima e embaixo"
+  "enquadramento": "bruto 864x1920 (mais estreito que 9:16): escala para 1080 de largura e corta ~240 px em cima e embaixo",
+  "pessoa": "_CLAUDE/midia/pessoa.mov"
  },
  "transcricao": {
   "modelo": "faster-whisper large-v3-turbo cpu int8 word_timestamps",
