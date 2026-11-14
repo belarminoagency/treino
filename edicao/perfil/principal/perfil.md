@@ -1,12 +1,12 @@
 # Perfil: principal
 
-Status: rascunho (fase 3), aguardando confirmação da pessoa e identidade visual.
+Status: confirmado pela pessoa em 2026-11-14 (curvas exatas a medir quando houver scripts de fluxo óptico).
 Regra geral: tendência, não regra. Cada item cita a referência de origem (fichas em `referencias.md`).
 
 ## Identidade visual
-- Cores: A DEFINIR (a pessoa não tem cores próprias; proposta em aberto). Base comum a todas as refs: texto branco + UMA cor de destaque forte.
-- Fonte: A DEFINIR. Tendência das refs: sans geométrica bold para legenda (refs 01, 04, 05, 06) + uma serifada itálica só para palavras de ênfase (refs 03, 04).
-- Logo/@: A DEFINIR.
+- Cores: texto branco #FFFFFF + destaque AZUL ELÉTRICO #2F5BFF (escolhido entre 4 opções, inspirado na ref01). Fundos de cartela: quase preto #0B0B0F. Sombra suave escura atrás do texto para leitura.
+- Fonte: Inter (apoio 600) e Inter Display Black (palavra-chave, caixa alta, tracking -1). Ênfase especial rara: serifada itálica bold na cor de destaque (Playfair Display se disponível no render; senão DejaVu Serif).
+- Logo/@: ainda não informado (perguntar no primeiro vídeo; opcional).
 
 ## Legenda (o centro do estilo — presente nas 6 refs)
 - Legenda dinâmica em blocos de 1–3 palavras, sincronizada palavra a palavra, na altura do peito (centro-baixo), nunca cobrindo o rosto. (todas)

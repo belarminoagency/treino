@@ -1,6 +1,6 @@
 # Montagem do fluxo de edição
 
-Fase atual: 3 (referências e perfil) · Atualizado em 2026-11-14
+Fase atual: 4 (plano do fluxo) · Atualizado em 2026-11-14
 
 ## Ambiente
 - Sessão na nuvem (Claude Code pelo app do celular), temporária: tudo o que precisa ficar vai para este repositório.
@@ -22,7 +22,7 @@ Fase atual: 3 (referências e perfil) · Atualizado em 2026-11-14
 - Nomes: prefixo `edit-`; skill mestra `/editar`
 
 ## Perfil
-- <ainda não criado>
+- principal (`edicao/perfil/principal/`): confirmado. Branco + azul elétrico #2F5BFF, Inter. Legenda dinâmica é o centro do estilo. Falta: logo/@ (opcional); medir curvas por fluxo óptico.
 
 ## Fluxo aprovado
 <pendente>
@@ -31,4 +31,4 @@ Fase atual: 3 (referências e perfil) · Atualizado em 2026-11-14
 - [ ] regras comuns
 
 ## Próximo passo
-Fase 3: juntar referências (vídeos de que a pessoa gosta) e escrever o perfil.
+Fase 4: aprovar a lista de etapas.
