@@ -16,7 +16,7 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - Notas faladas: "nota de edição" … "fim da nota" (sugestão padrão, aceita sem objeção)
 - Cortes: ritmo apertado (tira pausas, "ééé", "hum", respirações longas e repetições); na dúvida não corta e pergunta. Grava com roteiro mas improvisa em cima: o roteiro serve para reconhecer takes repetidos e a grafia de termos, nunca para trocar o que foi falado; o improviso é conteúdo válido, não erro.
 - Animação: sim, HyperFrames. Densidade média, "o necessário": mais no gancho (primeiros ~3 s), ênfases nas palavras-chave no meio, algo na chamada final. Maioria sobreposição; tela cheia de vez em quando (mais nos narrados).
-- Câmera: <…>
+- Câmera: zoom alternado nos cortes (disfarça o jump cut) + punch nas ênfases + câmera casada com as animações (feita depois das animações prontas). Seguir o rosto só quando precisar adaptar formato (vertical ↔ horizontal). Vídeos narrados pulam a etapa. A pessoa deixou o gosto fino a critério do Claude.
 - Som: <…> (a pessoa tem interesse no Epidemic Sound; sons baixados pelo celular e enviados na sessão)
 - Revisões: <…>
 - Nomes: prefixo <…>; skill mestra /<…>
@@ -31,4 +31,4 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-14
 - [ ] regras comuns
 
 ## Próximo passo
-Entrevista, decisão 8: câmera.
+Entrevista, decisão 9: som.
