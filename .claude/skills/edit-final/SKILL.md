@@ -23,6 +23,10 @@ Se a `sfx` não estiver `concluido`, pare e sugira terminá-la. Brutos e renders
 7. Saída: MP4 H.264 (CRF ~18, `yuv420p`, `+faststart`), AAC 48 kHz 192 kbps, fps do vídeo, resolução cheia.
 
 ## Scripts
+**Em uso (testado em 14/11/2026):**
+`~/.edicao-venv/bin/python edicao/ferramentas/final_render.py <pasta> --tras <mov> --frente <mov> --pessoa _CLAUDE/midia/pessoa.mov --objetos "<caixas>" --legenda <mov> --sfx <plano.json> --segura 1.0`
+(~3,5 min para 37 s). Só mudou som? `--so-audio <mp4 anterior>` refaz só o áudio. Conferir: duração, loudness (`ebur128`), tira de quadros e, de perto, as bordas do recorte. Enviar com SendUserFile.
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `final_render.py` | monta tudo pelo estado | aplicar câmera por quadro (ex.: `zoompan`/`scale`+`crop` com expressões, ou quadros via Python); conferir sincronia no fim do vídeo (erro de fps cresce); MOV com transparência como overlay (`format=yuva420p`) |

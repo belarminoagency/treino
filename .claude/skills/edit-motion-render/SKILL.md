@@ -23,6 +23,14 @@ Se a `motion-mapa` não estiver `concluido`, pare e sugira terminá-la.
 - **Asset faltando:** construa com marcador visível ("FALTA: print da DM") e peça à pessoa. Logos/ícones públicos: buscar (Iconify e fontes oficiais), mostrar em **uma folha numerada**, respeitar licenças.
 - **Peças-base:** a primeira vez que um elemento ficar bom (card de DM, número de lista, cartela), vira peça em `edicao/ferramentas/pecas/` (CSS + funções JS). Os próximos vídeos partem dela.
 
+## Scripts
+**Em uso (testado em 14/11/2026):** a pessoa prefere animações **atrás e em volta dela** (recortada na frente), não no peito.
+- Uma composição só, no tempo da sequência: `_CLAUDE/motion/base/template.html` com `data-camada="tras|frente"` em cada item; gerar `tras/` e `frente/` com `sed s/__CAMADA__/<camada>/` e renderizar cada uma (`npx --yes hyperframes@<versão> render --format mov --fps 30 -o …`). GSAP e fontes ficam locais (`vendor/`, `fonts/`): o CDN jsdelivr é bloqueado.
+- Recorte da pessoa: `python3 edicao/ferramentas/recorte_pessoa.py <pasta>` (~35 min na CPU para 35 s) → `_CLAUDE/midia/pessoa.mov`. **Sempre** passar ao final as caixas dos objetos parados da parede (`midia.objetos_parede` no estado; achar num quadro em que a pessoa não encosta neles): o modelo às vezes "pega" o objeto e ele aparece por cima da animação.
+- Zona livre medida no quadro final: rosto x≈280–900, y≈360–1180; parede livre no alto (y<330) e dos lados.
+- Saída de elemento que estava apagado parte da opacidade atual (senão pisca).
+- `_CLAUDE/motion/eventos.json`: eventos para o som, anotados na construção.
+
 ## Revisão
 Esta etapa não tem revisão com vídeo combinada: confira sozinho e mostre **uma imagem** com 1 quadro-chave por animação. A pessoa pode pedir por número ("mo04 mais rápido", "mo02 tira"). Feedback geral ("básico", "sem vida") pede refazer, não retocar. Revisão que muda duração → atualizar plano e estado. Anote aprendizados.
 

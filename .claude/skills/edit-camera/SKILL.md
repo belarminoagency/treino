@@ -21,6 +21,8 @@ Se a `motion-render` não estiver `concluido`, pare e sugira terminá-la. Vídeo
 - **Rosto:** detector YuNet (OpenCV) no vídeo de trabalho, resultado em cache em `_CLAUDE/camera/rosto.json` — para enquadrar olhos e para adaptar formato.
 
 ## Scripts
+**Em uso (testado em 14/11/2026):** o Claude escreve `_CLAUDE/camera/movimentos.json` (`fechado`, `lenta`, `ancora`, **`trocas`** = cortes onde o plano muda, `movimentos` punch/zoom/desloca/acelera/chega) → `python3 edicao/ferramentas/camera_calc.py <pasta> <movimentos.json>` → `keyframes.json`. **Aprovado pela pessoa: mudar de plano só onde começa uma ideia nova** (zoom em todo corte ficou "repentino"); nos outros cortes a câmera continua. Deslocamento lateral só em plano fechado (no aberto não há margem).
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `camera_rosto.py` | YuNet a cada N quadros, suavizado | cache; quadros escuros |

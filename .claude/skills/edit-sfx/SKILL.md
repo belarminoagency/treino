@@ -26,6 +26,9 @@ Se a etapa anterior não estiver `concluido` (ou `nao_precisa`), pare e sugira t
 - **Sincronia:** impacto no frame do evento; whoosh com o **pico** na chegada/troca; pop e clique começam no evento.
 - Não repetir o mesmo arquivo em ~20 s. Nível pela loudness da voz (alvos no perfil).
 
+## Scripts
+**Em uso (testado em 14/11/2026):** biblioteca gerada por `~/.edicao-venv/bin/python edicao/ferramentas/sons_sintetizar.py` + índice `sons_indice.py` (`edicao/sons/indice.json`). O Claude escreve `_CLAUDE/sfx/plano_vNN.json` (id, evento, camada, arquivo, `t`, `alinha` pico|inicio, `db` relativo ao pico da voz); o `final_render.py` posiciona e mixa. O Claude **não ouve** o áudio: peça à pessoa para conferir os sons. "Buh" que a pessoa escrever pode ser "bug": pergunte antes de mexer no som.
+
 ## Passo a passo
 1. Script junta os eventos no tempo da sequência (id estável, palavra dita, loudness da voz).
 2. Rascunho: para cada som, evento, camada, arquivo, alinhamento.

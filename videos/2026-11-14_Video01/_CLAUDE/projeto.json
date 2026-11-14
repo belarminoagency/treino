@@ -51,7 +51,7 @@
   "motion_render": "concluido",
   "camera": "concluido",
   "sfx": "concluido",
-  "final": "aguardando_aprovacao"
+  "final": "concluido"
  },
  "pendencias": [
   {
@@ -1257,13 +1257,22 @@
  },
  "versoes_usadas": {
   "legendas": {
-   "cortes": 1
+   "cortes": 2
   },
   "motion_mapa": {
-   "cortes": 1
+   "cortes": 2
   },
   "final": {
-   "cortes": 1
+   "cortes": 2
+  },
+  "motion_render": {
+   "cortes": 2
+  },
+  "camera": {
+   "cortes": 2
+  },
+  "sfx": {
+   "cortes": 2
   }
  },
  "motions": {
@@ -1534,6 +1543,7 @@
   "versao": 6,
   "arquivo": "Renders/2026-11-14_Video01_final_v06.mp4",
   "quadros": 1120,
-  "segura": 1.0
+  "segura": 1.0,
+  "aprovado": "14/11/2026 (v06)"
  }
 }

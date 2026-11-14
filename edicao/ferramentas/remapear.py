@@ -36,6 +36,8 @@ def main(pasta, antigo):
         it["ini"], it["fim"] = R(it["ini"]), R(it["fim"])
         it["gatilhos"] = {k: R(v) for k, v in it.get("gatilhos", {}).items()}
     d["motions"]["cortes_versao"] = d["cortes"]["versao"]
+    for e in ["legendas", "motion_mapa", "motion_render", "camera", "sfx"]:
+        d.setdefault("versoes_usadas", {})[e] = {"cortes": d["cortes"]["versao"]}
     estado.gravar(pasta, d)
     # eventos
     ev = pasta / "_CLAUDE/motion/eventos.json"

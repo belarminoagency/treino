@@ -23,6 +23,8 @@ Se a `cortes` não estiver `concluido`, pare e sugira terminá-la.
 `estilo-legenda.md` (blocos, posição, hierarquia, movimento) e `identidade.md` (cores, fontes).
 
 ## Scripts
+**Em uso (testado em 14/11/2026):** `python3 edicao/ferramentas/legendas_blocos.py <pasta>` (proposta) → o Claude revisa `blocos.json` (quebras, `destaque`, `enfase`, juntar palavras-chave como "todos os dias") → `legendas_blocos.py <pasta> --gravar` → `python3 edicao/ferramentas/legendas_render.py <pasta> --check|--snapshot t1,t2|--render`. Prévia sobre o vídeo: `python3 edicao/ferramentas/quadro_seq.py <pasta> <t> <saida.png> [legenda.png]`. Posição aprovada: y≈1460 (no peito; o rosto deste enquadramento desce até ~1050).
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `legendas_blocos.py` | palavras → tempo da sequência → blocos propostos (JSON + texto legível) | usar `tempo.py`; palavra na borda de corte |

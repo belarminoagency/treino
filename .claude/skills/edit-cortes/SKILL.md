@@ -30,6 +30,9 @@ Se a `preparar` não estiver `concluido`, pare e sugira terminá-la.
 `estilo-cortes.md`: ar entre frases, folga nas bordas, hesitações.
 
 ## Scripts
+**Em uso (testado em 14/11/2026):** o Claude escreve `_CLAUDE/cortes/rascunho_vNN.json` (segmentos por índice de palavra em `palavras.json`, marcadores, folgas) → `~/.edicao-venv/bin/python edicao/ferramentas/cortes_bordas.py <pasta> <rascunho>` → `~/.edicao-venv/bin/python edicao/ferramentas/render_rascunho.py <pasta>` → enviar o MP4.
+**Folgas aprovadas pela pessoa: `folga_ini` 0,18 s e `folga_fim` 0,20 s** (0,05/0,10 ficou picotado: "muitas pausas e cortes repentinos"). Se o corte mudar depois das outras etapas: guardar o bloco antigo em `_CLAUDE/cortes/cortes_vNN.json` e rodar `python3 edicao/ferramentas/remapear.py <pasta> <cortes_antigos.json>` (leva legenda, animações, câmera e sons para os tempos novos) e `~/.edicao-venv/bin/python edicao/ferramentas/recorte_atualizar.py <pasta> <cortes_antigos.json>` (recorte da pessoa).
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `cortes_bordas.py` | ajusta cada borda pela energia do áudio + folga do perfil, arredonda para frames | não comer sílaba; muleta curta colada vira marcador, não fala afirmada |

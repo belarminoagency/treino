@@ -24,6 +24,8 @@ Abre o projeto e organiza o briefing. Não analisa o vídeo (isso é da `prepara
 9. Marque `iniciar` = `concluido`, commit e push (sem os vídeos), e sugira `/clear` e `/editar`.
 
 ## Scripts
+**Em uso (testado em 14/11/2026):** `python3 edicao/ferramentas/estado.py <pasta> status|<bloco>|--set|--etapa|--pendencia|--resolver`. A pasta do vídeo é `videos/<AAAA-MM-DD_Nome>/`; os brutos são copiados do upload para `Brutos/bruto01.mp4…` em ordem de horário.
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `edicao/ferramentas/estado.py` | lê e muda o `projeto.json` sem abrir inteiro: `status`, `<bloco>`, `--json`, `--item`, `--set`, `--etapa`, `--pendencia`, `--resolver` | gravar de forma atômica (arquivo temporário + rename); `status` mostra alertas (ex.: `cortes.versao` mudou depois do `motion_mapa`); falta de brutos na sessão vira alerta |

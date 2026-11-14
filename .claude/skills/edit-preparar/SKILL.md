@@ -35,6 +35,13 @@ Rode `bash edicao/ferramentas/preparar_ambiente.sh`. Na primeira vez, escreva es
 8. **Resumo no chat:** duração, fps (e se converteu), quantas frases, quantas notas, alertas. Marque `concluido` (esta etapa não precisa de aprovação, salvo alerta), commit e push, sugira `/clear` e `/editar`.
 
 ## Scripts
+**Em uso (testado em 14/11/2026), nesta ordem:**
+1. `bash edicao/ferramentas/preparar_ambiente.sh` (venv em `~/.edicao-venv`; torch 2.8 CPU fixo: o torchaudio mais novo quebra o pyannote).
+2. `python3 edicao/ferramentas/inventario.py <pasta>` → cópias de trabalho CFR (+ espelho) em `_CLAUDE/midia/` e WAV 16 kHz.
+3. `~/.edicao-venv/bin/python edicao/ferramentas/transcrever.py <pasta> [modelo] [contexto]` → faster-whisper `large-v3-turbo` com `word_timestamps` (~40 s para 1 min de fala na CPU). O VAD e o alinhamento do WhisperX não carregam neste ambiente (torch.hub e nltk bloqueados); por isso o tempo por palavra vem do faster-whisper.
+4. `python3 edicao/ferramentas/notas.py <pasta>`.
+Rede necessária (ambiente `treino`): huggingface.co, us.aws.cdn.hf.co, cas-server.xethub.hf.co, download.pytorch.org.
+
 | Script | O que faz | Armadilhas |
 |---|---|---|
 | `preparar_ambiente.sh` | instala/confere tudo | idempotente; não reinstalar o que existe |

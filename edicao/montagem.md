@@ -1,21 +1,22 @@
 # Montagem do fluxo de edição
 
-Fase atual: 6 (teste num vídeo curto) · Atualizado em 2026-11-14
+Fase atual: 7 — MONTAGEM CONCLUÍDA em 14/11/2026 · Atualizado em 2026-11-14
 
 ## Ambiente
 - Sessão na nuvem (Claude Code pelo app do celular), temporária: tudo o que precisa ficar vai para este repositório.
 - Sistema: Linux · Python: 3.13 · FFmpeg: 6.1 · Node.js: 22 · Chromium: pré-instalado · GPU: não tem
-- Instalado nesta montagem: nada ainda (transcrição pendente)
+- Instalado nesta montagem: venv `~/.edicao-venv` (torch 2.8 CPU, whisperx/faster-whisper, opencv, soundfile) via `edicao/ferramentas/preparar_ambiente.sh`; HyperFrames 0.9.46 por npx
+- Ambiente de nuvem `treino` (criado nesta montagem): libera Hugging Face e PyTorch para baixar o modelo de transcrição. Aprovações de ambiente só funcionam no claude.ai em modo computador (no app do celular não aparecem).
 
 ## Decisões
 - Revisão: vídeo pronto (sem programa de edição; a pessoa revisa no celular e pede ajustes pelo chat)
 - Tipo e formato: principal = falando para a câmera; às vezes vídeo narrado (voz sobre imagens). Vertical 9:16 (Reels/TikTok/Shorts) agora; horizontal 16:9 (YouTube) em breve, então o formato é escolhido por vídeo. Grava com a câmera do celular (resolução e fps lidos do arquivo em cada vídeo, nunca supostos).
 - Duração típica: 30 s a 1 min (curtos: o fluxo trabalha o vídeo inteiro de uma vez, sem dividir em trechos)
 - Pastas: ferramentas em `edicao/` (neste repositório). Cada vídeo numa pasta da sessão `videos/AAAA-MM-DD_Nome/` com `Brutos/`, `Assets/`, `Renders/` e `_CLAUDE/` (estado); vídeos e renders fora do git. O estado (`_CLAUDE/*.json`) e o caderno de aprendizados vão para o repositório.
-- Transcrição: WhisperX local, na CPU (gratuita; reinstalada a cada sessão até existir script de preparação do ambiente). Alternativa futura: ElevenLabs Scribe.
+- Transcrição: faster-whisper large-v3-turbo local na CPU, tempo por palavra do próprio faster-whisper (~40 s por minuto de fala). Alternativa futura: ElevenLabs Scribe.
 - Notas faladas: "nota de edição" … "fim da nota" (sugestão padrão, aceita sem objeção)
 - Cortes: ritmo apertado (tira pausas, "ééé", "hum", respirações longas e repetições); na dúvida não corta e pergunta. Grava com roteiro mas improvisa em cima: o roteiro serve para reconhecer takes repetidos e a grafia de termos, nunca para trocar o que foi falado; o improviso é conteúdo válido, não erro.
-- Animação: sim, HyperFrames. Densidade média, "o necessário": mais no gancho (primeiros ~3 s), ênfases nas palavras-chave no meio, algo na chamada final. Maioria sobreposição; tela cheia de vez em quando (mais nos narrados).
+- Animação: sim, HyperFrames, **atrás e em volta da pessoa** (recorte da pessoa na frente) — pedido no teste. Densidade média, "o necessário": mais no gancho (primeiros ~3 s), ênfases nas palavras-chave no meio, algo na chamada final. Maioria sobreposição; tela cheia de vez em quando (mais nos narrados).
 - Câmera: zoom alternado nos cortes (disfarça o jump cut) + punch nas ênfases + câmera casada com as animações (feita depois das animações prontas). Seguir o rosto só quando precisar adaptar formato (vertical ↔ horizontal). Vídeos narrados pulam a etapa. A pessoa deixou o gosto fino a critério do Claude.
 - Som: efeitos sonoros pelo Claude. Biblioteca em `edicao/sons/` por categoria (whoosh, pop, clique, impacto, riser…): começa com sons sintetizados por código (sem problema de licença); depois cresce com sons do Epidemic Sound que a pessoa baixa no celular e envia (guardados uma vez no repositório). Música: Reels/TikTok/Shorts SEM música no render (a pessoa adiciona música em alta no app ao postar); YouTube: trilha de fundo baixa, enviada pela pessoa.
 - Revisões: (1) vídeo só com os cortes, assistido no celular; (2) plano das animações aprovado pelo chat (lista com tempos), sem render; (3) vídeo final completo (animações + câmera + som). Correções pelo chat citando o tempo ("0:15 corta essa frase") ou o número do item.
@@ -43,5 +44,13 @@ Fase atual: 6 (teste num vídeo curto) · Atualizado em 2026-11-14
 - Perfil dividido em `edicao/perfil/principal/` (identidade, estilo-legenda, estilo-motion, estilo-camera, estilo-cortes, estilo-som, catalogo)
 - Scripts: nascem no teste (fase 6)
 
+## Teste (fase 6)
+- Vídeo `videos/2026-11-14_Video01` (9 brutos, 64 s → 37 s), aprovado na v06 ("Top!!").
+- Ajustes que vieram do teste (no caderno do vídeo, a aplicar no perfil com `/editar aprendizados`): respiro 0,18/0,20 s nos cortes; zoom só em ideia nova; animações atrás da pessoa; limpar objetos da parede do recorte; saída sem pisca.
+
+## Como editar um vídeo
+Abra uma sessão com o repositório `treino`, mande o vídeo bruto e digite **`/editar`**.
+
 ## Próximo passo
-Fase 6: teste com um vídeo curto (30–60 s) da pessoa, rodando /editar do começo ao fim. Depois: salvar script de preparação do ambiente (setup script) para as próximas sessões.
+- `/editar aprendizados` para levar os 6 aprendizados ao perfil e às skills.
+- Salvar o script de preparação no ambiente `treino` (precisa aprovar no claude.ai em modo computador).
