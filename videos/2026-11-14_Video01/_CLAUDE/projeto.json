@@ -47,8 +47,8 @@
   "preparar": "concluido",
   "cortes": "concluido",
   "legendas": "concluido",
-  "motion_mapa": "em_andamento",
-  "motion_render": "pendente",
+  "motion_mapa": "concluido",
+  "motion_render": "em_andamento",
   "camera": "pendente",
   "sfx": "pendente",
   "final": "pendente"
@@ -1256,6 +1256,9 @@
  "versoes_usadas": {
   "legendas": {
    "cortes": 1
+  },
+  "motion_mapa": {
+   "cortes": 1
   }
  },
  "motions": {
@@ -1279,7 +1282,7 @@
      "depois": "corte s002 abre no plano aberto"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo02",
@@ -1298,7 +1301,7 @@
      "durante": "aproximação lenta em 'ninguém vê isso'"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo03",
@@ -1315,7 +1318,7 @@
      "durante": "—"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo04",
@@ -1334,7 +1337,7 @@
      "durante": "punch leve em 'resultados'"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo05",
@@ -1352,7 +1355,7 @@
      "durante": "rosto um pouco para a direita enquanto o '1º' está na tela"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo06",
@@ -1369,7 +1372,7 @@
      "depois": "volta chegando de baixo no corte s010"
     },
     "legenda": "some (a cartela já mostra a palavra)",
-    "status": "proposto"
+    "status": "aprovado"
    },
    {
     "id": "mo07",
@@ -1377,7 +1380,7 @@
     "fim": 34.97,
     "formato": "sobreposição",
     "posicao": "alto do quadro, acima da cabeça",
-    "conceito": "Chamada final: selo branco com texto escuro (texto a definir com a pessoa) entrando junto com 'NÃO VENDE'; o último quadro segura ~1 s.",
+    "conceito": "Chamada final: selo branco com texto escuro (“Salva pra lembrar”, com ícone de salvar) entrando junto com 'NÃO VENDE'; o último quadro segura ~1 s.",
     "gatilhos": {
      "não vende": 33.9
     },
@@ -1385,7 +1388,8 @@
      "durante": "punch em 'não vende'"
     },
     "legenda": "fica",
-    "status": "proposto"
+    "status": "aprovado",
+    "texto": "Salva pra lembrar"
    }
   ],
   "trechos": {
