@@ -78,6 +78,9 @@ def main():
     # subida curta: varredura ascendente que termina no pico (barra/elemento que sobe rápido)
     for i, (d, f0, f1) in enumerate([(0.45, 250, 6000), (0.35, 400, 8000)], 1):
         grava("whoosh", f"subida_{i:02d}", whoosh(d, f0, f1, pico=0.85))
+    # descida: varredura do agudo pro grave (algo que cai/despenca)
+    for i, (d, f0, f1) in enumerate([(0.5, 5000, 180), (0.4, 7000, 300)], 1):
+        grava("whoosh", f"descida_{i:02d}", whoosh(d, f0, f1, pico=0.2))
     print("ok:", RAIZ)
 
 if __name__ == "__main__":
