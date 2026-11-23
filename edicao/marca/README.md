@@ -1,0 +1,1 @@
+- Logo: `edicao/marca/belarmino_b.png` (recortado do JPG enviado em 23/11; branco + limão #DCE423, fundo transparente). Original em `belarmino_logo_original.jpg`.

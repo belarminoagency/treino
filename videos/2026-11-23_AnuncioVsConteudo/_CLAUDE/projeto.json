@@ -1,0 +1,27 @@
+{
+ "projeto": "2026-11-23_AnuncioVsConteudo",
+ "perfil": "principal",
+ "tipo": "motion",
+ "formato": "vertical",
+ "espelhar": false,
+ "marca": {
+  "nome": "Belarmino Agency",
+  "arroba": "@belarminoagency",
+  "logo": "edicao/marca/belarmino_b.png",
+  "acento_logo": "#DCE423 (só no logo)"
+ },
+ "referencia": "Vídeo de outra agência (Lima&Co.) enviado como inspiração do tema. NÃO copiar desenho, texto nem animação: versão original da ideia 'anúncio x conteúdo'.",
+ "brutos": [],
+ "etapas": {
+  "iniciar": "concluido",
+  "preparar": "nao_precisa",
+  "cortes": "nao_precisa",
+  "legendas": "nao_precisa",
+  "motion_mapa": "aguardando_aprovacao",
+  "motion_render": "pendente",
+  "camera": "nao_precisa",
+  "sfx": "pendente",
+  "final": "pendente"
+ },
+ "pendencias": []
+}
