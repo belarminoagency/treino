@@ -17,11 +17,19 @@
   "preparar": "nao_precisa",
   "cortes": "nao_precisa",
   "legendas": "nao_precisa",
-  "motion_mapa": "aguardando_aprovacao",
-  "motion_render": "pendente",
+  "motion_mapa": "concluido",
+  "motion_render": "concluido",
   "camera": "nao_precisa",
-  "sfx": "pendente",
-  "final": "pendente"
+  "sfx": "concluido",
+  "final": "aguardando_aprovacao"
  },
- "pendencias": []
+ "pendencias": [],
+ "ferramentas": {
+  "hyperframes": "0.9.46"
+ },
+ "final": {
+  "versao": 1,
+  "arquivo": "Renders/2026-11-23_AnuncioVsConteudo_final_v01.mp4",
+  "loudness": "-18,2 LUFS (sem voz; música entra no app)"
+ }
 }
