@@ -1,0 +1,261 @@
+{
+ "obs": "v02: textos mais explicativos (16 s); db = pico do som em dBFS antes da normalização",
+ "itens": [
+  {
+   "id": "sfx01",
+   "ev": "Pagar",
+   "arquivo": "whoosh/whoosh_01.wav",
+   "t": 0.27,
+   "alinha": "pico",
+   "db": -10
+  },
+  {
+   "id": "sfx02",
+   "ev": "ou",
+   "arquivo": "pop/pop_02.wav",
+   "t": 0.56,
+   "alinha": "inicio",
+   "db": -13
+  },
+  {
+   "id": "sfx03",
+   "ev": "postar",
+   "arquivo": "whoosh/whoosh_04.wav",
+   "t": 0.9,
+   "alinha": "pico",
+   "db": -8
+  },
+  {
+   "id": "sfx04",
+   "ev": "conteúdo?",
+   "arquivo": "pop/pop_01.wav",
+   "t": 1.05,
+   "alinha": "inicio",
+   "db": -10
+  },
+  {
+   "id": "sfx05",
+   "ev": "sai cena 1",
+   "arquivo": "whoosh/whoosh_02.wav",
+   "t": 1.88,
+   "alinha": "pico",
+   "db": -12
+  },
+  {
+   "id": "sfx06",
+   "ev": "legenda",
+   "arquivo": "interface/tic_01.wav",
+   "t": 2.15,
+   "alinha": "inicio",
+   "db": -16
+  },
+  {
+   "id": "sfx07",
+   "ev": "legenda",
+   "arquivo": "interface/tic_02.wav",
+   "t": 2.3,
+   "alinha": "inicio",
+   "db": -16
+  },
+  {
+   "id": "sfx08",
+   "ev": "anúncio dispara",
+   "arquivo": "whoosh/subida_01.wav",
+   "t": 3.387,
+   "alinha": "pico",
+   "db": -9
+  },
+  {
+   "id": "sfx09",
+   "ev": "post 1",
+   "arquivo": "pop/pop_01.wav",
+   "t": 3.15,
+   "alinha": "inicio",
+   "db": -14.0
+  },
+  {
+   "id": "sfx10",
+   "ev": "post 2",
+   "arquivo": "pop/pop_03.wav",
+   "t": 3.75,
+   "alinha": "inicio",
+   "db": -13.5
+  },
+  {
+   "id": "sfx11",
+   "ev": "post 3",
+   "arquivo": "pop/pop_02.wav",
+   "t": 4.35,
+   "alinha": "inicio",
+   "db": -13.0
+  },
+  {
+   "id": "sfx12",
+   "ev": "post 4",
+   "arquivo": "pop/pop_01.wav",
+   "t": 4.95,
+   "alinha": "inicio",
+   "db": -12.5
+  },
+  {
+   "id": "sfx13",
+   "ev": "post 5",
+   "arquivo": "pop/pop_03.wav",
+   "t": 5.55,
+   "alinha": "inicio",
+   "db": -12.0
+  },
+  {
+   "id": "sfx14",
+   "ev": "post 6",
+   "arquivo": "pop/pop_02.wav",
+   "t": 6.15,
+   "alinha": "inicio",
+   "db": -11.5
+  },
+  {
+   "id": "sfx15",
+   "ev": "post 7",
+   "arquivo": "pop/pop_01.wav",
+   "t": 6.75,
+   "alinha": "inicio",
+   "db": -11.0
+  },
+  {
+   "id": "sfx16",
+   "ev": "post 8",
+   "arquivo": "pop/pop_03.wav",
+   "t": 7.35,
+   "alinha": "inicio",
+   "db": -10.5
+  },
+  {
+   "id": "sfx17",
+   "ev": "parou de pagar",
+   "arquivo": "interface/carimbo_01.wav",
+   "t": 5.012,
+   "alinha": "inicio",
+   "db": -12
+  },
+  {
+   "id": "sfx18",
+   "ev": "anúncio despenca",
+   "arquivo": "whoosh/descida_01.wav",
+   "t": 5.229,
+   "alinha": "pico",
+   "db": -7
+  },
+  {
+   "id": "sfx19",
+   "ev": "conteúdo no topo",
+   "arquivo": "ding/ding_01.wav",
+   "t": 7.35,
+   "alinha": "inicio",
+   "db": -12
+  },
+  {
+   "id": "sfx20",
+   "ev": "etiquetas",
+   "arquivo": "pop/pop_02.wav",
+   "t": 7.45,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx21",
+   "ev": "sai gráfico",
+   "arquivo": "whoosh/whoosh_02.wav",
+   "t": 8.45,
+   "alinha": "pico",
+   "db": -12
+  },
+  {
+   "id": "sfx22",
+   "ev": "Anúncio:",
+   "arquivo": "whoosh/whoosh_04.wav",
+   "t": 8.8,
+   "alinha": "pico",
+   "db": -9
+  },
+  {
+   "id": "sfx23",
+   "ev": "Conteúdo:",
+   "arquivo": "whoosh/whoosh_01.wav",
+   "t": 10.45,
+   "alinha": "pico",
+   "db": -9
+  },
+  {
+   "id": "sfx24",
+   "ev": "Conteúdo:",
+   "arquivo": "grave/sub_01.wav",
+   "t": 10.35,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx25",
+   "ev": "usar os dois juntos",
+   "arquivo": "pop/pop_03.wav",
+   "t": 12.1,
+   "alinha": "inicio",
+   "db": -10
+  },
+  {
+   "id": "sfx26",
+   "ev": "usar os dois juntos",
+   "arquivo": "ding/ding_02.wav",
+   "t": 12.15,
+   "alinha": "inicio",
+   "db": -15
+  },
+  {
+   "id": "sfx27",
+   "ev": "sai frases",
+   "arquivo": "whoosh/whoosh_02.wav",
+   "t": 13.3,
+   "alinha": "pico",
+   "db": -12
+  },
+  {
+   "id": "sfx28",
+   "ev": "logo gira",
+   "arquivo": "whoosh/whoosh_03.wav",
+   "t": 13.85,
+   "alinha": "pico",
+   "db": -7
+  },
+  {
+   "id": "sfx29",
+   "ev": "logo assenta",
+   "arquivo": "impacto/impacto_02.wav",
+   "t": 14.0,
+   "alinha": "inicio",
+   "db": -9
+  },
+  {
+   "id": "sfx30",
+   "ev": "brilho",
+   "arquivo": "ding/ding_02.wav",
+   "t": 14.03,
+   "alinha": "inicio",
+   "db": -14
+  },
+  {
+   "id": "sfx31",
+   "ev": "@",
+   "arquivo": "pop/pop_01.wav",
+   "t": 14.07,
+   "alinha": "inicio",
+   "db": -12
+  },
+  {
+   "id": "sfx32",
+   "ev": "cta",
+   "arquivo": "interface/tic_03.wav",
+   "t": 14.47,
+   "alinha": "inicio",
+   "db": -15
+  }
+ ]
+}

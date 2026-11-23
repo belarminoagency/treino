@@ -28,8 +28,8 @@
   "hyperframes": "0.9.46"
  },
  "final": {
-  "versao": 1,
-  "arquivo": "Renders/2026-11-23_AnuncioVsConteudo_final_v01.mp4",
-  "loudness": "-18,2 LUFS (sem voz; música entra no app)"
+  "versao": 2,
+  "arquivo": "Renders/2026-11-23_AnuncioVsConteudo_final_v02.mp4",
+  "obs": "textos mais explicativos (pedido 23/11), 16,3 s"
  }
 }
